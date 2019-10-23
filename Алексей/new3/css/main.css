@@ -1,0 +1,8124 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+@font-face{
+	font-family: Cirqua;
+	src: url(../fonts/cirqua.ttf);
+}
+
+@font-face{
+	font-family: "Myriad Pro";
+	src: url(../fonts/MyriadPro-Regular.otf);
+}
+
+/*===NORMALISE===*/
+
+body.particuliers1::-webkit-scrollbar {
+    display: none;
+}
+
+/* background of the scrollbar except button or resizer */
+body.particuliers1::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* scrollbar itself */
+body.particuliers1::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+/* set button(top and bottom of the scrollbar) */
+body.particuliers1::-webkit-scrollbar-button {display:none}
+
+.body{
+    padding: 0;
+    margin: 0;
+	width: 100%;
+    box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+}
+
+html {
+	min-height: 100vh;
+}
+
+body.preview-page ol {
+	padding-left: 25px;
+}
+
+body.preview-page {
+    margin: 0;
+    padding: 15px 30px;
+    height: 100%;
+	background-image: linear-gradient(to right, #4d94bd, #bfcee6);
+    font-size: 20px;
+	font-family: Cirqua;
+    color: #fff;
+}
+
+body.preview-page li {
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+body.preview-page a {
+    color: #fff;
+    font-style: normal;
+}
+
+ul{
+	padding: 0;
+	margin: 0 !important;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.flex{
+	display:flex;
+}
+
+.flex-center{
+	margin:auto;
+}
+
+.h-100{
+	height:100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0 0 0 0;
+}
+
+a{
+	text-decoration: none! important;
+}
+
+
+.box{
+	position: relative;
+	width:100%;
+}
+
+.box.b1::before{
+    content:"";
+    display: block;
+    padding-top:100%;
+}
+
+.box.b2::before{
+	content:"";
+    display: block;
+    padding-top:50%;
+}
+
+.box-child{
+	position: absolute;
+	overflow:hidden;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+.col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12{
+	padding:15px;
+}
+.content{
+	overflow: hidden;	
+	box-sizing: border-box;	
+	width: 100%;
+}
+bold {
+	font-weight: 900;
+}
+.cont{
+	padding: 0 0 0 0;
+}
+/*===NORMALISE===*/
+/*===HEADER BTGIN===*/
+.right-block-head {
+    float: right;
+    height: 160px;
+    position: relative;
+    padding-left: 160px;
+	text-align: center;
+	order: 1;
+}
+.right-block-head p {
+	margin-bottom: 0px;
+    padding-top: 68px;
+    color: #4B0055;
+}
+img.image-right-header {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.header{
+	width: 100%;
+	height: 160px;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 55;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.93);
+}
+.conteiner-header {
+    height: 160px;
+}
+.header-fixed{
+	position: fixed;
+	top: 0;
+	left: 0;
+	animation-name: show_header;
+	animation-duration: 0.5s;
+	background: #fff;
+	z-index: 111;
+	height: 50px;
+}
+@keyframes show_header{
+	0%{
+		opacity: 0;
+		top: -120px;
+	}
+	100%{
+		opacity: 1;
+		top: 0;	
+	}
+}
+.header .logo{
+	height: 100%;
+	float: left;
+	padding-top: 58px;
+}
+.header-fixed .logo{
+	display: flex;
+	padding: 0;
+	align-items: center;
+}
+.header .logo img{
+	width: 200px;
+}
+.header .menu{
+	float: right;
+	/* height: 100%; */
+    width: calc(100% - 578px);
+}
+.header .menu li{
+	float: right;
+	height: 100%;
+	align-items: center;
+}
+.header .menu li a{
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	color: #000;
+	margin: 0 20px;
+	border-bottom: 2px solid transparent;
+	transition: 0.2s;
+	text-transform: uppercase;
+}
+.header .menu li a:hover {
+    border-bottom: 2px solid #ff2946;
+    color: #ff2946;
+}
+.header.header-fixed .image-right-header {
+    display: none;
+}
+.header.header-fixed .right-block-head p {
+    padding-top: 1px;
+}
+
+/*===BURGER-MENU===*/
+.burger-menu-button{
+	display: none;
+	float: right;
+	height: 100%;
+	padding: 0 20px;
+}
+.burger-menu-icon{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	cursor: pointer;
+}
+.lines::after{
+	content: "";
+    position: absolute;
+    top: 10px;
+	width: 40px;
+	height: 3px;
+	background: #4b0055;
+	transition: 0.2s;
+}
+.lines{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 3px;
+	background: #4b0055;
+	transform: translate(-50%, -50%);
+	transition: 0.2s;
+}
+.lines::before{
+	content: "";
+    position: absolute;
+    top: -10px;
+	width: 40px;
+	height: 3px;
+	background: #4b0055;
+	transition: 0.2s;
+}
+.burger-menu-active .lines{
+	background: transparent;
+}
+.burger-menu-active .lines::after{
+	transform: rotate(-45deg);
+	top: 0;
+}
+.burger-menu-active .lines::before{
+	transform: rotate(45deg);
+	top: 0;
+}
+.header-fixed .lines::before{
+	background: #d90746;
+}
+.header-fixed .lines{
+	background: #d90746;
+}
+.header-fixed .lines::after{
+	background: #d90746;
+}
+.header-fixed .burger-menu-active .lines{
+	background: transparent;
+}
+.burger-menu{
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	height: 100%;
+	width: 300px;
+	background: #4b0055;
+}
+.burger-menu ul{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.burger-menu li{
+	width: 100%;
+}
+.burger-menu a{
+	display: block;
+	width: 100%;
+	padding: 20px 0 20px 20px;
+	color: #fff;
+	border-bottom: 3px solid transparent;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.burger-menu a:hover{
+	background: #6f027d;
+}
+/*===HEADER END===*/
+.section1{
+	padding: 270px 0 100px 0;
+	box-sizing: border-box;	
+	overflow: hidden;
+	background: url(../img/s1bg.png) no-repeat center/cover;
+}
+.section1 h3{
+	font-family: Cirqua;
+	font-size: 40px;
+	color: #fff;
+	text-shadow: 1px 0 4px #000;
+}
+
+.section2{
+	box-sizing: border-box;	
+	padding: 40px 0 80px 0;
+	position: relative;
+	background: linear-gradient(to left,  #4b0055 40%, #ffffff ) top right;
+}
+.section2 img{
+	position: absolute;
+	top:-15px;
+	left: 0;
+	z-index: 10;
+	width: 400px;
+}
+.section2 h3{
+	font-family: Cirqua;
+	font-size: 30px;
+	color: #fff;
+	text-align: right;
+	position: relative;
+	z-index: 11;
+}
+.section2 h4{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	color: #fff;
+	text-align: right;
+	position: relative;
+	z-index: 11;
+}
+.color{
+	color: #ff308c;
+}
+.bold{
+	font-weight: 700;
+}
+
+.section3{
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+    z-index: 9;
+}
+.section3 .text{
+	padding: 55px 0;
+}
+.section3 h3{
+	font-family: Cirqua;
+	font-size: 36px;
+	color: #5d2665;
+	margin: 0;
+	padding-bottom: 30px;
+}
+.section3 h4{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	color: #000;
+	font-weight: 400;
+}
+.section3 .img1{
+	width: 100%;
+}
+.section3 .img2{
+	width: 100%;
+}
+.section3>.container>.row>div {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.section3 img.img2.flex-center {
+    margin-top: 0px;
+}
+.section3>.container>.row>div:last-of-type {
+    padding: 0px;
+}
+
+
+.section4{
+	position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 515px;
+    width: 100%;
+    background: url(../img/s4bg.png) no-repeat;
+    margin-top: -70px;
+    background-position: bottom right;
+}
+.section4 h3{
+	font-family: Cirqua;
+	font-size: 36px;
+	color: #fff;
+	padding-top: 150px;
+	
+}
+.section4-2{
+	box-sizing: border-box;
+	overflow: hidden;
+	height: 447px;
+	padding: 50px 0;
+	width: 100%;
+	background: url(../img/s4bg2.png) no-repeat right;
+}
+.section4-2 .bg{
+    background: rgba(255, 255, 255, 70%);
+    padding: 30px 40px;
+}
+.section4-2 .text{
+	text-align: right;
+}
+.section4-2 h1{
+	font-family: Cirqua;
+	font-size: 30px;
+	font-weight: 400px;
+	color: #000;
+	padding-bottom: 30px;
+}
+.section4-2 p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400px;
+	color: #000;
+}
+.section5-1{
+	padding-bottom: 80px;
+	box-sizing: border-box;
+	overflow: hidden;
+	background: linear-gradient(to left,  #4b0055 10%, #ffffff ) top right;
+}
+.section5-1 h3{
+	font-family: Cirqua;
+	font-size: 30px;
+	color: #4b0055;
+	padding: 80px 0 40px 0;
+}
+.section5-1 p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 400px;
+}
+.section5-1 img{
+	width: 200px;
+}
+.section5 {
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #4b0055;
+}
+.section5 .cont1{
+	padding: 0;
+}
+/* .section5 .cont{
+	padding-top-bottom: 0;
+} */
+.section5 .text{
+	height: 100%;
+	padding: 70px 0 70px 0px;
+	position: relative;
+}
+.section5 .text img{
+	position: absolute;
+	bottom: 10%;
+	left: 20%;
+	opacity: 0.4;
+}
+.section5 h3{
+	font-family: Cirqua;
+	font-size: 30px;
+	color: #fff;
+	text-align: right;
+	padding-bottom: 40px;
+}
+.section5 p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 400px;
+	color: #fff;
+	text-align: right;
+}
+
+/*===SECTION6 BEGIN===*/
+.section6{
+	box-sizing: border-box;	
+	overflow: hidden;
+	padding: 200px 0 40px 0;
+	background: url(../img/s6bg.png) no-repeat center/cover;
+}
+.section6 .bg{
+    padding: 30px;
+    background: rgba(255, 255, 255, 70%);
+}
+.section6 h1{
+	font-family: Cirqua;
+	font-size: 30px;
+	color: #4b0055;
+	padding-bottom: 40px;
+}
+.section6 p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 400px;
+	color: #000;
+}
+.section6 .btn1{
+	padding-left: 20px;
+}
+.section6 a{
+	width: 280px;
+	display: block;
+	padding: 10px 30px;
+	text-align: center;
+	font-family: Cirqua;
+	font-size: 14px;
+	color: #fff;
+	background: #4b0055;
+	border-radius: 20px;
+	border: 3px solid transparent;
+	transition: 0.2s;
+}
+.section6 a:hover{
+	border-color: #4b0055;
+	background: transparent;
+	color: #4b0055;	
+}
+
+
+/*===SECTION6 END===*/
+
+/*===SECTION7 BEGIN===*/
+.section7{
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.section7 .img1{
+  width: 50%;
+  float: left;
+}
+.section7 .img2{
+    width: 50%;
+    float: right;
+}
+.section7 .img3{
+    width: 100%;
+}
+.section7 .text{
+	padding: 30px 50px 0 0;
+	width: 100%;
+	position: relative;
+}
+.section7 .text img{
+	width: 150px;
+	height: 100px;
+	position: absolute;
+	bottom: 0px;
+	right: 40px;
+	z-index: -1;
+}
+.section7 h3{
+	font-family: Cirqua;
+	font-size: 30px;
+	color: #000;
+	padding-bottom: 30px;
+}
+.section7 h4{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 400px;
+	color: #ff4795;
+	padding-bottom: 30px;
+}
+.section7 p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 400px;
+	color: #000;
+	padding-right: 100px;
+}
+.section7 .btn1{
+	padding-right: 30px;
+	padding-bottom: 110px;
+}
+.section7 a{
+	width: 400px;
+	display: block;
+	padding: 10px 30px;
+	text-align: center;
+	font-family: Cirqua;
+	font-size: 14px;
+	color: #fff;
+	background: #ff00ff;
+	border-radius: 	20px;
+	border: 3px solid transparent;
+	transition: 0.2s;
+	float: right;
+}
+.section7 a:hover{
+	border-color: #4b0055;
+	background: transparent;
+	color: #4b0055;	
+}
+
+
+.section8{
+	box-sizing: border-box;	
+	overflow: hidden;	
+}
+.section8 .img1{
+    width: 100%;
+}
+.section8 .bg{
+	background: #ee92bb;
+	position: relative;
+	padding: 30px;
+}
+.section8 .text{
+	text-align: right;
+}
+.section8 h3{
+	font-family: Cirqua;
+	font-size: 30px;
+	font-weight: 400px;
+	color: #692166;
+}
+.section8 p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400px;
+	color: #fff;
+}
+.section8 .color{
+	color: #000;
+}
+.section8 .btn1{
+	padding-bottom: 30px;
+}
+.section8 a{
+	width: 350px;
+	display: block;
+	padding: 10px 30px;
+	text-align: center;
+	font-family: Cirqua;
+	font-size: 14px;
+	color: #000 !important;
+	background: #fff;
+	border-radius: 	20px;
+	border: 3px solid transparent;
+	transition: 0.2s;
+	float: right;
+}
+.section8 a:hover{
+	transform: scale(0.95);	
+}
+.section8 .pc {
+    width: 80px;
+    position: absolute;
+    left: -25px;
+    bottom: 150px;
+    z-index: 1;
+}
+.section8 .grap {
+    position: absolute;
+    width: 80px;
+    left: 10px;
+    bottom: 70px;
+    z-index: 1;
+}
+.section9{
+	overflow: hidden;
+	padding: 80px 0 40px 0;
+	box-sizing: border-box;
+	background: url(../img/s9bg.png) center/ cover;
+}
+.section9 .bg{
+    background: rgba(255, 255, 255, 80%);
+    padding: 30px 40px;
+}
+.section9 .text{
+	text-align: right;
+}
+.section9 h1{
+	font-family: Cirqua;
+	font-size: 30px;
+	font-weight: 400px;
+	color: #000;
+	padding-bottom: 30px;
+}
+.section9 p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400px;
+	color: #000;
+}
+
+.section10{
+	padding: 40px 0;
+	background: #692166;
+	box-sizing: border-box;	
+	overflow: hidden;
+}
+.section10 .logo{
+    float: left;
+    padding-top: 15px;
+}
+.section10 .logo img{
+	width: 200px;
+}
+.section10 ul{
+	float: right;
+	padding-top: 10px;
+}
+.section10 i{
+	color: #fff;
+}
+.section10 li{
+    display: flex;
+    height: 100%;
+    float: left;
+    align-items: center;
+    flex-direction: column;
+}
+.section10 li a{
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	color: #fff;
+	margin: auto;
+	padding: 10px 10px 0 10px;
+}
+
+.location-page .header .menu,
+.evenement-page .header .menu,
+.mariage-page .header .menu,
+.anniversaire-page .header .menu,
+.animation-page .header .menu,
+.main-page .header .menu,
+.contact-page .header .menu {
+	width: calc(100% - 410px);
+}
+
+.location-section1 {
+	padding-top: 154px;
+	padding-bottom: 321px;
+	background: url('../img/location-section1.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+.two_strings {
+	line-height: 62px !important;
+}
+.location-section1__title {
+	margin: 0 0 185px 120px;
+	font-size: 60px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 36px;
+	color: #ffffff;
+	text-shadow: 0 1px 4px #000000;
+}
+
+.location-section1__body {
+	max-width: 68%;
+	width: 100%;
+	margin-left: auto;
+	padding: 40px 70px 35px;
+	background-color: #ffffff;
+	opacity: 0.67;
+	text-align: center;
+}
+
+.location-section1__body__title {
+	font-family: Cirqua;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000;
+}
+
+.location-section1__body__title span {
+	color: #ff308c;
+}
+
+.location-section1__body__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.location-section1__body__text span {
+	color: #ff308c;
+}
+
+.location-section2 {
+	position: relative;
+	margin: 0 0 0;
+	padding: 0 0 0;
+	background: #ee92bb;
+	/* background: url('../img/location-section2.png') 50% 0 no-repeat; */
+	background-size: 100% 100%;
+}
+
+.location-section2__items {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.location-section2__left {
+	position: relative;
+	flex: 0 0 50%;
+	max-width: 50%;
+	margin-top: -370px;
+	padding: 100px 370px 366px 100px;
+	background: url('../img/location-section2_title-bg.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.location-section2__left::before {
+	content: '';
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	left: 0;
+	max-width: 934px;
+	width: 100%;
+	max-height: 440px;
+	height: 100%;
+	background: url('../img/location-section2-before.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.location-section2__right {
+	flex: 0 0 47%;
+	max-width: 47%;
+	padding: 50px 80px 30px 0;
+	text-align: right;
+}
+
+.location-section2__title {
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #fff;
+}
+
+.location-section2__icon {
+	display: block;
+	margin-right: 50px;
+}
+
+.location-section2__title span,
+.location-section2__text span {
+	color: #4b0055;
+}
+
+.location-section2__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.location-section3 {
+	/* min-height: 483px; */
+	background: url('../img/location-section3.png') 50% 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.location-section3__container {
+	padding: 69px 42px 66px;
+}
+
+.location-section3__items {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -30px;
+}
+
+.location-section3__item {
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding: 0 0 0 30px;
+}
+
+.location-section3__item img {
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.location-section4 {
+	background: url('../img/location-section4.png') 50% 0 no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.location-section4__head-title {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: -120px;
+	margin-bottom: 20px;
+	padding: 60px 70px 53px;
+	background: url('../img/location-section4__head-title.png') 50% 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.location-section4__head-title span {
+	display: inline-block;
+	transform: rotateZ(-5deg);
+	font-size: 72px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 31.83px;
+	color: #4d0f5a;
+}
+
+.location-section4__items {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -70px;
+}
+
+.location-section4__item {
+	flex: 0 0 33.3%;
+	max-width: 33.3%;
+	padding: 0 0 50px 70px;
+}
+
+.location-section4__item:nth-child(2n) .location-section4__title {
+	transform: rotateZ(20deg);
+}
+.location-section4__item:nth-child(2n) .location-section4__title span {
+	transform: rotateZ(-4deg);
+}
+
+.location-section4__item:nth-child(3n) .location-section4__title {
+	transform: rotateZ(10deg);
+}
+.location-section4__item:nth-child(3n) .location-section4__title span {
+	transform: rotateZ(-5deg);
+}
+
+.location-section4__title {
+	margin-bottom: 30px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px 30px 23px;
+	background: url('../img/location-section4__title.png') 50% 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.location-section4__title span {
+	display: inline-block;
+	transform: rotateZ(-8deg);
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 31.76px;
+	color: #ffffff;
+}
+
+.location-section4__text {
+	margin-bottom: 40px;
+	color: #ffffff;
+	font-family: "Myriad Pro";
+	font-size: 22px;
+	font-weight: 400;
+}
+
+.location-section4__text span {
+	color: #e6fb00;
+}
+
+.location-section5__container {
+	position: relative;
+	z-index: -4;
+	margin-top: -240px;
+	padding-top: 220px;
+	padding-bottom: 90px;
+	background: url('../img/location-section5.png') 50% 20px no-repeat;
+	background-size: cover;
+}
+
+.location-section5 {
+	position: relative;
+}
+
+.location-section5:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 608px;
+	height: 1015px;
+	margin-top: 70px;
+	transform: translate(-50%,-50%);
+	background: url('../img/location-section5-arrow.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.location-section5__title {
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48.01px;
+	color: #000000;
+}
+
+.location-section5__title span,
+.location-section5__text span {
+	color: #ff308c;
+}
+
+.location-section5__text {
+	font-size: 18px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #010101;
+}
+
+.location-section5__items {
+	display: flex;
+	justify-content: space-between;
+}
+
+.location-section5__left .location-section5__body {
+	padding: 27px 36px 20px 70px;
+	background-color: #ffffff;
+	opacity: 0.8;
+}
+
+.location-section5__right .location-section5__body {
+	padding: 27px 70px 20px 36px;
+	background-color: #ffffff;
+	opacity: 0.8;
+}
+
+.location-section5__left,
+.location-section5__right {
+	flex: 0 0 33.3%;
+	max-width: 33.3%;
+}
+
+.location-section5__left {
+	margin-top: 330px;
+}
+
+.location-section5__right {
+	margin-top: 70px;
+	text-align: right;
+}
+
+.location-section6 {
+	padding: 30px 0;
+	background: url('../img/location-section6.jpg') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.location-section6__items {
+	display: flex;
+	justify-content: space-between;
+}
+
+.location-section6__title {
+	margin-bottom: 20px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #fff;
+}
+
+.location-section6__text {
+	font-family: "Myriad Pro";
+	font-size: 22px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.location-section6__title span,
+.location-section6__text span {
+	color: #ee92bb;
+}
+
+.location-section7 {
+	padding: 388px 0 62px;
+	background: url('../img/location-section7.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.location-section7__text {
+	position: relative;
+	padding: 30px 60px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+	text-align: center;
+	background-color: #ffffff;
+	opacity: 0.73;
+}
+
+.location-section7__text:before {
+	content: '';
+	position: absolute;
+	top: -200px;
+	left: -50px;
+	width: 242px;
+	height: 244px;
+	background: url('../img/location-section7__text-medal.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.location-section7__text span {
+	color: #ff308c;
+}
+
+.location-section8 {
+	padding: 121px 0 369px;
+	background: url('../img/location-section8.jpg') 50% 50% no-repeat;
+	background-size: cover;
+}
+
+.location-section8__text {
+	padding: 70px 150px 100px;
+	font-size: 36px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 48px;
+	color: #ffffff;
+	text-align: center;
+	background: url('../img/location-section8__text.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.location-section8__text .yellow {
+	color: #ffea00;
+}
+
+.location-section8__text .black {
+	font-weight: bold;
+	color: #000;
+}
+
+.location-section9__container {
+	position: relative;
+    z-index: 4;
+    margin-top: -100px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background: url("../img/location-section9.png") 50% 20px no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.location-section9-head-title {
+	margin-top: -160px;
+	margin-bottom: 30px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 60px 70px 53px;
+	background: url('../img/location-section9__head-title.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.location-section9-head-title span {
+	display: inline-block;
+	transform: rotateZ(-5deg);
+	font-size: 72px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 31.91px;
+	color: #b30050;
+}
+
+.location-section9__items {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -30px;
+}
+
+.location-section9__item {
+	flex: 0 0 33.3%;
+	max-width: 33.3%;
+	padding: 0 0 30px 30px;
+}
+
+.location-section9__item:nth-child(2n) .location-section9__title {
+	transform: rotateZ(10deg);
+}
+
+.location-section9__title {
+	margin-bottom: 30px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 30px;
+	background: url('../img/location-section9__title1.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.location-section9__title span {
+	display: inline-block;
+	transform: rotateZ(-5deg);
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 31.9px;
+	color: #ffffff;
+}
+
+.location-section9__text {
+	margin-bottom: 30px;
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	line-height: 30px;
+	color: #ffffff;
+}
+
+.location-section9__text span {
+	color: #e59d23;
+}
+
+.location-section4__img img,
+.location-section9__img img {
+	max-width: 100%;
+}
+
+.evenement-section1 {
+	padding: 100px 0 30px;
+	background: url('../img/evenement-section1.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.evenement-section1__title {
+	margin-bottom: 180px;
+	padding: 0 20px;
+	font-size: 60px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 36px;
+	color: #ffffff;
+	text-shadow: -1px 1px 13px #da486b;
+	text-align: center;
+}
+
+.evenement-section1__body {
+	max-width: 50%;
+	margin: 0 0 0 auto;
+	padding: 30px 110px 30px 30px;
+	background: rgba(255,255,255,0.8);
+	text-align: right;
+}
+
+.evenement-section1__body__title {
+	margin-bottom: 20px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+}
+
+.evenement-section1__body__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.evenement-section1__body__text span {
+	color: #da486b;
+}
+
+.evenement-section2 {
+	padding: 80px 0;
+	background: url('../img/evenement-section2.jpg') 50% 80% no-repeat;
+	background-size: cover;
+}
+
+.evenement-section2__body {
+	max-width: 55%;
+	margin: 0;
+	padding: 0;
+}
+
+.evenement-section2__body__title {
+	margin-bottom: 20px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+}
+
+.evenement-section2__body__title span,
+.evenement-section2__body__text span {
+	color: #da486b;
+}
+
+.evenement-section2__body__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.evenement-section3 {
+	background: url('../img/evenement-section3.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.evenement-section3__container {
+	position: relative;
+	z-index: 2;
+	min-height: 850px;
+}
+
+.evenement-section3__item:nth-child(1) {
+	z-index: 4;
+	top: -10%;
+	left: 16%;
+	width: 739px;
+	height: 689px;
+	background: url('../img/evenement-section3__item1.png') 0 0 no-repeat;
+}
+
+.evenement-section3__item:nth-child(2) {
+	z-index: 3;
+	top: -15%;
+	right: 3%;
+	width: 903px;
+	height: 676px;
+	background: url('../img/evenement-section3__item2.png') 0 0 no-repeat;
+}
+
+.evenement-section3__item:nth-child(3) {
+	z-index: 3;
+	bottom: -18%;
+	left: 5%;
+	width: 784px;
+	height: 669px;
+	background: url('../img/evenement-section3__item3.png') 0 0 no-repeat;
+}
+
+.evenement-section3__item:nth-child(4) {
+	z-index: 4;
+	bottom: -15%;
+	right: 20%;
+	width: 700px;
+	height: 658px;
+	background: url('../img/evenement-section3__item4.png') 0 0 no-repeat;
+}
+
+.evenement-section3__item:nth-child(1),
+.evenement-section3__item:nth-child(2),
+.evenement-section3__item:nth-child(3),
+.evenement-section3__item:nth-child(4) {
+	position: absolute;
+	background-size: 100% 100%;
+}
+
+.evenement-section3__item:nth-child(1) .evenement-section3__title {
+	top: 40%;
+	left: 10%;
+	font-size: 46px;
+	color: #4b0055;
+}
+
+.evenement-section3__item:nth-child(2) .evenement-section3__title {
+	top: 30%;
+	left: 30%;
+	transform: rotate(15deg);
+	font-size: 40px;
+	color: #da486b;
+}
+
+.evenement-section3__item:nth-child(3) .evenement-section3__title {
+	top: 15%;
+    left: 5%;
+	transform: rotate(-25deg);
+	font-size: 44px;
+	color: #da486b;
+}
+
+.evenement-section3__item:nth-child(4) .evenement-section3__title {
+	top: 16%;
+	left: 5%;
+    transform: rotate(-15deg);
+	font-size: 36px;
+	color: #4b0055;
+}
+
+.evenement-section3__item:nth-child(1) .evenement-section3__title,
+.evenement-section3__item:nth-child(2) .evenement-section3__title,
+.evenement-section3__item:nth-child(3) .evenement-section3__title,
+.evenement-section3__item:nth-child(4) .evenement-section3__title {
+	position: absolute;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 30.96px;
+}
+
+.evenement-section3__item:nth-child(1) .evenement-section3__text {
+	top: 50%;
+    left: 50%;
+    transform: rotate(-15deg) translate(-40%,-50%);
+    max-width: 370px;
+}
+
+.evenement-section3__item:nth-child(2) .evenement-section3__text {
+	top: 50%;
+    left: 50%;
+    transform: rotate(15deg) translate(-47%,0);
+    max-width: 410px;
+}
+
+.evenement-section3__item:nth-child(3) .evenement-section3__text {
+	top: 50%;
+    left: 50%;
+    transform: rotate(-5deg) translate(-48%,-63%);
+    max-width: 360px;
+}
+
+.evenement-section3__item:nth-child(4) .evenement-section3__text {
+	top: 50%;
+    left: 50%;
+    transform: rotate(-5deg) translate(-43%,-80%);
+    max-width: 330px;
+}
+
+.evenement-section3__text {
+	position: absolute;
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	line-height: 24px;
+	color: #ffffff;
+}
+
+.evenement-section3__item:nth-child(1) .evenement-section3__icon {
+	top: 25%;
+    right: 13%;
+    transform: rotate(-15deg) translate(-40%,-50%);
+}
+
+.evenement-section3__item:nth-child(2) .evenement-section3__icon {
+	top: 15%;
+    right: 22%;
+}
+
+.evenement-section3__item:nth-child(3) .evenement-section3__icon {
+	bottom: 9%;
+    right: 30%;
+}
+
+.evenement-section3__item:nth-child(4) .evenement-section3__icon {
+	top: 6%;
+    right: 28%;
+}
+
+.evenement-section3__icon {
+	position: absolute;
+}
+
+.evenement-section4 {
+	background: #ffffff;
+}
+
+.evenement-section4__top {
+	background: url('../img/evenement-section4.jpg') 50% 0 no-repeat;
+	background-size: cover;
+	min-height: 141px;
+}
+
+.evenement-section4__body {
+	max-width: 80%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 30px 0;
+	text-align: center;
+}
+
+.evenement-section4__body__title {
+	margin-bottom: 20px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+}
+
+.evenement-section4__body__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.evenement-section4__body__text span {
+	color: #da486b;
+}
+
+.evenement-section5 {
+	background: url('../img/evenement-section5.jpg') 70% 50% no-repeat;
+	background-size: cover;
+}
+
+.evenement-section5__container {
+	position: relative;
+	min-height: 1217px;
+}
+
+.evenement-section5__item:first-child {
+	top: 1%;
+	left: 1%;
+	z-index: 1;
+	width: 348px;
+	height: 269px;
+	background: url('../img/evenement-section5__item1.png') 0 0 no-repeat;
+}
+
+.evenement-section5__item:nth-child(2) {
+	top: 4%;
+	left: 10%;
+	z-index: 2;
+	width: 816px;
+	height: 683px;
+	background: url('../img/evenement-section5__item2.png') 0 0 no-repeat;
+}
+
+.evenement-section5__item:nth-child(3) {
+	top: 2%;
+	left: 47%;
+	z-index: 3;
+	width: 529px;
+	height: 201px;
+	background: url('../img/evenement-section5__item3.png') 0 0 no-repeat;
+}
+
+.evenement-section5__item:nth-child(4) {
+	top: 14%;
+	right: 10%;
+	z-index: 2;
+	width: 662px;
+	height: 490px;
+	background: url('../img/evenement-section5__item4.png') 0 0 no-repeat;
+}
+
+.evenement-section5__item:nth-child(5) {
+	top: 3%;
+	right: 2%;
+	z-index: 1;
+	width: 364px;
+	height: 240px;
+	background: url('../img/evenement-section5__item5.png') 0 0 no-repeat;
+}
+
+.evenement-section5__item:nth-child(6) {
+	bottom: 24%;
+	left: 6%;
+	z-index: 2;
+	width: 490px;
+	height: 232px;
+	background: url('../img/evenement-section5__item6.png') 0 0 no-repeat;
+}
+
+.evenement-section5__item:nth-child(7) {
+	bottom: 10%;
+    left: 14%;
+	width: 702px;
+	height: 294px;
+	background: url('../img/evenement-section5__item7.png') 0 0 no-repeat;
+}
+
+.evenement-section5__item:nth-child(8) {
+	bottom: 5%;
+    right: 10%;
+	width: 625px;
+	height: 400px;
+	background: url('../img/evenement-section5__item8.png') 0 0 no-repeat;
+}
+
+.evenement-section5__item:nth-child(9) {
+	bottom: 30%;
+	right: 0;
+	width: 442px;
+	height: 207px;
+	background: url('../img/evenement-section5__item9.png') 0 0 no-repeat;
+}
+
+.evenement-section5__item {
+	position: absolute;
+	background-size: 100% 100%;
+}
+
+.evenement-section5__item:nth-child(1) .evenement-section5__item__text {
+	top: 50%;
+    left: 50%;
+    transform: translate(-40%,-50%) rotate(-20deg);
+	font-size: 28px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 44.5px;
+	color: #000000;
+}
+
+.evenement-section5__item:nth-child(2) .evenement-section5__item__text {
+	top: 50%;
+	left: 50%;
+	max-width: 650px;
+	width: 100%;
+    transform: translate(-49%,-72%) rotate(-13deg);
+	font-size: 20px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+	text-align: center;
+}
+
+.evenement-section5__item:nth-child(3) .evenement-section5__item__text {
+	top: 50%;
+	left: 50%;
+	max-width: 650px;
+	width: 100%;
+    transform: translate(-50%,-50%) rotate(-9deg);
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 47.48px;
+	color: #000000;
+	text-align: center;
+}
+
+.evenement-section5__item:nth-child(3) .evenement-section5__item__text:before {
+	content: '';
+	position: absolute;
+	top: -71%;
+    left: -9%;
+	width: 137px;
+	height: 125px;
+	background: url('../img/evenement-section5__item10.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.evenement-section5__item:nth-child(3) .evenement-section5__item__text:after {
+	content: '';
+	position: absolute;
+	top: -62%;
+    right: -9%;
+	width: 154px;
+	height: 107px;
+	background: url('../img/evenement-section5__item11.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.evenement-section5__item:nth-child(4) .evenement-section5__item__text {
+	top: 50%;
+	left: 50%;
+	max-width: 510px;
+	width: 100%;
+    transform: translate(-48%,-60%) rotate(9deg);
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	line-height: 29.42px;
+	color: #000000;
+	text-align: center;
+}
+
+.evenement-section5__item:nth-child(5) .evenement-section5__item__text {
+	top: 50%;
+	left: 50%;
+	max-width: 650px;
+	width: 100%;
+    transform: translate(-50%,-60%) rotate(-9deg);
+	font-size: 30px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 47.48px;
+	color: #000000;
+	text-align: center;
+}
+
+.evenement-section5__item:nth-child(6) .evenement-section5__item__text {
+	top: 50%;
+	left: 50%;
+	max-width: 424px;
+	width: 100%;
+    transform: translate(-50%,-30%) rotate(-8deg);
+	font-size: 24px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 38.1px;
+	color: #000000;
+	text-align: center;
+}
+
+.evenement-section5__item:nth-child(7) .evenement-section5__item__text {
+	top: 50%;
+	left: 50%;
+	max-width: 520px;
+	width: 100%;
+    transform: translate(-50%,-20%) rotate(-1deg);
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	line-height: 30.03px;
+	color: #000000;
+	text-align: center;
+}
+
+.evenement-section5__item:nth-child(8) .evenement-section5__item__text {
+	top: 50%;
+	left: 50%;
+	max-width: 520px;
+	width: 100%;
+    transform: translate(-50%,-35%) rotate(-12deg);
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	line-height: 30.03px;
+	color: #000000;
+	text-align: center;
+}
+
+.evenement-section5__item:nth-child(9) .evenement-section5__item__text {
+	top: 50%;
+	left: 50%;
+	max-width: 330px;
+	width: 100%;
+    transform: translate(-60%,-50%) rotate(12deg);
+	font-size: 30px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 47.67px;
+	color: #000000;
+	text-align: center;
+}
+
+.evenement-section5__item .evenement-section5__item__text {
+	position: absolute;
+}
+
+.mariage-section1 {
+	padding: 85px 0 200px;
+	background: url('../img/mariage-section1.png') 50% 20% no-repeat;
+	background-size: cover;
+}
+
+.mariage-section1__title {
+	margin-bottom: 190px;
+	padding: 0 20px;
+	font-size: 60px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 36px;
+	color: #ffffff;
+	text-shadow: -1px 1px 13px #da486b;
+	text-align: center;
+}
+
+.mariage-section1__body {
+	max-width: 50%;
+	margin: 0 0 0 auto;
+	padding: 30px 85px 30px 30px;
+	background: rgba(255,255,255,0.8);
+	text-align: right;
+}
+
+.mariage-section1__body__title {
+	margin-bottom: 20px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+}
+
+.mariage-section1__body__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.mariage-section1__body__text span,
+.mariage-section1__body__title span {
+	color: #da486b;
+}
+
+.mariage-section2 {
+	background: url('../img/mariage-section2.png') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.mariage-section2__container {
+	position: relative;
+	z-index: 2;
+	margin-top: -200px;
+	padding: 230px 0 112px;
+}
+
+.mariage-section2__title {
+	font-size: 24px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 24px;
+	color: #000000;
+	text-align: center;
+}
+
+.mariage-section2__title p {
+	font-size: 32px;
+	line-height: 32px;
+}
+
+.mariage-section2__items {
+	display: flex;
+	justify-content: space-between;
+}
+
+.mariage-section2__item:first-child {
+	margin: 98px 0 0;
+	width: 491px;
+	height: 432px;
+	background: url('../img/mariage-section2__item1.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(1)::before {
+	content: '';
+	position: absolute;
+	left: 154px;
+	bottom: -112px;
+	width: 78px;
+	height: 212px;
+	background: url('../img/mariage-section2__item__icon1.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(1)::after {
+	content: '';
+	position: absolute;
+	right: 21px;
+	bottom: 72px;
+	width: 120px;
+	height: 144px;
+	background: url('../img/mariage-section2__item__icon2.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(2) {
+	margin: 64px 0 0;
+	width: 633px;
+	height: 380px;
+	background: url('../img/mariage-section2__item2.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(2)::before {
+	content: '';
+	position: absolute;
+	left: 51px;
+	bottom: -197px;
+	width: 68px;
+	height: 201px;
+	background: url('../img/mariage-section2__item__icon3.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(2)::after {
+	content: '';
+	position: absolute;
+	right: -49px;
+	bottom: -133px;
+	width: 460px;
+	height: 147px;
+	background: url('../img/mariage-section2__item__icon4.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(3) {
+	margin: 114px 0 0;
+	width: 324px;
+	height: 278px;
+	background: url('../img/mariage-section2__item3.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(3)::before {
+	content: '';
+	position: absolute;
+	left: -114px;
+	top: -69px;
+	width: 139px;
+	height: 169px;
+	background: url('../img/mariage-section2__item__icon5.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(3)::after {
+	content: '';
+	position: absolute;
+	left: 121px;
+	bottom: -249px;
+	width: 81px;
+	height: 218px;
+	background: url('../img/mariage-section2__item__icon6.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(4) {
+	width: 430px;
+	height: 472px;
+	background: url('../img/mariage-section2__item4.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(4)::before {
+	content: '';
+	position: absolute;
+	left: -101px;
+	top: 340px;
+	width: 126px;
+	height: 133px;
+	background: url('../img/mariage-section2__item__icon7.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item:nth-child(4)::after {
+	content: '';
+	position: absolute;
+	left: 152px;
+	bottom: -170px;
+	width: 69px;
+	height: 210px;
+	background: url('../img/mariage-section2__item__icon8.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section2__item {
+	position: relative;
+}
+
+.mariage-section2__item:first-child .mariage-section2__item__text {
+	transform: translate(-50%,-76%) rotate(-8deg);
+	width: 400px;
+	font-size: 29px;
+	font-family: Cirqua;
+	line-height: 36.66px;
+	font-weight: 400;
+	color: #000000;
+}
+
+.mariage-section2__item:first-child .mariage-section2__item__author {
+	font-size: 14px;
+	font-family: "Myriad Pro";
+}
+
+.mariage-section2__item:nth-child(2) .mariage-section2__item__text {
+	transform: translate(-50%,-42%) rotate(8deg);
+    width: 440px;
+	font-size: 24px;
+	font-family: Cirqua;
+	line-height: 32.08px;
+	font-weight: 400;
+	color: #000000;
+}
+
+.mariage-section2__item:nth-child(2) .mariage-section2__item__author {
+	font-size: 12px;
+	font-family: "Myriad Pro";
+}
+
+.mariage-section2__item:nth-child(3) .mariage-section2__item__text {
+	transform: translate(-47%,-50%) rotate(-4deg);
+    width: 282px;
+	font-size: 38px;
+	font-family: Cirqua;
+	line-height: 50.6px;
+	font-weight: 400;
+	color: #000000;
+}
+
+.mariage-section2__item:nth-child(3) .mariage-section2__item__author {
+	font-size: 19px;
+	font-family: "Myriad Pro";
+}
+
+.mariage-section2__item:nth-child(4) .mariage-section2__item__text {
+	transform: translate(-47%,-62%) rotate(5deg);
+    width: 342px;
+	font-size: 24px;
+	font-family: Cirqua;
+	line-height: 31px;
+	font-weight: 400;
+	color: #000000;
+}
+
+.mariage-section2__item:nth-child(4) .mariage-section2__item__author {
+	font-size: 12px;
+	font-family: "Myriad Pro";
+}
+
+.mariage-section2__item .mariage-section2__item__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.mariage-section2__item .mariage-section2__item__text span {
+	color: #db355d;
+}
+
+.mariage-section3 {
+	position: relative;
+	min-height: 906px;
+	display: flex;
+	align-items: center;
+	background: url('../img/mariage-section3.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.mariage-section3__text:nth-child(1) {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -80%);
+	left: 0;
+	right: 0;
+	z-index: 4;
+	width: 100%;
+	padding: 27px 20px 32px;
+	font-size: 31px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 39.05px;
+	color: #000000;
+	text-align: center;
+	background: rgba(255,255,255,0.9);
+}
+
+.mariage-section3__text span {
+	color: #db355d;
+}
+
+.mariage-section3__img img {
+	max-width: 100%;
+}
+
+.mariage-section3__img:nth-child(2) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 952px;
+	height: 672px;
+}
+
+.mariage-section3__img:nth-child(3) {
+	position: absolute;
+	top: 0;
+	right: 14px;
+	z-index: 3;
+	width: 986px;
+	height: 629px;
+}
+
+.mariage-section3__img:nth-child(4) {
+	position: absolute;
+	bottom: -66px;
+	left: 38px;
+	z-index: 5;
+	width: 684px;
+	height: 594px;
+}
+
+.mariage-section3__img:nth-child(5) {
+	position: absolute;
+	bottom: -78px;
+	right: 192px;
+	z-index: 1;
+	width: 979px;
+	height: 782px;
+}
+
+.mariage-section4 {
+	background-color: #ea9a7f;
+	background-image: linear-gradient(-35deg, #4b0055 0%, #db355d 100%);
+}
+
+.mariage-section4__item {
+	max-width: 70%;
+	margin: 0 auto;
+	padding: 69px 0 52px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.mariage-section4__item__img {
+	margin-right: 27px;
+}
+
+.mariage-section4__item__img img {
+	border-radius: 50%;
+	width: 100%;
+	max-width: 328px;
+	height: 100%;
+	max-height: 328px;
+}
+
+.mariage-section4__body {
+	padding-bottom: 27px;
+}
+
+.mariage-section4__body__title {
+	margin-bottom: 40px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #ffffff;
+}
+
+.mariage-section4__body__title span {
+	color: #db355d;
+}
+
+.mariage-section4__body__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.mariage-section5 {
+	padding: 40px 10px 170px 94px;
+	background: url('../img/mariage-section5.png') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.mariage-section5__item {
+	position: relative;
+	width: 642px;
+	height: 632px;
+	background: rgba(255,255,255,0.67);
+	border-radius: 50%;
+}
+
+.mariage-section5__item__body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 489px;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.mariage-section5__item__title {
+	margin-bottom: 15px;
+	font-size: 30px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 40.09px;
+	color: #000000;
+}
+
+.mariage-section5__item__title span {
+	color: #db355d;
+}
+
+.mariage-section5__item__text {
+	font-size: 18px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.mariage-section6 {
+	position: relative;
+	background-color: #ffffff;
+	background-image: linear-gradient(-35deg, rgba(219, 53, 93, 0.6) 0%, rgba(243, 188, 202, 0.6) 100%);
+}
+
+.mariage-section6__body {
+	max-width: 55%;
+	padding: 49px 20px 45px 137px;
+	text-align: center;
+}
+
+.mariage-section6__body__title {
+	margin-bottom: 40px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+}
+
+.mariage-section6__body__title span {
+	color: #db355d;
+}
+
+.mariage-section6__body__text {
+	font-size: 18px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	line-height: 30px;
+	color: #000000;
+}
+
+.mariage-section6__body__text p:last-child {
+	margin-bottom: 0;
+}
+
+.mariage-section6__img {
+	position: absolute;
+	top: -227px;
+	right: 0;
+	bottom: -208px;
+	width: 645px;
+	height: 870px;
+}
+
+.mariage-section6__img img {
+	max-width: 100%;
+}
+
+.mariage-section7 {
+	padding: 169px 0 165px;
+	background: url('../img/mariage-section7.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.mariage-section7__item {
+	max-width: 80%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 39px 50px 21px;
+	text-align: center;
+	background: rgba(255,255,255,0.9);
+}
+
+.mariage-section7__item__title {
+	margin-bottom: 20px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+}
+
+.mariage-section7__item__title span {
+	color: #db355d;
+}
+
+.mariage-section7__item__subtitle {
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	line-height: 30px;
+	color: #000000;
+}
+
+.mariage-section7__item__title__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.mariage-section8 {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	background: url('../img/mariage-section8.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.mariage-section8__left {
+	position: absolute;
+	top: -30px;
+	left: 110px;
+	width: 476px;
+	height: 543px;
+	background: url('../img/mariage-section8__left.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.mariage-section8__left__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 330px;
+	transform: translate(-50%,-50%) rotate(-6deg);
+	font-size: 22px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 29.68px;
+	color: #000000;
+}
+
+.mariage-section8__left__text span {
+	color: #db355d;
+}
+
+.mariage-section8__right {
+	max-width: 30%;
+	padding: 405px 97px 68px 10px;
+	text-align: right;
+}
+
+.mariage-section8__right__title {
+	margin-bottom: 40px;
+	font-size: 31px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 40.87px;
+	color: #000000;
+}
+
+.mariage-section8__right__title span {
+	color: #db355d;
+}
+
+.mariage-section8__right__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.anniversaire-section1.mariage-section1 {
+	padding-right: 80px;
+	background: url('../img/anniversaire-section1.jpg') 50% 50% no-repeat;
+	background-size: cover;
+}
+
+.anniversaire-section1.mariage-section1 .mariage-section1__body {
+	max-width: 60%;
+	padding: 39px 30px 40px;
+	background: rgba(255,255,255,0.67);
+}
+
+.anniversaire-section2 {
+	margin-top: -257px;
+	padding-top: 242px;
+	padding-bottom: 78px;
+	background: url('../img/anniversaire-section2.png') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.anniversaire-section2__item {
+	padding-left: 71px;
+	max-width: 32%;
+}
+
+.anniversaire-section2__title {
+	margin-bottom: 30px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+}
+
+.anniversaire-section2__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.anniversaire-section2__text h2 {
+	margin: 30px 0;
+	font-family: Cirqua;
+}
+
+.anniversaire-section2__title span,
+.anniversaire-section2__text span {
+	color: #db355d;
+}
+
+.anniversaire-section3 {
+	background-color: #db355d;
+	background-image: linear-gradient(to right, #4b0055 0%, #db355d 100%);
+}
+
+.anniversaire-section3 .mariage-section2__container {
+	margin-top: 0;
+	padding: 10px 40px 157px;
+}
+
+.anniversaire-section3 .mariage-section2__item:first-child {
+	width: 484px;
+	height: 441px;
+	margin-top: 50px;
+	background: url('../img/anniversaire-section3__img1.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(2) {
+	width: 571px;
+	height: 408px;
+	margin-top: 20px;
+	background: url('../img/anniversaire-section3__img2.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(3) {
+	width: 447px;
+	height: 471px;
+	margin-top: 15px;
+	background: url('../img/anniversaire-section3__img3.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(4) {
+	width: 332px;
+	height: 361px;
+	margin-top: 20px;
+	background: url('../img/anniversaire-section3__img4.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.anniversaire-section3 .mariage-section2__item:first-child .mariage-section2__item__text {
+	transform: translate(-43%,-77%) rotate(-14deg);
+    width: 400px;
+	font-size: 21px;
+	font-family: Cirqua;
+	font-weight: 400;
+    color: #ffffff;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(2) .mariage-section2__item__text {
+	transform: translate(-49%,-40%) rotate(8deg);
+    width: 390px;
+	font-size: 21px;
+	font-family: Cirqua;
+	font-weight: 400;
+    color: #ffffff;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(3) .mariage-section2__item__text {
+	transform: translate(-50%,-76%) rotate(-14deg);
+    width: 303px;
+	font-size: 25px;
+	line-height: 30px;
+	font-family: Cirqua;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(4) .mariage-section2__item__text {
+	transform: translate(-50%,-50%) rotate(5deg);
+    width: 244px;
+	font-size: 23px;
+	font-family: Cirqua;
+	font-weight: 400;
+    color: #ffffff;
+}
+
+.anniversaire-section3 .mariage-section2__item .mariage-section2__item__text span {
+	color: #00597b;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(2)::before {
+	left: 0;
+	width: 78px;
+	bottom: -219px;
+    height: 212px;
+	background: url(../img/mariage-section2__item__icon1.png) 0 0 no-repeat;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(1)::before {
+	left: 200px;
+	bottom: -157px;
+	width: 68px;
+    height: 201px;
+	background: url(../img/mariage-section2__item__icon3.png) 0 0 no-repeat;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(1)::after {
+	bottom: 128px;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(2)::after {
+    content: '';
+    position: absolute;
+	left: auto;
+	right: -26px;
+	top: auto;
+	bottom: -160px;
+    width: 218px;
+    height: 246px;
+    background: url(../img/mariage-section2__item__icon5.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(3)::before {
+    content: '';
+    position: absolute;
+	right: auto;
+	left: -374px;
+	top: -72px;
+    bottom: auto;
+    width: 512px;
+	height: 171px;
+    background: url(../img/anniversaire-section3__img5.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(3)::after {
+	left: 276px;
+	bottom: -161px;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(4)::before {
+	left: -118px;
+	top: auto;
+	bottom: -15px;
+}
+
+.anniversaire-section3 .mariage-section2__item:nth-child(4)::after {
+	left: 136px;
+	bottom: -266px;
+}
+
+.anniversaire-section4 {
+	padding: 56px 0 27px 0;
+	background: url('../img/anniversaire-section4.jpg') 0 50% no-repeat;
+	background-size: cover;
+}
+
+.anniversaire-section4__item {
+	position: relative;
+	width: 748px;
+	height: 733px;
+	margin: 0 0 0 auto;
+	background-color: rgba(255,255,255,0.67);
+	border-radius: 50%;
+	text-align: center;
+}
+
+.anniversaire-section4__item__title {
+	font-family: Cirqua;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+}
+
+.anniversaire-section4__item__title span {
+	color: #db355d;
+}
+
+.anniversaire-section4__item__text {
+	font-size: 18px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	color: #000000;
+}
+
+.anniversaire-section4__item__text span {
+	font-weight: bold;
+}
+
+.anniversaire-section4__body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 569px;
+	transform: translate(-50%,-50%);
+}
+
+.anniversaire-section5 {
+	padding: 74px 20px;
+	background-color: #00597b;
+	background-image: linear-gradient(-189deg, #350087 0%, #0082a8 100%);
+}
+
+.anniversaire-section5__text {
+	max-width: 60%;
+	margin: 0 auto;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	color: #ffffff;
+	text-align: center;
+}
+
+.anniversaire-section5__text span {
+	color: #db355d;
+}
+
+.anniversaire-section6 {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	background-color: #db355d;
+	background-image: linear-gradient(-189deg, #f3bcca 0%, #db355d 100%);
+}
+
+.anniversaire-section6__img {
+	position: relative;
+	flex: 0 0 55%;
+	max-width: 55%;
+	margin-top: -36px;
+	padding: 0 0 0 246px;
+}
+
+.anniversaire-section6__img:before {
+	content: '';
+	position: absolute;
+	top: -58px;
+	left: 0;
+	width: 465px;
+	height: 290px;
+	background: url('../img/anniversaire-section6__img1.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.anniversaire-section6__img:after {
+	content: '';
+	position: absolute;
+	bottom: -36px;
+	right: -57px;
+	width: 309px;
+	height: 310px;
+	background: url('../img/anniversaire-section6__img2.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.anniversaire-section6__body {
+	flex: 0 0 43%;
+	max-width: 43%;
+}
+
+.anniversaire-section6__body {
+	position: relative;
+	margin-left: auto;
+	padding: 228px 133px 85px 0px;
+	text-align: right;
+}
+
+.anniversaire-section6__body:before {
+	content: '';
+	position: absolute;
+	top: -55px;
+	right: 159px;
+	width: 292px;
+	height: 224px;
+	background: url('../img/anniversaire-section6__img3.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.anniversaire-section6__body__title {
+	margin-bottom: 35px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #ffffff;
+}
+
+.anniversaire-section6__body__title span {
+	color: #00597b;
+}
+
+.anniversaire-section6__body__text {
+	font-size: 24px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.anniversaire-section7 {
+	position: relative;
+	z-index: 1;
+	padding: 67px 20px 50px;
+	background-color: #db355d;
+	background-image: linear-gradient(-189deg, #f3bcca 0%, #db355d 100%);
+}
+
+.anniversaire-section7:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background: rgba(255,255,255,0.67);
+}
+
+.anniversaire-section7__item {
+	max-width: 85%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.anniversaire-section7__item__title {
+	margin-bottom: 50px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+}
+
+.anniversaire-section7__item__title span {
+	color: #db355d;
+}
+
+.anniversaire-section7__item__text {
+	font-size: 24px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.anniversaire-section8 {
+	position: relative;
+	z-index: 3;
+	background-color: #00597b;
+}
+
+.anniversaire-section8__img {
+	position: relative;
+}
+
+.anniversaire-section8__img img {
+	max-width: 75%;
+	min-height: 919px;
+	margin-top: -30px;
+}
+
+.anniversaire-section8__body {
+	position: absolute;
+	top: 85px;
+	left: 71px;
+	max-width: 32%;
+}
+
+.anniversaire-section8__body__title {
+	margin-bottom: 40px;
+	font-size: 38px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 50.2px;
+	color: #ffffff;
+}
+
+.anniversaire-section8__body__title span {
+	color: #000000;
+}
+
+.anniversaire-section8__body__text {
+	font-size: 22px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.anniversaire-section8__img__right {
+	position: absolute;
+	top: -85px;
+	right: 0;
+	z-index: 1;
+}
+
+.anniversaire-section8__img__right img {
+	max-width: 100%;
+}
+
+.anniversaire-section8__item {
+	position: absolute;
+	right: 95px;
+	bottom: 0;
+	z-index: 0;
+	width: 658px;
+	height: 661px;
+	background: url('../img/anniversaire-section8__item.png') 0 85px no-repeat;
+	background-size: 100% 100%;
+}
+
+.anniversaire-section8__item__body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 550px;
+	transform: translate(-50%,-40%) rotate(-11deg);
+}
+
+.anniversaire-section8__item__body__title {
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 36.81px;
+	color: #000000;
+}
+
+.anniversaire-section8__item__body__title span {
+	color: #db355d;
+}
+
+.anniversaire-section8__item__body__text {
+	font-size: 20px;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	color: #000000;
+}
+
+.animation-section1 {
+	padding: 124px 0 205px;
+	background: url('../img/animation-section1.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.animation-section1__title {
+	margin-bottom: 143px;
+	font-size: 60px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 36px;
+	color: #ffffff;
+	text-shadow: -1px 0 4px #000000;
+}
+
+.animation-section1__item {
+	padding: 27px 0 36px;
+	background-color: rgba(79,99,126,0.59);
+}
+
+.animation-section1__text {
+	max-width: 70%;
+	margin: 0 auto;
+	font-size: 24px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 39.05px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.animation-section1__text p:last-child {
+	margin-bottom: 0;
+}
+
+.animation-section1__text span {
+	color: #f39e07;
+}
+
+.animation-section2 {
+	padding-bottom: 100px;
+	background: url('../img/animation-section2.png') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.animation-section2__items {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -75px;
+}
+
+.animation-section2__col {
+	flex: 0 0 33.3%;
+	max-width: 33.3%;
+	padding: 0 0 0 75px;
+}
+
+.animation-section2__item {
+	width: 495px;
+	height: 495px;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.67);
+	border-radius: 50%;
+	text-align: center;
+}
+
+.animation-section2__col:nth-child(1) .animation-section2__item {
+	margin-top: -66px;
+	padding: 31px 68px 99px 66px;
+}
+
+.animation-section2__col:nth-child(2) .animation-section2__item {
+	width: 556px;
+	height: 556px;
+	margin-top: -66px;
+	padding: 31px 67px 76px 67px;
+}
+
+.animation-section2__col:nth-child(3) .animation-section2__item {
+	width: 512px;
+	height: 512px;
+	padding: 45px 38px 79px 52px;
+}
+
+.animation-section2__col .animation-section2__img img {
+	max-width: 100%;
+}
+
+.animation-section2__col:nth-child(1) .animation-section2__img {
+	margin-bottom: 16px;
+}
+
+.animation-section2__col:nth-child(2) .animation-section2__img {
+	margin-bottom: 30px;
+}
+
+.animation-section2__col:nth-child(3) .animation-section2__img {
+	margin-bottom: 52px;
+}
+
+.animation-section2__col .animation-section2__text {
+	font-size: 18px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 30px;
+	color: #000000;
+}
+
+.animation-section2__col .animation-section2__text span {
+	font-weight: bold;
+}
+
+.animation-section2__col .animation-section2__text .animation-section2__title {
+	display: block;
+	margin-bottom: 25px;
+	font-family: Cirqua;
+	font-size: 36px;
+	font-weight: 400;
+	color: #e80216;
+}
+
+.animation-section2__col .animation-section2__text .animation-section2__color {
+	font-size: 30px;
+	font-family: Cirqua;
+	font-weight: 400;
+	color: #e80216;
+}
+
+.animation-section3__container {
+    position: relative;
+    z-index: 2;
+	margin: -258px 0 0;
+	padding-top: 180px;
+	padding-bottom: 188px;
+    background: url(../img/animation-section3.png) 50% 0 no-repeat;
+    background-size: cover;
+}
+
+.animation-section3__container .container {
+	display: flex;
+}
+
+.animation-section3__item:first-child {
+	margin-top: -100px;
+}
+
+.animation-section3__item {
+	flex: 0 0 33.3%;
+	max-width: 100%;
+}
+
+.animation-section3__item img {
+	max-width: 100%;
+}
+
+.animation-section3__head-title {
+	margin-bottom: 40px;
+	padding: 35px 25px 30px 40px;
+	font-size: 36px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+	background: url('../img/animation-section3__head-title.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.animation-section3__head-title span {
+	display: inline-block;
+	vertical-align: top;
+	transform: rotate(1deg);
+}
+
+.animation-section3__head-title span.animation-section3__item__color {
+	display: inline;
+	color: #f39e07;
+}
+
+.animation-section3__item:first-child {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 36px;
+}
+
+.animation-section3__img {
+	margin-top: auto;
+}
+
+.animation-section3__text {
+	padding: 0 20px;
+	font-size: 18px;
+	font-family: Cirqua;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.animation-section3__text p:last-child {
+	margin-bottom: 0;
+}
+
+.animation-section3__text span {
+	color: #f39e07;
+}
+
+.animation-section3__title {
+	margin-bottom: 25px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 24px;
+	color: #ffffff;
+}
+
+.animation-section3__title span {
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.animation-section4 {
+	background: url('../img/animation-section4.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.animation-section4__container {
+	position: relative;
+	margin-top: -200px;
+	display: flex;
+	justify-content: space-between;
+	padding: 85px 50px 83px;
+	margin-bottom: -45px;
+}
+
+.animation-section4__item {
+	text-align: center;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 67%);
+}
+
+.animation-section4__item:first-child {
+	width: 602px;
+	height: 602px;
+	padding: 26px 80px 57px;
+}
+
+.animation-section4__item:nth-child(2) {
+	margin-top: 126px;
+	width: 502px;
+	height: 502px;
+	padding: 32px 50px 54px;
+}
+
+.animation-section4__img {
+	margin-bottom: 30px;
+}
+
+.animation-section4__text {
+	font-size: 18px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 30px;
+	color: #000000;
+}
+
+.animation-section4__text span {
+	font-weight: bold;
+}
+
+.animation-section4__text span.section-4__color {
+	font-size: 30px;
+	font-family: Cirqua;
+	font-weight: 400;
+	color: #fa1934;
+}
+
+.contact-section1 {
+	padding: 50px 0 80px;
+	background: url('../img/contact-section1.jpg') 50% 0 no-repeat;
+	background-size: cover;
+}
+
+.contact-section1__container {
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+.contact-section1__head-title {
+	margin-bottom: 5px;
+	font-size: 60px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 72px;
+	color: #fffefe;
+	text-shadow: 0 3px 9px #000000;
+	text-align: center;
+}
+
+.contact-section1__form {
+	text-align: center;
+}
+
+.contact-section1__top,
+.contact-section1__top {
+	text-align: left;
+}
+
+.contact-section1__top {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.contact-section1__top .contact-section1__label {
+	position: relative;
+	flex: 0 0 388px;
+	max-width: 388px;
+	margin-bottom: 30px;
+}
+
+.contact-section1__top .contact-section1__icon {
+	position: absolute;
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section1__top .contact-section1__label:nth-child(odd) .contact-section1__icon {
+	right: 0;
+}
+
+.contact-section1__top .contact-section1__label:nth-child(even) .contact-section1__icon {
+	left: 0;
+}
+
+.contact-section1__top .contact-section1__label:nth-child(odd) {
+	padding-right: 55px;
+}
+
+.contact-section1__top .contact-section1__label:nth-child(even) {
+	padding-left: 55px;
+}
+
+.contact-section1__top .contact-section1__input {
+	width: 100%;
+	height: 48px;
+	padding: 0 10px;
+	font-size: 18px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	color: #000000;
+	border: 2px solid #000000;
+	border-radius: 5px;
+	outline: none;
+}
+
+.contact-section1__bot .contact-section1__label {
+	display: block;
+	max-width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.contact-section1__bot .contact-section1__title,
+.contact-section1__icon {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.contact-section1__bot {
+	text-align: center;
+}
+
+.contact-section1__bot .contact-section1__icon {
+	width: 39px;
+	height: 38px;
+	opacity: 0.6;
+}
+
+.contact-section1__bot .contact-section1__textarea {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 200px;
+	padding: 0 10px;
+	font-size: 18px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	color: #000000;
+	border: 2px solid #000000;
+	border-radius: 5px;
+	outline: none;
+}
+
+.contact-section1__title {
+	display: block;
+	font-size: 18px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 25px;
+	color: #fffefe;
+}
+
+.contact-section1__button {
+	width: 115px;
+	height: 115px;
+	margin: 0 auto;
+	font-family: Cirqua;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 66.4px;
+	color: #000000;
+	text-transform: uppercase;
+	border: 2px solid #000000;
+	background-color: #ffffff;
+	border-radius: 50%;
+	outline: none;
+	transition: background-color 0.3s;
+}
+
+.contact-section1__button:hover,
+.contact-section1__button:active,
+.contact-section1__button:focus {
+	background-color: rgba(255, 255, 255, 67%);
+}
+
+.header .menu li {
+	position: relative;
+}
+
+.header .menu li .menu-level2 {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 180px;
+	margin: 10px 0 0 !important;
+	padding: 10px 0;
+	list-style: none;
+	box-shadow: 0px 2px 3px 0px #bd3580;
+	background: #ffffff;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.header .menu li .menu-level2:before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 0;
+	right: 0;
+	height: 10px;
+	border-top: 10px solid transparent;
+}
+
+.header .menu li:hover .menu-level2 {
+	opacity: 1;
+	visibility: visible;
+}
+
+.header .menu li .menu-level2 li {
+	float: none;
+	margin-bottom: 5px;
+}
+
+.menu-level2 li a {
+	margin: 0;
+}
+
+body.particuliers1 .particuliers1-section1 {
+	padding: 80px 0;
+}
+
+.particuliers1-section1 {
+	position: relative;
+	z-index: 2;
+	min-height: 100%;
+	padding: 100px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url('../img/particuliers1-section1.jpg') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.particuliers1-section1:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: -1px;
+	z-index: -1;
+	background-color: rgba(57,19,59,0.8);
+}
+
+.particuliers1-section1__container {
+	max-width: 52%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 31px 79px 32px;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+
+.particuliers1-section1__title {
+	margin-bottom: 20px;
+	font-size: 40px;
+	font-family: "Open Sans";
+	font-weight: 600;
+	line-height: 40px;
+	color: #000000;
+}
+
+.particuliers1-section1__subtitle {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 48px;
+	color: #000000;
+}
+
+.particuliers1-section1__bot {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.particuliers1-section1__button {
+	width: 380px;
+	height: 92px;
+	margin: 0 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 72px;
+	text-transform: uppercase;
+	color: #000000;
+	border-radius: 10px;
+	border: 1px solid #4b0055;
+	cursor: pointer;
+	background-color: #ffffff;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.particuliers1-section1__button:hover {
+	color: #000000;
+    background-color: #eac5e8;
+    -webkit-transform: scale(1.03) !important;
+    -ms-transform: scale(1.03) !important;
+    -o-transform: scale(1.03) !important;
+    transform: scale(1.03) !important;
+}
+
+.particuliers1-section1__button:active,
+.particuliers1-section1__button:focus {
+	color: #000000;
+	background-color: #ca2e81;
+	-webkit-transform: scale(1.03) !important;
+    -ms-transform: scale(1.03) !important;
+    -o-transform: scale(1.03) !important;
+    transform: scale(1.03) !important;
+}
+/* 
+.particuliers1-section1__button--left {
+	background-color: #ffffff;
+}
+
+.particuliers1-section1__button--right {
+	background-color: #ea3d9a;
+}
+
+.particuliers1-section1__button--left:hover,
+.particuliers1-section1__button--left:active,
+.particuliers1-section1__button--left:focus {
+	color: #000000;
+    background-color: #eac5e8;
+    -webkit-transform: scale(1.03) !important;
+    -ms-transform: scale(1.03) !important;
+    -o-transform: scale(1.03) !important;
+    transform: scale(1.03) !important;
+}
+
+.particuliers1-section1__button--right:hover,
+.particuliers1-section1__button--right:active,
+.particuliers1-section1__button--right:focus {
+	color: #000000;
+	background-color: #ca2e81;
+	-webkit-transform: scale(1.03) !important;
+    -ms-transform: scale(1.03) !important;
+    -o-transform: scale(1.03) !important;
+    transform: scale(1.03) !important;
+} */
+
+.particuliers2-section1 {
+	position: relative;
+	z-index: 2;
+	padding: 10px 45px 40px;
+	background: url('../img/particuliers1-section1.jpg') 50% 0 no-repeat;
+    background-size: cover;
+}
+
+.particuliers2-section1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: -1px;
+    z-index: -1;
+    background-color: rgba(57,19,59,0.8);
+}
+
+.particuliers2-section1__items {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -120px;
+}
+
+.particuliers2-section1__col {
+	flex: 0 0 33.3%;
+	max-width: 33.3%;
+	padding: 0 0 0 120px;
+}
+
+.particuliers2-section11 .particuliers2-section1__col:nth-child(1) .particuliers2-section1__price span {
+	transform: rotate(10deg) translate(0, -2px);
+}
+
+.particuliers2-section1__col:nth-child(2) .particuliers2-section1__price span {
+	transform: rotate(9deg) translate(0, -2px);
+}
+
+.particuliers2-section1__col:nth-child(3) .particuliers2-section1__price span {
+	transform: rotate(9deg) translate(0, -2px);
+}
+
+.particuliers2-section1__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.particuliers2-section1__title {
+	display: inline-block;
+	vertical-align: top;
+	padding: 36px 25px;
+	font-size: 40px;
+	font-family: Cirqua;
+	font-weight: 400;
+	line-height: 15.61px;
+	color: #ffffff;
+	background: url('../img/particuliers2-section1__title.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.particuliers2-section1__title span {
+	display: block;
+	transform: rotate(-8deg);
+}
+
+.particuliers2-section1__price {
+	display: inline-block;
+	vertical-align: top;
+/*	margin-bottom: 30px;*/
+	padding: 40px 35px;
+	font-size: 39px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 21.04px;
+	color: #ffffff;
+	background: url('../img/particuliers2-section1__price.png') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.particuliers2-section1__price span {
+	display: block;
+	transform: rotate(4deg) translate(0, -4px);
+}
+
+.particuliers2-section1__img {
+	margin-bottom: 40px;
+}
+
+.particuliers2-section1__img img {
+	max-width: 100%;
+}
+
+.particuliers2-section1__button {
+	max-width: 326px;
+	width: 100%;
+	padding: 18px 20px;
+	font-family: "Open Sans";
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #000000;
+	border-radius: 10px;
+	border: 1px solid #000;
+	background-color: #ffffff;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.particuliers2-section1__button:hover {
+	color: #000000;
+	background-color: #eac5e8;
+	-webkit-transform: scale(1.03) !important;
+    -ms-transform: scale(1.03) !important;
+    -o-transform: scale(1.03) !important;
+    transform: scale(1.03) !important;
+}
+
+.particuliers2-section1__button:focus,
+.particuliers2-section1__button:active {
+	color: #000000;
+	background-color: #ca2e81;
+	-webkit-transform: scale(1.03) !important;
+    -ms-transform: scale(1.03) !important;
+    -o-transform: scale(1.03) !important;
+    transform: scale(1.03) !important;
+}
+
+.particuliers3-section1 {
+	position: relative;
+	z-index: 2;
+	padding: 35px 45px 40px;
+	background: url('../img/particuliers1-section1.jpg') 50% 0 no-repeat;
+    background-size: cover;
+}
+
+.particuliers3-section1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: -1px;
+    z-index: -1;
+    background-color: rgba(57,19,59,0.8);
+}
+
+.particuliers3-section1__items {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -190px;
+}
+
+.particuliers3-section1__col-left {
+	flex: 1 0 60%;
+	max-width: 60%;
+	padding-left: 190px;
+	position: relative;
+	z-index: 5;
+}
+
+.particuliers3-section1__col-right {
+	position: relative;
+	z-index: 5;
+	flex: 0 0 40%;
+	max-width: 40%;
+	padding-left: 190px;
+}
+
+.particuliers3-section1__left-item__body {
+	position: relative;
+	min-height: 768px;
+	padding: 34px 29px 31px 40px;
+	border-radius: 10px;
+	border: 1px solid #8560a8;
+	background-color: #ffffff;
+	/* position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%; */
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}
+
+.particuliers3-section1__left-item__body.active {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+.particuliers3-section1__col-right__item {
+	border-radius: 10px;
+	background-color: #ffffff;
+	height: 100%;
+}
+
+.particuliers3-section1__left-item {
+	padding-right: 50px;
+}
+
+.particuliers3-section1__left-item__head-title {
+	cursor: pointer;
+}
+
+.particuliers3-section1__left-item__head-titles {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 100%;
+	width: 50px;
+	margin-left: -62px;
+}
+
+.particuliers3-section1__left-item__head-title:first-child {
+	position: absolute;
+    top: 0;
+	left: 0;
+	width: 50px;
+	height: 146px;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+
+.particuliers3-section1__left-item__head-title:nth-child(2) {
+	position: absolute;
+    top: 19%;
+	left: 0;
+	width: 50px;
+	height: 121px;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+
+.particuliers3-section1.entreprises-section1 .particuliers3-section1__left-item__head-title:nth-child(2) {
+	height: 151px;
+}
+
+.particuliers3-section1__left-item__head-title:nth-child(3) {
+	position: absolute;
+    top: 35%;
+	left: 0;
+	width: 50px;
+	height: 147px;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+
+.particuliers3-section1__left-item__head-title:nth-child(4) {
+	position: absolute;
+    top: 54%;
+	left: 0;
+	width: 50px;
+	height: 182px;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+
+.particuliers3-section1__left-item__head-title.active {
+	background-color: #ea3d9a;
+}
+
+.particuliers3-section1.entreprises-section1 .particuliers3-section1__left-item__head-title.active  {
+	/*background: #48d5ff;*/
+}
+
+.particuliers3-section1__left-item__head-title span {
+    display: block;
+	transform: rotate(90deg) translate(44px,-6px);
+	font-size: 1rem;
+	font-family: "Open Sans";
+	font-weight: bold;
+	line-height: 1rem;
+	color: #000000;
+}
+
+.particuliers3-section1__left-item__body__head-title {
+	margin-bottom: 30px;
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: 600;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #000000;
+	text-align: center;
+}
+
+.particuliers3-section1__left-item__body__row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.particuliers3-section1__left-item__body__row:last-child {
+	margin-bottom: 0;
+	justify-content: flex-end;
+}
+
+/* .particuliers3-section1__left-item__body__row:not(.particuliers3-section1__left-item__body__row:first-child) {
+	display: flex;
+	align-items: center;
+} */
+
+.particuliers3-section1__left-item__body__item {
+	padding-right: 31px;
+}
+
+.particuliers3-section1__left-item__body__title {
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: 600;
+	line-height: 48px;
+	color: #000000;
+}
+
+.particuliers3-section1__left-item__body__input {
+	display: flex;
+	align-items: center;
+	width: 387px;
+	height: 71px;
+	padding: 0 30px;
+	border-radius: 10px;
+	border: 1px solid #4b0055;
+	outline: none;
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 48px;
+	color: #ea3d9a;
+	transition: color 0.3s, background 0.3s;
+}
+
+.particuliers3-section1__left-item__body__left__a.particuliers3-section1__left-item__body__input {
+	width: 387px;
+}
+
+.particuliers3-section1__left-item__body__left__a.particuliers3-section1__left-item__body__input input {
+	position: relative;
+	width: 387px;
+	max-width: 387px;
+	opacity: 1;
+	height: auto;
+	border: none;
+	outline: none;
+}
+
+/* 
+.particuliers3-section1__left-item__body__input:hover,
+.particuliers3-section1__left-item__body__input:active,
+.particuliers3-section1__left-item__body__input:focus {
+	color: #ffffff;
+    background: #ea3d9a;
+} */
+
+.particuliers3-section1__left-item__body__button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 6px 74px 8px 0;
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 48px;
+	text-transform: uppercase;
+	color: #000000;
+	transition: text-decoration 0.3s;
+}
+
+.particuliers3-section1__left-item__body__button:hover,
+.particuliers3-section1__left-item__body__button:active,
+.particuliers3-section1__left-item__body__button:focus {
+	color: #000000;
+}
+
+.particuliers3-section1__left-item__body__button:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 62px;
+	height: 62px;
+	background: url('../img/particuliers3-section1__left-item__body__button.png') 50% 50% no-repeat;
+	background-size: cover;
+}
+
+/* .particuliers3-section1__col-right {
+	position: relative;
+	z-index: 5;
+} */
+
+.particuliers3-section1__col-right__item {
+	padding: 29px 37px;
+}
+
+.particuliers3-section1__col-right__head-title {
+	margin-bottom: 57px;
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: bold;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #000000;
+	text-align: center;
+}
+
+.particuliers3-section1__col-right__body {
+	margin-bottom: 62px;
+}
+
+.particuliers3-section1__col-right__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.particuliers3-section1__col-right__body__title {
+	max-width: 60%;
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: 600;
+	line-height: 25px;
+	color: #000000;
+}
+
+.particuliers3-section1__col-right__body__value {
+	max-width: 40%;
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 25px;
+	color: #ea3d9a;
+}
+
+.particuliers3-section1__col-right__body__button {
+	max-width: 224px;
+	display: flex;
+	align-items: center;
+	padding: 30px;
+	font-size: 40px;
+	font-family: "Open Sans";
+	font-weight: 600;
+	line-height: 40px;
+	color: #000000;
+	border-radius: 10px;
+	border: 1px solid #4b0055;
+	transition: background 0.3s;
+}
+
+.particuliers3-section1__col-right__body__button:hover,
+.particuliers3-section1__col-right__body__button:focus,
+.particuliers3-section1__col-right__body__button:active {
+	color: #000000;
+	background: #e3b3e9;
+}
+
+.particuliers3-section1__left-item__body__row.options {
+	flex-wrap: wrap;
+	margin-left: -52px;
+}
+
+.particuliers3-section1__left-item__body__left,
+.particuliers3-section1__left-item__body__right {
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding: 0 0 0 52px;
+}
+
+.particuliers3-section1__left-item__body__right {
+	font-size: 22px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 40px;
+	color: #000000;
+}
+
+.particuliers3-section1__left-item__body__right > div {
+	display: none;
+}
+
+.particuliers3-section1__left-item__body__left__a,
+.particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a:last-child {
+	position: relative;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 399px;
+	width: 100%;
+	margin: 0 0 43px;
+	height: 52px;
+	padding: 0 20px;
+	border: 1px solid #4b0055;
+	border-radius: 10px;
+	background: transparent;
+	transition: background-color 0.3s;
+	cursor: pointer;
+}
+
+.particuliers3-section1__left-item__body__left__a input ~ .text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 399px;
+	width: 100%;
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 25px;
+	color: #ea3d9a;
+}
+
+.particuliers3-section1__left-item__body__left__a input:checked ~ .text {
+	color: #ffffff;
+}
+
+.particuliers3-section1__left-item__body__left__a .checkmark {
+	display: none;
+}
+
+/* .particuliers3-section1__left-item__body__left__a:hover,
+.particuliers3-section1__left-item__body__left__a:active,
+.particuliers3-section1__left-item__body__left__a:focus,
+.particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a:last-child:hover,
+.particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a:last-child:active,
+.particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a:last-child:focus {
+	color: #ffffff;
+	background-color: #ea3d9a;
+} */
+
+.particuliers3-section1__left-item__body__left__a input,
+.particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a:last-child input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.particuliers3-section1__left-item__body__left__a input:hover input ~ .checkmark,
+.particuliers3-section1__left-item__body__left__a input:checked ~ .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	z-index: -2;
+	color: #ffffff;
+	border-radius: 10px;
+	background-color: #ea3d9a;
+	display: block;
+}
+
+/* 
+.particuliers3-section1__left-item__body__left__a:nth-child(even),
+.particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a {
+	color: #ea3d9a;
+	border-radius: 10px;
+	border: 1px solid #4b0055;
+	background: transparent;
+} */
+
+/* .particuliers3-section1__left-item__body__left__a:nth-child(even):hover,
+.particuliers3-section1__left-item__body__left__a:nth-child(even):active,
+.particuliers3-section1__left-item__body__left__a:nth-child(even):focus,
+.particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a:hover,
+.particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a:active,
+.particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a:focus {
+	color: #ffffff;
+	background-color: #ea3d9a;
+} */
+
+.particuliers3-section1__left-item__body__left__a span {
+	display: inline-block;
+	margin-left: 10px;
+	color: #000000;
+}
+
+.particuliers3-section1__left-item__body.informations input {
+	width: 100%;
+	height: 71px;
+	padding: 0 20px;
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 48px;
+	color: #949494;
+	border-radius: 10px;
+	border: 1px solid #4b0055;
+	background-color: #ffffff;
+	outline: none;
+}
+
+.particuliers3-section1__left-item__body.informations textarea {
+	width: 100%;
+	padding: 0 20px;
+	font-size: 25px;
+	font-family: "Open Sans";
+	font-weight: 400;
+	line-height: 48px;
+	color: #949494;
+	border-radius: 10px;
+	border: 1px solid #4b0055;
+	background-color: #ffffff;
+	outline: none;
+}
+
+.particuliers3-section1__left-item__body.informations .particuliers3-section1__left-item__body__row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -70px;
+}
+
+.particuliers3-section1__left-item__body.informations .particuliers3-section1__left-item__body__row .coll {
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding: 0 0 0 70px;
+}
+
+.particuliers3-section1__col-right__body__value {
+	text-align: right;
+}
+
+.particuliers3-section1__col-right__body__button.right {
+	max-width: 260px;
+	color: #fff;
+	background: #82ca9c;
+}
+
+.particuliers3-section1__col-right__body__button.right:hover,
+.particuliers3-section1__col-right__body__button.right:active,
+.particuliers3-section1__col-right__body__button.right:focus {
+	background: #548666;
+}
+
+.particuliers3-section1__col-right__item .particuliers3-section1__col-right__row {
+	flex-wrap: wrap;
+}
+
+.condition {
+	width: 100%;
+	margin: 0 auto;
+	padding: 41px 60px 80px 80px;
+}
+.condition__container {
+	max-width: 1778px;
+	margin: 0 auto;
+	box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.84);
+	padding: 64px 35px 65px 50px;
+}
+.condition__title {
+	text-align: center;
+	color: #4d0f5a;
+	font-family: "Arial Narrow";
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 60px;
+}
+.condition__subtitle {
+	color: #ff00d8;
+	font-family: "Arial Narrow";
+	font-size: 36px;
+	font-weight: 400;
+	margin-top: 60px;
+}
+.condition__text{
+	color: #4d0f5a;
+	font-family: "Arial Narrow";
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 48px;
+}
+
+
+@media (max-width: 1919px) {
+	.animation-section2 {
+		padding: 0 20px 100px;
+	}
+
+	.location-section2__left {
+		margin-top: -310px;
+		padding: 100px 230px 366px 100px;
+	}
+
+	.evenement-section5 {
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.evenement-section5::-webkit-scrollbar {
+		background-color:#fff;
+		width:16px
+	}
+
+	.evenement-section5::-webkit-scrollbar-track {
+		background-color:#fff
+	}
+	
+	/* scrollbar itself */
+	.evenement-section5::-webkit-scrollbar-thumb {
+		background-color:#d90746;
+		border-radius:16px;
+		border:4px solid #fff
+	}
+
+	.evenement-section5__container  {
+		width: 1850px;
+		display: block;
+	}
+
+	.anniversaire-section2 {
+		margin-top: -347px;
+		padding-top: 282px;
+	}
+}
+
+@media (max-width: 1799px) {
+	.particuliers3-section1__col-right__body__button {
+		font-size: 35px;
+		line-height: 35px;
+	}
+
+	.particuliers3-section1__items {
+		margin-left: -50px;
+	}
+
+	.particuliers3-section1__col-right,
+	.particuliers3-section1__col-left {
+		padding-left: 50px;
+	}
+
+	.particuliers1-section1__container {
+		max-width: 80%;
+	}
+
+	.contact-section1__container {
+		max-width: 60%;
+	}
+	
+	.animation-section2 .animation-section2__col .animation-section2__item {
+		width: 100%;
+		height: 100%;
+	}
+
+	.animation-section2__items {
+		margin-left: -40px;
+	}
+
+	.animation-section2__col {
+		padding-left: 40px;
+	}
+
+	.animation-section2 .animation-section2__col .animation-section2__img {
+		margin-bottom: 20px;
+	}
+	
+	.animation-section2__col .animation-section2__img img {
+		max-width: 50px;
+	}
+
+	.animation-section2__col .animation-section2__text {
+		font-size: 16px;
+		line-height: 25px;
+	}
+
+	.anniversaire-section6__img {
+		padding-left: 50px;
+	}
+
+	.anniversaire-section6__body {
+		padding-right: 50px;
+	}
+	
+	.mariage-section4__item {
+		align-items: center;
+	}
+
+	.mariage-section3__text:nth-child(1) {
+		padding: 27px 100px 32px 20px;
+		text-align: right;
+	}
+
+	.mariage-section3__img:nth-child(5) {
+		right: 0;
+	}
+
+	.mariage-section3__img:nth-child(4) {
+		left: 0;
+	}
+
+	.mariage-section2__item:first-child .mariage-section2__item__text,
+	.anniversaire-section3 .mariage-section2__item:first-child .mariage-section2__item__text {
+		transform: translate(-50%,-100%) rotate(-8deg);
+		width: 340px;
+		font-size: 19px;
+		line-height: 25px;
+	}
+
+	.mariage-section2__item:nth-child(2) .mariage-section2__item__text,
+	.anniversaire-section3 .mariage-section2__item:nth-child(2) .mariage-section2__item__text {
+		font-size: 19px;
+		line-height: 25px;
+		width: 350px;
+	}
+
+	.mariage-section2__item:nth-child(3) .mariage-section2__item__text,
+	.anniversaire-section3 .mariage-section2__item:nth-child(3) .mariage-section2__item__text {
+		font-size: 19px;
+		line-height: 25px;
+		width: 212px;
+	}
+
+	.mariage-section2__item:nth-child(4) .mariage-section2__item__text,
+	.anniversaire-section3 .mariage-section2__item:nth-child(4) .mariage-section2__item__text {
+		font-size: 19px;
+		line-height: 25px;
+		width: 282px;
+	}
+
+	.anniversaire-section3 .mariage-section2__container {
+		padding: 10px 10px 157px;
+	}
+
+	.mariage-section2__item:nth-child(2)::after,
+	.anniversaire-section3 .mariage-section2__item:nth-child(3)::before {
+		width: 360px;
+		height: 117px;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(4) .mariage-section2__item__text {
+		width: 200px;
+	}
+
+	.location-section6__items {
+		flex-wrap: wrap;
+		margin-left: -20px;
+	}
+
+	.location-section6__left,
+	.location-section6__icons {
+		flex: 0 0 25%;
+		max-width: 25%;
+		padding-left: 20px;
+	}
+
+	.location-section6__pictures {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding-left: 20px;
+	}
+
+	.location-section6__pictures img,
+	.location-section6__icons img {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 1740px) {
+	.location-section2__left {
+		margin-top: -230px;
+		padding: 50px 230px 366px 50px;
+	}
+
+	.location-section2__right {
+		padding: 50px 50px 30px 0;
+	}
+
+	.evenement-section3__item:nth-child(1) {
+		left: 6%;
+		top: -15%;
+	}
+
+	.evenement-section3__item:nth-child(4) {
+		right: 100px;
+	}
+}
+
+@media (max-width: 1739px) {
+	.location-section2__left {
+		margin-top: -190px;
+		padding: 50px 80px 357px 50px;
+	}
+
+	.location-section1 {
+		padding-top: 54px;
+		padding-bottom: 160px;
+	}
+
+	.location-section1__title {
+		margin: 0 0 55px 120px;
+	}
+
+	.location-section4__text {
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.location-section4__head-title span {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	.location-section4__title span {
+		font-size: 45px;
+		line-height: 45px;
+	}
+
+	.location-section4__head-title,
+	.location-section4__title {
+		padding: 40px;
+	}
+
+	.location-section5__container {
+		margin-top: -260px;
+		padding-top: 190px;
+	}
+
+	.location-section5:before {
+		width: 478px;
+		height: 805px;
+	}
+
+	.location-section7__text {
+		margin: 0 50px;
+	}
+
+	.location-section8__text {
+		padding: 50px;
+	}
+
+	.evenement-section3__item:nth-child(1) {
+		left: 0%;
+		top: -15%;
+	}
+
+	.evenement-section3__item:nth-child(4) {
+		right: 0;
+	}
+
+	.evenement-section3__item:nth-child(3) {
+		left: 0;
+	}
+
+	.mariage-section6__body {
+		padding-left: 50px;
+	}
+
+	.mariage-section6__img {
+		width: 575px;
+		height: auto;
+	}
+
+	.anniversaire-section2__item {
+		max-width: 40%;
+	}
+
+	.anniversaire-section2 {
+		margin-top: -397px;
+		padding-top: 332px;
+	}
+
+	.anniversaire-section6__img {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.anniversaire-section6__img img {
+		max-width: 100%;
+	}
+
+	.anniversaire-section6 {
+		align-items: center;
+	}
+	
+	.anniversaire-section6__img:before {
+		top: -80px;
+		width: 415px;
+		height: 240px;
+	}
+	
+	.animation-section1__text {
+		line-height: 30px;
+	}
+	
+	.animation-section2__items {
+		margin-left: -20px;
+	}
+
+	.animation-section2__col {
+		padding-left: 20px;
+	}
+
+	.animation-section3__head-title {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.particuliers2-section1__button {
+		max-width: 270px;
+		padding: 10px 15px;
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.particuliers2-section1__title {
+		padding: 35px 25px;
+		font-size: 40px;
+	}
+
+	.particuliers2-section1__price {
+		padding: 20px 25px;
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.particuliers3-section1__left-item__body__item {
+		padding-right: 0;
+	}
+
+	.particuliers3-section1__left-item__body__title,
+	.particuliers3-section1__col-right__body__title,
+	.particuliers3-section1__col-right__body__value,
+	.particuliers3-section1__left-item__body__input {
+		font-size: 22px;
+		line-height: 22px;
+	}
+
+	.particuliers3-section1__col-right__body__button {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	.particuliers3-section1__left-item__body__left__a {
+		height: auto;
+		padding: 20px;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+}
+
+@media (max-width: 1375px) {
+	.particuliers2-section1__title {
+		font-size: 30px;
+	}
+
+	.particuliers2-section1__price {
+		padding: 20px 25px;
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.particuliers2-section1__price span {
+		transform: rotate(5deg) translate(0, -4px);
+	}
+
+	.particuliers2-section1__button {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	.contact-section1__container {
+		max-width: 80%;
+	}
+
+	.animation-section4__img img {
+		max-width: 80px;
+	}
+
+	.animation-section4__img {
+		margin-bottom: 10px;
+	}
+
+	.animation-section4__item:nth-child(1) {
+		max-width: 50%;
+		height: 50%;
+	}
+
+	.animation-section4__text {
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	.animation-section4__item:nth-child(2) {
+		max-width: 40%;
+		height: 40%;
+	}
+
+	.animation-section2 {
+		padding: 50px 20px 100px;
+		background-image: linear-gradient(-264deg, #730082 0%, #730082 34%, #ffffff 100%);
+	}
+
+	.animation-section2__items {
+		margin-left: -60px;
+		justify-content: center;
+	}
+
+	.animation-section2__col .animation-section2__img img {
+		max-width: 100%;
+	}
+
+	.animation-section2__col {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding-left: 60px;
+	}
+
+	.animation-section2 .animation-section2__col .animation-section2__item {
+		margin-top: 0;
+	}
+
+	.anniversaire-section8__item {
+		right: 0;
+	}
+
+	.mariage-section7 {
+		padding: 90px 0;
+	}
+
+	.mariage-section8__right {
+		max-width: 50%;
+	}
+
+	.mariage-section2__item:nth-child(4)::after {
+		bottom: -110px;
+	}
+
+	.mariage-section2__item:nth-child(3)::after {
+		bottom: -240px;
+	}
+
+	.mariage-section2__item:nth-child(2)::before {
+		bottom: -188px;
+	}
+
+	.mariage-section2__item:nth-child(1)::before {
+		bottom: -132px;
+	}
+
+	.mariage-section6__body {
+		padding-left: 30px;
+		max-width: 50%;
+	}
+
+	.mariage-section4__body__title {
+		margin-bottom: 20px;
+		font-size: 29px;
+		line-height: 30px;
+	}
+
+	.mariage-section4__body__title br {
+		display: none;
+	}
+
+	.mariage-section4__item {
+		padding: 30px 0;
+	}
+
+	.mariage-section3__img:nth-child(3) {
+		width: 706px;
+		right: 0;
+	}
+
+	.mariage-section3__img:nth-child(5) {
+		width: 749px;
+	}
+
+	.mariage-section3__img:nth-child(4) {
+		width: 604px;
+	}
+
+	.mariage-section3__img:nth-child(2) {
+		width: 682px;
+	}
+
+	.mariage-section2__item:first-child {
+		width: 421px;
+		height: 352px;
+	}
+
+	.mariage-section2__item:first-child .mariage-section2__item__text {
+		width: 280px;
+	}
+
+	.mariage-section2__item:nth-child(2) {
+		width: 583px;
+		height: 330px;
+	}
+
+	.mariage-section2__item:nth-child(3) {
+		width: 274px;
+		height: 228px;
+	}
+
+	.mariage-section2__item:nth-child(3) .mariage-section2__item__text {
+		width: 162px;
+	}
+
+	.mariage-section2__item:nth-child(4)::before {
+		left: -31px;
+		top: 280px;
+		width: 96px;
+		height: 103px;
+	}
+
+	.mariage-section2__item:nth-child(3)::before {
+		width: 109px;
+		height: 139px;
+	}
+
+	.evenement-section3__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.evenement-section3__item:nth-child(1) {
+		width: 689px;
+		height: 639px;
+	}
+
+	.evenement-section3__item:nth-child(2) {
+		right: 0;
+		width: 853px;
+		height: 626px;
+	}
+
+	.evenement-section3__item:nth-child(3) {
+		bottom: -13%;
+		width: 734px;
+		height: 619px;
+	}
+
+	.evenement-section3__item:nth-child(3) .evenement-section3__text {
+		transform: rotate(-10deg) translate(-39%,-90%);
+	}
+
+	.evenement-section3__item:nth-child(4) {
+		bottom: -5%;
+		width: 650px;
+		height: 608px;
+	}
+
+	.evenement-section1__body {
+		padding: 30px 50px 30px 30px;
+	}
+
+	.location-section6__left {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.location-section2__left {
+		margin-top: -160px;
+		padding: 20px 130px 317px 30px;
+	}
+
+	.location-section2__right {
+		padding: 30px 30px 30px 0;
+	}
+
+	.location-section4__text {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.location-section4__title {
+		padding: 25px;
+	}
+
+	.location-section4__title span {
+		font-size: 35px;
+		line-height: 35px;
+	}
+
+	.location-section5__left .location-section5__body,
+	.location-section5__right .location-section5__body {
+		padding: 30px;
+	}
+
+	.evenement-section5__item:nth-child(2) .evenement-section5__item__text {
+		transform: translate(-53%,-76%) rotate(-13deg);
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.evenement-section5__item:nth-child(1) .evenement-section5__item__text,
+	.evenement-section5__item:nth-child(6) .evenement-section5__item__text,
+	.evenement-section5__item:nth-child(9) .evenement-section5__item__text,
+	.evenement-section5__item:nth-child(5) .evenement-section5__item__text,
+	.evenement-section5__item:nth-child(3) .evenement-section5__item__text {
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	.evenement-section5__item:nth-child(6) .evenement-section5__item__text {
+		transform: translate(-50%,-10%) rotate(-9deg);
+	}
+
+	.evenement-section5__item:nth-child(7) .evenement-section5__item__text,
+	.evenement-section5__item:nth-child(8) .evenement-section5__item__text,
+	.evenement-section5__item:nth-child(4) .evenement-section5__item__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.evenement-section5__item:nth-child(4) .evenement-section5__item__text {
+		transform: translate(-48%,-80%) rotate(9deg);
+	}
+
+	.anniversaire-section2 {
+		margin-top: -257px;
+		padding-top: 242px;
+		padding-bottom: 20px;
+	}
+
+	.anniversaire-section2__item {
+		max-width: 90%;
+		margin: 0 auto;
+		padding: 20px;
+		text-align: center;
+		background: rgba(255,255,255,0.87);
+	}
+}
+
+@media (max-width: 1255px) {
+	.particuliers3-section1__col-right__body__button {
+		padding: 15px;
+	}
+
+	.particuliers3-section1__left-item__body__button {
+		padding: 0 45px 0 0;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	.particuliers3-section1__left-item__body__button:before {
+		top: 50%;
+		margin-top: -17px;
+		width: 35px;
+		height: 35px;
+	}
+
+	.particuliers3-section1__left-item__body__title,
+	.particuliers3-section1__col-right__body__title,
+	.particuliers3-section1__col-right__body__value,
+	.particuliers3-section1__left-item__body__input {
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	.particuliers3-section1__left-item__body__input {
+		height: auto;
+		padding: 15px;
+	}
+
+	.particuliers3-section1__col-right__body__button {
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	.animation-section3__item:first-child {
+		margin-top: 0;
+	}
+
+	.anniversaire-section4__item {
+		margin: 0 auto;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(3)::before {
+		left: 0;
+	}
+
+	.mariage-section8__right {
+		max-width: 50%;
+	}
+
+	.mariage-section5 {
+		background: url('../img/mariage-section5.png') -30% 0 no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.mariage-section2__items {
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 30px;
+	}
+
+	.mariage-section2__item:first-child,
+	.mariage-section2__item:nth-child(2) {
+		margin-bottom: 220px;
+	}
+
+	.mariage-section2__container {
+		margin-top: -290px;
+		padding: 290px 0 112px;
+	}
+
+	.mariage-section2__item:nth-child(3) {
+		margin-top: 100px;
+	}
+
+	.mariage-section2__item:nth-child(3)::before {
+		left: -34px;
+	}
+
+	.mariage-section2__item:nth-child(4)::after {
+		bottom: -105px;
+	}
+
+	.mariage-section2__item:nth-child(4)::before {
+		top: 0;
+		left: 0;
+	}
+
+	.mariage-section2__item:nth-child(1)::before {
+		bottom: -145px;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__text {
+		transform: rotate(8deg) translate(-32%,0);
+		max-width: 310px;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__title {
+		top: 41%;
+		left: 44%;
+	}
+
+	.mariage-section2__item:nth-child(2)::after {
+		right: 60px;
+	}
+
+	.location-section2__left {
+		margin-top: -100px;
+		padding: 20px 80px 317px 30px;
+	}
+
+	.location-section9-head-title span {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	.location-section9-head-title {
+		padding: 40px;
+		margin-top: -140px;
+	}
+
+	.location-section9__title {
+		padding: 30px;
+	}
+
+	.location-section9__title span {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	.evenement-section2 {
+		background: url('../img/evenement-section2.jpg') 90% 80% no-repeat;
+	}
+
+	.evenement-section2__body__title {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.evenement-section2__body__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.mariage-section3__text:nth-child(1) {
+		padding: 20px 50px 20px 20px;
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.particuliers3-section1__items {
+		display: block;
+		margin-left: -30px;
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	.particuliers3-section1__col-right, .particuliers3-section1__col-left {
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.particuliers3-section1__left-item__head-titles {
+		margin-left: -50px;
+	}
+
+	.particuliers3-section1__left-item {
+		padding-right: 40px;
+	}
+}
+
+@media (max-width: 1140px) {
+	.anniversaire-section8__img img {
+		max-width: 100%;
+	}
+
+	.anniversaire-section8__item {
+		width: 608px;
+		height: 611px;
+	}
+
+	.anniversaire-section8__item__body {
+		width: 450px;
+	}
+
+	.anniversaire-section8__img__right {
+		top: -20px;
+		max-width: 240px;
+	}
+
+	.anniversaire-section8__item__body__text,
+	.anniversaire-section8__body__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.anniversaire-section8__body__title {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.mariage-section6__img {
+		position: absolute;
+		top: 50%;
+		margin-top: -30%;
+		width: 505px;
+	}
+
+	.location-section9__text {
+		font-size: 20px;
+		line-height: 20px;
+	}
+	
+	.location-section7 {
+		padding-top: 278px;
+	}
+
+	.location-section7__text {
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.location-section2__items {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.location-section2__left,
+	.location-section2__right {
+		flex: 0 0 100%;
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.location-section2__right {
+		padding: 30px;
+	}
+
+	.location-section2__left {
+		margin-top: 0;
+		background: none;
+		order: 1;
+		padding: 20px 30px 317px 30px;
+	}
+
+	.location-section1__body {
+		max-width: 100%;
+		padding: 30px;
+	}
+
+	.location-section1 {
+		padding-bottom: 60px;
+	}
+
+	.location-section1__title {
+		margin: 0 0 30px;
+		text-align: center;
+	}
+
+	.location-section4__items {
+		margin-left: -30px;
+	}
+
+	.location-section4__item {
+		padding: 0 0 50px 30px;
+	}
+
+	.location-section5__title {
+		margin-bottom: 10px;
+		font-size: 28px;
+		line-height: 30px;
+	}
+
+	.location-section5:before {
+		max-width: 338px;
+		width: 100%;
+		max-height: 565px;
+		height: 100%;
+	}
+
+	.location-section5__text {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.location-section8__text {
+		font-size: 28px;
+		line-height: 30px;
+	}
+
+	.mariage-section3__text:nth-child(1) {
+		padding: 20px;
+	}
+
+	.mariage-section4__item {
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 1078px) {
+	.mariage-section3__text:nth-child(1) {
+		z-index: 6;
+		text-align: center;
+	}
+
+	.mariage-section3__img:nth-child(3) {
+		width: 596px;
+	}
+
+	.mariage-section3__img:nth-child(2) {
+		width: 642px;
+	}
+
+	.mariage-section3__img:nth-child(4) {
+		width: 474px;
+	}
+
+	.mariage-section3__img:nth-child(5) {
+		width: 649px;
+	}
+
+	.mariage-section2__container {
+		margin-top: -400px;
+		padding-top: 360px;
+	}
+
+	.mariage-section2__item:first-child {
+		margin-top: 30px;
+	}
+
+	.mariage-section2__item:first-child {
+		margin-bottom: 160px;
+	}
+
+	.mariage-section2__title p {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	.mariage-section2__title {
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.mariage-section4__item__img {
+		flex: 0 0 30%;
+		max-width: 30%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.particuliers1-section1__subtitle {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.particuliers1-section1__button {
+		max-width: 380px;
+		width: 100%;
+		padding: 0 20px;
+		height: 62px;
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.contact-section1__container {
+		max-width: 90%;
+	}
+
+	.contact-section1__top .contact-section1__label {
+		flex: 0 0 40%;
+		max-width: 40%;
+	}
+
+	.contact-section1__bot .contact-section1__textarea {
+		height: 150px;
+	}
+
+	.contact-section1__head-title {
+		margin-bottom: 30px;
+	}
+
+	.animation-section3__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.animation-section3__title {
+		font-size: 17px;
+		line-height: 19px;
+	}
+
+	.animation-section3__head-title {
+		padding: 25px;
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	.animation-section3__head-title br {
+		display: none;
+	}
+	
+	.animation-section2__col .animation-section2__img img {
+		max-width: 50px;
+	}
+
+	.animation-section2__col .animation-section2__text {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.animation-section2__col .animation-section2__text .animation-section2__title {
+		margin-bottom: 10px;
+		line-height: 36px;
+	}
+
+	.animation-section2__col .animation-section2__text .animation-section2__color {
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.animation-section1__title {
+		margin-bottom: 50px;
+	}
+
+	.animation-section1 {
+		padding: 124px 0 105px;
+	}
+
+	.animation-section1__text {
+		max-width: 90%;
+	}
+
+	.anniversaire-section8__item {
+		background: url('../img/anniversaire-section8__item.png') 0 171px no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.anniversaire-section8__item__body {
+		transform: translate(-50%,-10%) rotate(-11deg);
+	}
+
+	.anniversaire-section7__item {
+		max-width: 90%;
+	}
+
+	.anniversaire-section7__item__title {
+		margin-bottom: 25px;
+		font-size: 28px;
+		line-height: 30px;
+	}
+
+	.anniversaire-section7__item__text {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.anniversaire-section5__text {
+		max-width: 90%;
+		font-size: 28px;
+		line-height: 30px;
+	}
+
+	.anniversaire-section2__title {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.anniversaire-section2__text {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.mariage-section7__item {
+		padding: 30px;
+	}
+
+	.mariage-section7__item__title {
+		font-size: 30px;
+		line-height: 32px;
+	}
+
+	.mariage-section5 {
+		padding: 40px;
+	}
+
+	.mariage-section1__title {
+		margin-bottom: 80px;
+	}
+
+	.mariage-section1,
+	.anniversaire-section1.mariage-section1 {
+		padding: 85px 0 120px;
+	}
+
+	.evenement-section3__item:nth-child(1) {
+		max-width: 739px;
+		max-height: 689px;
+		background: url('../img/evenement-section3__item1.png') 0 0 no-repeat;
+	}
+	
+	.evenement-section3__item:nth-child(2) {
+		max-width: 903px;
+		max-height: 676px;
+		background: url('../img/evenement-section3__item2.png') 0 0 no-repeat;
+	}
+	
+	.evenement-section3__item:nth-child(3) {
+		max-width: 784px;
+		max-height: 669px;
+		background: url('../img/evenement-section3__item3.png') 0 0 no-repeat;
+	}
+	
+	.evenement-section3__item:nth-child(4) {
+		max-width: 700px;
+		max-height: 658px;
+		background: url('../img/evenement-section3__item4.png') 0 0 no-repeat;
+	}
+
+	.evenement-section3__item:nth-child(1),
+	.evenement-section3__item:nth-child(2),
+	.evenement-section3__item:nth-child(3),
+	.evenement-section3__item:nth-child(4) {
+		position: relative;
+		margin: 0 auto;
+		background-size: 100% 100%;
+		width: 100%;
+	}
+}
+
+@media (max-width: 991px) {
+	.particuliers3-section1__left-item__body__left__a {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+
+	.particuliers3-section1__left-item__body__right {
+		font-size: 18px;
+		line-height: 25px;
+	}
+
+	.particuliers3-section1__left-item__body__left__a {
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	.particuliers3-section1__left-item__body__left, .particuliers3-section1__left-item__body__right {
+		max-width: 100%;
+	}
+
+	.cld-main {
+		max-width: 400px;
+		width: 100%;
+	}
+
+	.cld-number {
+		padding: 5px;
+	}
+
+	.particuliers3-section1__left-item__body__input {
+		max-width: 380px;
+		min-width: 150px;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.particuliers3-section1__left-item__head-title span {
+		font-size: 0.8rem;
+	}
+
+	.particuliers3-section1__left-item__head-title {
+		width: 40px !important;
+	}
+
+	.particuliers3-section1__left-item__body {
+		min-height: 800px;
+	}
+
+	.particuliers3-section1__left-item__body__row {
+		display: block;
+	}
+
+	.particuliers3-section1__left-item__body__title {
+		margin-bottom: 20px;
+	}
+
+	.particuliers3-section1__left-item__body__button {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.cld-main {
+		margin: 0 auto;
+	}
+
+	.particuliers3-section1__left-item__body__input {
+		max-width: 100%;
+	}
+
+	.particuliers3-section1__left-item__body__head-title {
+		margin-bottom: 30px;
+	}
+
+	.particuliers2-section1__items {
+		margin-left: -40px;
+	}
+
+	.particuliers2-section1__col {
+		padding-left: 40px;
+	}
+
+	.animation-section4__container {
+		margin-top: 0;
+	}
+
+	.animation-section4__text span.section-4__color {
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	.animation-section3__item {
+		max-width: 100%;
+	}
+
+	.animation-section3__container {
+		position: relative;
+		margin-top: 0;
+		padding-top: 20px;
+		padding-bottom: 30px;
+		background-image: linear-gradient(-264deg, #005a99 0%, #3b0013 100%);
+	}
+
+	.animation-section3__img {
+		margin-top: 30px;
+	}
+
+	.animation-section3__item:nth-child(2) {
+		margin-bottom: 20px;
+	}
+
+	.animation-section3__container:before {
+		content: '';
+		position: absolute;
+		top: -50px;
+		left: 0;
+		right: 0;
+		height: 50px;
+		background: #df0047;
+	}
+
+	.animation-section3__container:after {
+		content: '';
+		position: absolute;
+		bottom: -50px;
+		left: 0;
+		right: 0;
+		height: 50px;
+		box-shadow: -6px -1px 10px #000000;
+		background-image: linear-gradient(-264deg, #f959ff 0%, #eb2700 100%);
+	}
+
+	.animation-section3__container .container {
+		display: block;
+	}
+
+	.animation-section2 .animation-section2__col .animation-section2__item {
+		width: 60%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.animation-section2__items {
+		display: block;
+	}
+
+	.animation-section2__col {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding-bottom: 30px;
+	}
+
+	.anniversaire-section8__body {
+		max-width: 60%;
+	}
+
+	.anniversaire-section8__body {
+		left: 20px;
+		z-index: 5;
+	}
+
+	.anniversaire-section8__item__body__title,
+	.anniversaire-section8__body__title {
+		margin-bottom: 15px;
+		font-size: 23px;
+		line-height: 25px;
+	}
+
+	.anniversaire-section6__img,
+	.anniversaire-section6__body {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.anniversaire-section6__body {
+		padding-right: 0;
+	}
+
+	.anniversaire-section6__img {
+		padding-left: 0;
+	}
+
+	.anniversaire-section6 {
+		padding: 0 20px;
+	}
+
+	.anniversaire-section6__img:after {
+		right: 0;
+	}
+
+	.anniversaire-section6 {
+		display: block;
+	}
+
+	.anniversaire-section4 {
+		overflow: hidden;
+	}
+
+	.anniversaire-section4__item__title {
+		font-size: 28px;
+		line-height: 30px;
+	}
+
+	.anniversaire-section4__item {
+		width: 698px;
+		height: 683px;
+	}
+	
+	.mariage-section8__left {
+		left: 10px;
+		width: 426px;
+		height: 493px;
+	}
+
+	.mariage-section8__left__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.mariage-section8__right__title {
+		margin-bottom: 25px;
+		font-size: 25px;
+		line-height: 28px;
+	}
+
+	.mariage-section8__right__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.mariage-section8__right {
+		padding-right: 30px;
+	}
+
+	.mariage-section6 {
+		overflow: hidden;
+	}
+
+	.mariage-section6__img {
+		margin-top: -30%;
+		right: -10%;
+		bottom: 0;
+		width: 435px;
+	}
+
+	.mariage-section6__body__title {
+		margin-bottom: 25px;
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.location-section7__text {
+		margin: 0;
+	}
+
+	.location-section7__text:before {
+		top: -130px;
+		max-width: 180px;
+		width: 100%;
+		max-height: 180px;
+		height: 100%;
+	}
+
+	.evenement-section1__body {
+		max-width: 80%;
+		width: 100%;
+		margin: 0 auto;
+		padding: 30px;
+		text-align: center;
+	}
+
+	.mariage-section1__body,
+	.anniversaire-section1.mariage-section1 .mariage-section1__body {
+		max-width: 90%;
+		margin: 0 auto;
+		padding: 30px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 873px) {
+	.anniversaire-section3 .mariage-section2__item:nth-child(3) {
+		margin-bottom: 150px;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(4) {
+		margin-bottom: 50px;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(1)::before {
+		bottom: -67px;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(4)::before {
+		left: 0;
+		bottom: 0;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(4)::after {
+		bottom: -166px;
+	}
+
+	.animation-section4__container {
+		display: block;
+		margin-bottom: -55px;
+	}
+
+	.animation-section4__item:nth-child(1),
+	.animation-section4__item:nth-child(2) {
+		max-width: 100%;
+		margin: 0 auto 30px;
+	}
+}
+
+@media (max-width: 778px) {
+	.particuliers2-section1__items {
+		display: block;
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	.particuliers2-section1__col {
+		max-width: 100%;
+		padding-bottom: 20px;
+	}
+
+	.mariage-section2__item:nth-child(3) {
+		margin-bottom: 170px;
+	}
+
+	.mariage-section2__item:nth-child(3)::after {
+		bottom: -169px;
+		width: 51px;
+		height: 168px;
+	}
+
+	.mariage-section2__item:nth-child(2)::before {
+		bottom: -177px;
+		width: 45px;
+		height: 168px;
+	}
+
+	.mariage-section2__item:nth-child(4)::after {
+		width: 60px;
+		height: 168px;
+		bottom: -65px;
+	}
+
+	.mariage-section2__item:nth-child(1)::before {
+		width: 60px;
+		height: 168px;
+		bottom: -65px;
+	}
+
+	.mariage-section2__item:first-child {
+		margin-bottom: 70px;
+	}
+
+	.mariage-section2__item:nth-child(2) {
+		margin-bottom: 190px;
+	}
+}
+
+@media (max-width: 768px) {
+	.particuliers3-section1__left-item__body__left__a, .particuliers3-section1__left-item__body.livraison .particuliers3-section1__left-item__body__left__a:last-child {
+		height: auto;
+		padding: 20px;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	.particuliers3-section1 {
+		padding: 45px 0 40px;
+	}
+
+	.animation-section1__text {
+		font-size: 22px;
+		line-height: 26px;
+	}
+
+	.animation-section2 {
+		padding-bottom: 50px;
+	}
+
+	.animation-section1 {
+		padding: 40px 0;
+	}
+
+	.animation-section1__title {
+		margin-bottom: 30px;
+		font-size: 45px;
+		line-height: 40px;
+		text-align: center;
+	}
+
+	.anniversaire-section6__body__title {
+		margin-bottom: 20px;
+		font-size: 25px;
+		line-height: 28px;
+	}
+
+	.anniversaire-section6__body__text {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.anniversaire-section6__img:before {
+		top: -50px;
+		width: 315px;
+		height: 150px;
+	}
+
+	.anniversaire-section6__img:after {
+		width: 209px;
+		height: 200px;
+	}
+
+	.anniversaire-section4__item__title {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.anniversaire-section4__item__text {
+		font-size: 15px;
+		line-height: 16px;
+	}
+
+	.anniversaire-section4__item {
+		width: 648px;
+		height: 633px;
+	}
+
+	.anniversaire-section2__text h2 {
+		margin: 15px 0;
+	}
+	
+	.mariage-section8__right {
+		max-width: 100%;
+		padding: 465px 30px 30px 30px;
+		text-align: center;
+	}
+
+	.mariage-section8__left {
+		width: 396px;
+		height: 463px;
+	}
+
+	.mariage-section8__left__text {
+		width: 300px;
+		font-size: 17px;
+		line-height: 21px;
+	}
+
+	.mariage-section7 {
+		padding: 40px 0;
+	}
+
+	.mariage-section7__item {
+		max-width: 90%;
+	}
+
+	.mariage-section7__item__title {
+		margin-bottom: 15px;
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.mariage-section7__item__subtitle {
+		margin-bottom: 15px;
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.mariage-section6__img {
+		top: 0;
+		margin-top: 0;
+		width: 385px;
+	}
+
+	.mariage-section6__body__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.mariage-section6__body__title {
+		margin-bottom: 15px;
+		font-size: 26px;
+		line-height: 28px;
+	}
+
+	.mariage-section5__item {
+		margin: 0 auto;
+		width: 544px;
+		height: 534px;
+	}
+
+	.mariage-section5 {
+		padding: 40px 20px;
+	}
+
+	.mariage-section5__item__title {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.mariage-section5__item__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.mariage-section4__body__title {
+		font-size: 25px;
+		line-height: 26px;
+	}
+
+	.mariage-section4__body__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.mariage-section3 {
+		overflow: hidden;
+	}
+
+	.mariage-section3__img:nth-child(3),
+	.mariage-section3__img:nth-child(5) {
+		right: -10%;
+		height: auto;
+	}
+
+	.mariage-section3__img:nth-child(2),
+	.mariage-section3__img:nth-child(4) {
+		left: -10%;
+		height: auto;
+	}
+
+	.mariage-section3__img:nth-child(4),
+	.mariage-section3__img:nth-child(5) {
+		bottom: 0;
+	}
+
+	.mariage-section1__title {
+		font-size: 40px;
+		margin-bottom: 40px;
+	}
+
+	.mariage-section1__body {
+		padding: 20px;
+	}
+
+	.mariage-section1__body__title {
+		font-size: 26px;
+		line-height: 30px;
+	}
+
+	.mariage-section1__body__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.evenement-section4__body__title {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.evenement-section4__body__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__text {
+		transform: rotate(8deg) translate(-42%,0);
+		max-width: 400px;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__title {
+		top: 33%;
+		left: 30%;
+		transform: rotate(8deg);
+	}
+
+	.evenement-section2__body__title {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.evenement-section2 {
+		padding: 30px 0;
+	}
+
+	.evenement-section1__body__title {
+		font-size: 26px;
+		line-height: 30px;
+	}
+
+	.evenement-section1__title {
+		margin-bottom: 80px;
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.evenement-section1__body__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+	
+	.location-section9-head-title span {
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.location-section9-head-title {
+		padding: 30px;
+		margin-top: -120px;
+	}
+
+	.location-section8__text {
+		padding: 20px;
+		font-size: 25px;
+		line-height: 28px;
+	}
+
+	.location-section7 {
+		padding-top: 160px;
+	}
+
+	.location-section7__text:before {
+		left: 50%;
+		transform: translate(-50%,0)
+	}
+
+	.location-section7__text {
+		padding: 70px 20px 20px;
+		font-size: 28px;
+		line-height: 30px;
+	}
+
+	.location-section6__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.location-section5__left .location-section5__body,
+	.location-section5__right .location-section5__body {
+		padding: 20px;
+	}
+
+	.location-section5:before {
+		display: none;
+	}
+
+	.location-section5__items {
+		flex-wrap: wrap;
+		margin-left: -20px;
+	}
+
+	.location-section5__left, .location-section5__right {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding: 0 0 20px 20px;
+	}
+
+	.location-section4__items {
+		display: block;
+	}
+
+	.location-section4__item {
+		max-width: 100%;
+	}
+
+	.location-section4__item:last-child {
+		padding-bottom: 100px;
+	}
+
+	.location-section1__title {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	.location-section1__body__title {
+		margin-bottom: 10px;
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.location-section2__right {
+		padding: 20px;
+	}
+
+	.location-section2__left {
+		padding: 0 20px 320px;
+	}
+
+	.location-section1__body__text,
+	.location-section2__text {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.location-section2__icon {
+		margin: 0 auto;
+	}
+
+	.location-section2__icon img {
+		max-width: 100%;
+	}
+	
+	.location-section3__items {
+		display: block;
+	}
+	
+	.location-section3__item {
+		max-width: 100%;
+		padding-bottom: 30px;
+	}
+
+	.location-section3__item:last-child {
+		padding-bottom: 0;
+	}
+
+	.location-section3 {
+		background-size: cover;
+	}
+
+	.location-section3__container {
+		padding: 119px 30px 119px;
+	}
+
+	.location-section9__items {
+		display: block;
+	}
+
+	.location-section9__item {
+		max-width: 100%;
+	}
+
+	.location-section9__container {
+		margin-top: -230px;
+		padding-top: 160px;
+	}
+	.condition {
+		padding: 40px 30px 40px 40px;
+	}
+	.condition__title {
+		font-size: 36px;
+		margin-bottom: 60px;
+	}
+	.condition__subtitle {		
+		margin-top: 30px;
+		font-size: 24px;
+		line-height: 29px;
+	}
+	.condition__text{
+		font-size: 24px;
+		line-height: 29px;
+	}
+	
+}
+
+@media (max-width: 767px) {
+	.particuliers1-section1__container {
+		padding: 30px;
+	}
+
+	.particuliers1-section1__button {
+		height: auto;
+		margin: 0 15px;
+		padding: 10px 20px;
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.particuliers1-section1__subtitle {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.particuliers1-section1__title {
+		margin-bottom: 10px;
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.contact-section1__top .contact-section1__label {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.contact-section1__top .contact-section1__label:nth-child(odd),
+	.contact-section1__top .contact-section1__label:nth-child(even) {
+		padding-left: 55px;
+		padding-right: 0;
+	}
+
+	.contact-section1__top .contact-section1__label:nth-child(odd) .contact-section1__icon {
+		left: 0;
+	}
+
+	.contact-section1__bot .contact-section1__title {
+		display: block;
+		text-align: left;
+	}
+
+	.contact-section1__bot .contact-section1__label {
+		position: relative;
+		max-width: 100%;
+		width: 100%;
+		padding-left: 55px;
+	}
+
+	.contact-section1__bot .contact-section1__icon {
+		position: absolute;
+		left: 0;
+		bottom: 30px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 1;
+	}
+
+	.contact-section1__head-title {
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.animation-section2 .animation-section2__col .animation-section2__item {
+		max-width: 80%;
+		width: 100%;
+	}
+
+	.evenement-section3__item:nth-child(1) .evenement-section3__icon {
+		top: 26%;
+		right: 9%;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__icon {
+		top: 9%;
+		right: 19%;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__title {
+		top: 38%;
+	}
+
+	.evenement-section3__item:nth-child(3) .evenement-section3__text {
+		transform: rotate(-23deg) translate(-26%,-90%);
+		max-width: 260px;
+	}
+
+	.evenement-section3__item:nth-child(3) .evenement-section3__title {
+		top: 13%;
+		left: 3%;
+	}
+
+	.evenement-section3__item:nth-child(3) .evenement-section3__icon {
+		bottom: 8%;
+		right: 30%;
+	}
+
+	.evenement-section3__item:nth-child(3) .evenement-section3__icon img {
+		max-width: 130px;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__icon {
+		top: 14%;
+		right: 22%;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__icon img {
+		max-width: 80px;
+	}
+
+	.evenement-section3__item:nth-child(4) .evenement-section3__icon {
+		top: 14%;
+		right: 32%;
+	}
+
+	.evenement-section3__item:nth-child(4) .evenement-section3__icon img {
+		max-width: 80px;
+	}
+
+	.evenement-section3__item:nth-child(1) .evenement-section3__icon {
+		top: 32%;
+		right: 19%;
+	}
+
+	.evenement-section3__item:nth-child(1) .evenement-section3__icon img {
+		max-width: 100px;
+	}
+
+	.evenement-section3__text {
+		font-size: 15px;
+	}
+
+	.mariage-section5__item {
+		width: 444px;
+		height: 434px;
+	}
+
+	.mariage-section5__item__title {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.mariage-section5__item__text {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.mariage-section5__item__body {
+		width: 354px;
+	}
+
+	.mariage-section6__body {
+		position: relative;
+		z-index: 5;
+		padding: 30px;
+		max-width: 70%;
+		background: rgba(255,255,255,0.8);
+		border-radius: 10%;
+	}
+
+	.anniversaire-section4__body {
+		width: 359px;
+	}
+
+	.anniversaire-section4__item {
+		width: 478px;
+		height: 443px;
+	}
+	
+	.animation-section2 {
+		padding: 40px 0;
+	}
+
+	.animation-section4__container {
+		margin-bottom: -65px;
+	}
+	
+	.animation-section4__item:first-child {
+		padding: 26px 40px 57px;
+	}
+
+	.particuliers3-section1__col-right__row {
+		display: block;
+	}
+
+	.particuliers3-section1__col-right__body__title {
+		max-width: none;
+		margin-bottom: 15px;
+	}
+
+	.particuliers3-section1__col-right__body__value {
+		max-width: none;
+		text-align: left;
+	}
+
+	.particuliers3-section1__col-right__body__button,
+	.particuliers3-section1__col-right__body__button.right {
+		max-width: 100%;
+		margin-bottom: 10px;
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+@media (max-width: 500px) {
+	.particuliers3-section1__left-item__body__left__a input ~ .text {
+		display: block;
+	}
+
+	.particuliers3-section1__left-item__body__left__a input ~ .text span {
+		margin: 10px 0 0;
+	}
+
+	.particuliers3-section1__left-item__body__left__a {
+		margin-bottom: 20px;
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.particuliers3-section1__left-item__body__right {
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	.particuliers3-section1__items {
+		max-width: 90%;
+	}
+
+	.particuliers3-section1__col-right, .particuliers3-section1__col-left {
+		padding-left: 0;
+	}
+
+	.particuliers3-section1__col-right__item,
+	.particuliers3-section1__left-item__body {
+		padding: 20px;
+	}
+
+	.cld-datetime {
+		width: 80%;
+	}
+
+	.particuliers3-section1__left-item__body__title {
+		text-align: center;
+	}
+
+	.particuliers2-section1__items {
+		max-width: 100%;
+	}
+
+	.particuliers1-section1 {
+		padding: 60px 0;
+	}
+
+	.particuliers1-section1__bot {
+		display: block;
+	}
+
+	.particuliers1-section1__button {
+		margin: 10px 0;
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.particuliers1-section1__subtitle {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.particuliers1-section1__container {
+		padding: 20px;
+	}
+
+	.particuliers1-section1__title {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.animation-section2 .animation-section2__col .animation-section2__item {
+		max-width: 90%;
+		padding: 20px 20px 40px;
+	}
+
+	.animation-section2__col .animation-section2__text .animation-section2__title,
+	.animation-section2__col .animation-section2__text .animation-section2__color {
+		font-size: 25px;
+		line-height: 25px;
+	}
+	
+	.animation-section2__col .animation-section2__text {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.animation-section1__text {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.animation-section1__title {
+		margin-bottom: 25px;
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.anniversaire-section8__body {
+		max-width: 100%;
+	}
+
+	.anniversaire-section8__img img {
+		min-height: 649px;
+	}
+
+	.anniversaire-section8__item {
+		width: 498px;
+		height: 510px;
+	}
+
+	.anniversaire-section8__item__body__title, .anniversaire-section8__body__title {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.anniversaire-section8__item__body__text, .anniversaire-section8__body__text {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.anniversaire-section8__item__body {
+		transform: translate(-50%,20%) rotate(-11deg);
+		width: 330px;
+	}
+
+	.anniversaire-section7__item__title {
+		font-size: 22px;
+		line-height: 24px;
+	}
+
+	.anniversaire-section7 {
+		padding: 30px 0;
+	}
+
+	.anniversaire-section7__item__text {
+		font-size: 15px;
+		line-height: 16px;
+	}
+
+	.anniversaire-section6__body:before {
+		top: 0;
+		width: 252px;
+		height: 184px;
+	}
+
+	.anniversaire-section6__body {
+		padding-bottom: 30px;
+	}
+	
+	.anniversaire-section5__text {
+		font-size: 22px;
+		line-height: 25px;
+	}
+
+	.anniversaire-section5 {
+		padding: 30px 0;
+	}
+
+	.anniversaire-section4__body {
+		max-width: 359px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	.anniversaire-section4__item {
+		width: 100%;
+		min-height: 343px;
+		height: 100%;
+		border-radius: 0;
+	}
+	
+	.anniversaire-section4 {
+		padding: 0;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(1)::after {
+		right: auto;
+		bottom: -12px;
+	}
+
+	.anniversaire-section2__title {
+		margin-bottom: 15px;
+		font-size: 22px;
+		line-height: 24px;
+	}
+
+	.anniversaire-section2__text {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.anniversaire-section2__text h2 {
+		font-size: 20px;
+		line-height: 23px;
+	}
+
+	.mariage-section7__item__title {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.mariage-section7__item__subtitle {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.mariage-section7__item__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.mariage-section7__item {
+		padding: 20px;
+	}
+	
+	.mariage-section6__img {
+		width: 505px;
+		right: 0;
+		top: -50%;
+	}
+
+	.mariage-section6__body {
+		max-width: 100%;
+		border-radius: 0;
+	}
+
+	.mariage-section5__item {
+		width: 380px;
+		height: 370px;
+	}
+
+	.mariage-section5__item__body {
+		width: 334px;
+	}
+
+	.mariage-section5__item__title {
+		font-size: 14px;
+		line-height: 15px;
+	}
+
+	.mariage-section5__item__text {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.mariage-section4__item {
+		display: block;
+	}
+
+	.mariage-section4__item__img {
+		max-width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.mariage-section4__body {
+		text-align: center;
+	}
+
+	.mariage-section3__img:nth-child(3),
+	.mariage-section3__img:nth-child(5) {
+		right: -50%;
+	}
+
+	.mariage-section3__img:nth-child(2),
+	.mariage-section3__img:nth-child(4) {
+		left: -50%;
+	}
+
+	.mariage-section3__text:nth-child(1) {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.mariage-section3 {
+		min-height: 696px;
+	}
+
+	.mariage-section2__container {
+		padding-top: 390px;
+	}
+
+	.mariage-section2__title p {
+		font-size: 22px;
+		line-height: 22px;
+	}
+
+	.mariage-section2__title {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.mariage-section2__item:nth-child(2) {
+		margin-top: 30px;
+	}
+
+	.mariage-section2__item:nth-child(2)::after {
+		width: 200px;
+		height: 57px;
+		right: 20%;
+	}
+
+	.mariage-section2__item:nth-child(2) .mariage-section2__item__text,
+	.mariage-section2__item:first-child .mariage-section2__item__text,
+	.mariage-section2__item:nth-child(3) .mariage-section2__item__text,
+	.mariage-section2__item:nth-child(4) .mariage-section2__item__text,
+	.anniversaire-section3 .mariage-section2__item:nth-child(2) .mariage-section2__item__text,
+	.anniversaire-section3 .mariage-section2__item:first-child .mariage-section2__item__text,
+	.anniversaire-section3 .mariage-section2__item:nth-child(3) .mariage-section2__item__text,
+	.anniversaire-section3 .mariage-section2__item:nth-child(4) .mariage-section2__item__text {
+		font-size: 14px;
+		line-height: 16px;
+		width: 240px;
+		text-align: center;
+	}
+
+	.mariage-section2__item:nth-child(2) .mariage-section2__item__author,
+	.mariage-section2__item:nth-child(1) .mariage-section2__item__author,
+	.mariage-section2__item:nth-child(3) .mariage-section2__item__author,
+	.mariage-section2__item:nth-child(4) .mariage-section2__item__author,
+	.anniversaire-section3 .mariage-section2__item:nth-child(2) .mariage-section2__item__author,
+	.anniversaire-section3 .mariage-section2__item:nth-child(1) .mariage-section2__item__author,
+	.anniversaire-section3 .mariage-section2__item:nth-child(3) .mariage-section2__item__author,
+	.anniversaire-section3 .mariage-section2__item:nth-child(4) .mariage-section2__item__author {
+		margin-top: 10px;
+	}
+
+	.mariage-section1 {
+		padding: 35px 0 110px;	
+	}
+
+	.mariage-section1__title {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.mariage-section1__body__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.mariage-section1__body {
+		padding: 10px;
+	}
+
+	.evenement-section4__body {
+		max-width: 100%;
+	}
+
+	.evenement-section4__body__title {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.evenement-section4__body__text {
+		font-size: 15px;
+		line-height: 18px;
+	}
+
+	.evenement-section3__container {
+		overflow: hidden;
+	}
+
+	.evenement-section3__item:nth-child(1) {
+		width: 689px;
+		height: 639px;
+		transform: translate(-13%, 10px);
+	}
+
+	.evenement-section3__item:nth-child(1) .evenement-section3__title {
+		left: 20%;
+	}
+
+	.evenement-section3__item:nth-child(2) {
+		width: 853px;
+		height: 626px;
+		transform: translate(-26%, 10px);
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__title {
+		top: 33%;
+	}
+
+	.evenement-section3__item:nth-child(3) {
+		width: 734px;
+		height: 619px;
+		transform: translate(-19%, 10px) rotate(32deg);
+	}
+
+	.evenement-section3__item:nth-child(4) {
+		width: 650px;
+		height: 608px;
+		transform: translate(-17%, 10px) rotate(26deg);
+	}
+
+	.evenement-section3__item:nth-child(4) .evenement-section3__title {
+		top: 12%;
+		left: 4%;
+		transform: rotate(-32deg);
+	}
+
+	.evenement-section2__body {
+		max-width: 95%;
+		width: 100%;
+		margin: 0 auto;
+		padding: 20px;
+		background: rgba(255,255,255,0.7);
+	}
+
+	.evenement-section1__body {
+		max-width: 85%;
+	}
+
+	.evenement-section2__body__title {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.evenement-section2__body__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.evenement-section1__body__title {
+		font-size: 22px;
+		line-height: 25px;
+	}
+
+	.evenement-section1__title {
+		margin-bottom: 50px;
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.evenement-section1__body__text {
+		font-size: 15px;
+		line-height: 18px;
+	}
+
+	.location-section9-head-title span {
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.location-section9__title {
+		padding: 20px;
+	}
+
+	.location-section9__title span {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	.location-section8__text {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.location-section7__text {
+		padding: 60px 20px 20px;
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.location-section6__items {
+		display: block;
+	}
+
+	.location-section6__title {
+		font-size: 33px;
+		line-height: 35px;
+	}
+
+	.location-section6__icons,
+	.location-section6__pictures {
+		max-width: 100%;
+		padding-bottom: 20px;
+	}
+
+	.location-section5__title {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	.location-section5__items {
+		display: block;
+	}
+
+	.location-section5__left, .location-section5__right {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.location-section5__right {
+		margin-top: 0;
+	}
+
+	.location-section5__left {
+		margin-top: 50px;
+	}
+
+	.location-section5__container {
+		padding-bottom: 50px;
+	}
+
+	.location-section5__text {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.location-section4__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.location-section4__head-title span {
+		font-size: 35px;
+		line-height: 35px;
+	}
+
+	.location-section4__head-title {
+		margin-top: -60px;
+	}
+
+	.location-section4__head-title, .location-section4__title {
+		padding: 30px;
+	}
+
+	.location-section3__container {
+		padding: 90px 30px 90px;
+	}
+
+	.location-section1__title {
+		margin-bottom: 20px;
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.location-section1 {
+		padding-bottom: 30px;
+	}
+
+	.location-section1__body {
+		padding: 20px;
+	}
+
+	.location-section1__body__title,
+	.location-section2__title {
+		margin-bottom: 10px;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	.location-section2__right {
+		padding: 20px;
+	}
+
+	.location-section2__left {
+		padding: 0 20px 260px;
+	}
+
+	.location-section1__body__text,
+	.location-section2__text {
+		font-size: 15px;
+		line-height: 20px;
+	}
+}
+
+@media (max-width: 425px) {
+	.animation-section4__container {
+		padding: 85px 20px 83px;
+	}
+
+	.animation-section4__text,
+	.animation-section4__text span.section-4__color {
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.animation-section2__col .animation-section2__text .animation-section2__title, .animation-section2__col .animation-section2__text .animation-section2__color {
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	.animation-section2__col .animation-section2__text {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.anniversaire-section8__item__body {
+		transform: translate(-11%,0%) rotate(-1deg);
+		width: 239px;
+	}
+
+	.anniversaire-section8__body {
+		left: 0;
+		padding: 20px;
+		background: rgba(0,0,0,0.5);
+	}
+
+	.anniversaire-section8__item__body__title, .anniversaire-section8__body__title {
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.anniversaire-section8__item__body__text, .anniversaire-section8__body__text {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.anniversaire-section5 {
+		overflow: hidden;
+	}
+
+	.anniversaire-section6__body__title {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.anniversaire-section6__body__text {
+		font-size: 15px;
+		line-height: 16px;
+	}
+
+	.anniversaire-section6__body:before {
+		width: 202px;
+		height: 134px;
+		left: 0;
+	}
+
+	.anniversaire-section6__img:before {
+		top: -30px;
+		width: 195px;
+		height: 100px;
+	}
+
+	.anniversaire-section6__body {
+		padding-top: 158px;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(3)::after {
+		left: 216px;
+		bottom: 0;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(3) {
+		margin-bottom: 0;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(2)::after {
+		left: auto;
+		right: 0;
+		top: auto;
+		bottom: -20px;
+		width: 118px;
+		height: 146px;
+	}
+
+	.anniversaire-section3 .mariage-section2__container {
+		overflow: hidden;
+	}
+
+	.mariage-section8__left {
+		width: 346px;
+		height: 413px;
+	}
+
+	.mariage-section8__left__text {
+		width: 250px;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.mariage-section8__right {
+		padding: 405px 20px 20px 20px;
+	}
+
+	.mariage-section8__right__title {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.mariage-section8__right__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.mariage-section6__img {
+		top: -15%;
+	}
+
+	.mariage-section6__body {
+		padding: 15px;
+	}
+
+	.mariage-section6__body__title {
+		font-size: 22px;
+		line-height: 25px;
+	}
+
+	.mariage-section6__body__text {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.mariage-section5 {
+		overflow: hidden;
+		position: relative;
+		min-height: 290px;
+	}
+
+	.mariage-section5__item {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	.evenement-section3__item:nth-child(1) .evenement-section3__text {
+		transform: rotate(-15deg) translate(-59%,-50%);
+		max-width: 270px;
+	}
+
+	.evenement-section3__item:nth-child(1) {
+		transform: translate(-19%, 10px);
+	}
+
+	.evenement-section3__item:nth-child(2) {
+		transform: translate(-31%, 10px);
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__title {
+		left: 36%;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__text {
+		max-width: 330px;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__icon {
+		right: 26%;
+	}
+
+	.mariage-section4__body__title {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.mariage-section4__body__text {
+		font-size: 15px;
+		line-height: 16px;
+	}
+
+	.mariage-section2__items {
+		padding: 0;
+	}
+}
+
+
+@media (max-width: 375px) {
+	.anniversaire-section4__body {
+		max-width: 90%;
+	}
+
+	.anniversaire-section4__item {
+		min-height: 500px;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:nth-child(4) .mariage-section2__item__text {
+		width: 170px;
+	}
+
+	.anniversaire-section3 .mariage-section2__item:first-child .mariage-section2__item__text {
+		width: 180px;
+	}
+
+	.mariage-section8__right {
+		padding: 345px 20px 20px 20px;
+	}
+
+	.mariage-section8__left {
+		width: 286px;
+		height: 353px;
+	}
+
+	.mariage-section8__left__text {
+		width: 230px;
+		font-size: 13px;
+		line-height: 17px;
+	}
+
+	.mariage-section7__item__text {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.mariage-section5__item__body {
+		width: 284px;
+	}
+
+	.mariage-section3__text:nth-child(1) {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.mariage-section2__item:nth-child(4) {
+		width: 280px;
+		height: 322px;
+	}
+
+	.mariage-section2__item:nth-child(4)::after {
+		width: 50px;
+		height: 128px;
+		bottom: -37px;
+	}
+
+	.mariage-section2__item:nth-child(2) .mariage-section2__item__text, .mariage-section2__item:first-child .mariage-section2__item__text, .mariage-section2__item:nth-child(3) .mariage-section2__item__text, .mariage-section2__item:nth-child(4) .mariage-section2__item__text {
+		width: 210px;
+	}
+
+	.mariage-section2__item:first-child {
+		width: 241px;
+		height: 282px;
+	}
+
+	.mariage-section2__item:nth-child(1)::before {
+		width: 50px;
+		height: 118px;
+		left: 94px;
+	}
+
+	.mariage-section2__item:nth-child(1)::after {
+		width: 40px;
+		height: 54px;
+	}
+
+	.mariage-section2__item:nth-child(2)::before {
+		bottom: -127px;
+		width: 35px;
+		height: 118px;
+	}
+
+	.mariage-section2__item:nth-child(2)::after {
+		width: 150px;
+		height: 47px;
+		right: 0;
+		bottom: -73px;
+	}
+
+	.mariage-section2__item:nth-child(2) {
+		margin-bottom: 120px;
+	}
+
+	.mariage-section2__item:nth-child(3)::before {
+		width: 79px;
+		height: 99px;
+		left: 0;
+		top: -19px;
+	}
+
+	.mariage-section2__item:nth-child(3)::after {
+		bottom: -119px;
+		width: 41px;
+		height: 118px;
+	}
+
+	.mariage-section2__item:nth-child(3) {
+		margin-bottom: 130px;
+	}
+
+	.mariage-section2__item:nth-child(4)::before {
+		width: 76px;
+		height: 63px;
+	}
+
+	.mariage-section2__item:nth-child(4)::after {
+		width: 33px;
+		height: 88px;
+		bottom: 0;
+	}
+
+	.mariage-section2__container {
+		padding-bottom: 40px;
+	}
+
+	.mariage-section2__title p {
+		font-size: 17px;
+		line-height: 17px;
+	}
+
+	.mariage-section2__title {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.mariage-section2__item:first-child {
+		margin-top: 10px;
+	}
+
+	.mariage-section2__container {
+		margin-top: -370px;
+		padding-top: 330px;
+	}
+
+	.location-section2__left::before {
+		max-height: 280px;
+	}
+
+	.location-section2__left {
+		padding-bottom: 220px;
+	}
+
+	.evenement-section3__item:nth-child(4) {
+		transform: translate(-20%, 10px) rotate(26deg);
+	}
+
+	.evenement-section3__item:nth-child(4) .evenement-section3__text {
+		transform: rotate(-5deg) translate(-60%,-64%);
+		max-width: 170px;
+	}
+
+	.evenement-section3__item:nth-child(4) .evenement-section3__icon {
+		top: auto;
+		right: 49%;
+		bottom: 9%;
+	}
+
+	.evenement-section3__item:nth-child(3) {
+		transform: translate(-31%, 10px) rotate(43deg);
+	}
+
+	.evenement-section3__item:nth-child(3) .evenement-section3__text {
+		transform: rotate(-23deg) translate(-26%,-76%);
+		max-width: 240px;
+	}
+
+	.evenement-section3__item:nth-child(3) .evenement-section3__icon {
+		bottom: 19%;
+		right: 30%;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__text {
+		transform: rotate(8deg) translate(-52%,0);
+		max-width: 230px;
+	}
+
+	.evenement-section3__item:nth-child(2) .evenement-section3__icon {
+		right: auto;
+		left: 35%;
+		top: 6%;
+	}
+
+	.evenement-section3__item:nth-child(1) .evenement-section3__text {
+		transform: rotate(-15deg) translate(-70%,-20%);
+		max-width: 220px;
+	}
+
+	.evenement-section3__item:nth-child(1) .evenement-section3__icon {
+		top: 24%;
+		right: auto;
+		left: 27%;
+	}
+}
+
+@media (min-width: 1800px) {
+	.location-page .header .menu,
+	.evenement-page .header .menu,
+	.mariage-page .header .menu,
+	.anniversaire-page .header .menu,
+	.animation-page .header .menu,
+	.main-page .header .menu,
+	.contact-page .header .menu {
+		width: calc(100% - 604px);
+	}
+}
+
+@media screen and (min-width: 992px){
+	.section5 {
+	    background-image: url(../img/s5img.png);
+	    background-color: #4b0055;
+	    background-size: 61%;
+	    background-repeat: no-repeat;
+	}
+	body .container {
+    	max-width: 1450px;
+		width: calc(100% - 20px);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.section8 .row>div:last-of-type {
+    	padding: 0px;
+	}
+	.section8 img.flex-center.img1, .section7 .gallery.flex-center {
+    	opacity: 0;
+	}
+	.section8 {
+	    background-image: url(../img/s8img.png);
+	    background-color: #EE92BB;
+	    background-size: 35%;
+	    background-repeat: no-repeat;
+	}
+	.section7 {
+	    background-image: url(../img/image-pp.jpg);
+	    background-size: 42%;
+	    background-repeat: no-repeat;
+	    background-position: right;
+	}
+}
+@media screen and (min-width: 1200px){
+ 	.header .container {
+    	max-width: 1450px !important;
+    	width: 98%;
+	}
+	.header.header-fixed .menu {
+	    margin-right: -10px !important;
+	    position: relative;
+	}
+}
+
+@media screen and (min-width: 1266px){
+	.header.header-fixed .menu {
+	    margin-right: -50px !important;
+	    position: relative;
+	}
+}
+
+@media screen and (min-width: 1365px){
+	.section5 {
+	    background-size: 61% 100%;
+	}
+	.section7 {
+	    background-size: 42% 100%;
+	}
+}
+
+@media screen and (min-width: 1400px){
+	.section3 {
+	    background: url(../img/s3img.png) no-repeat;
+	    background-position: right;
+	    background-size: contain;
+	}
+	.section3 img.img2.flex-center {
+	    opacity: 0;
+	}
+}
+
+@media screen and (min-width: 1550px){
+	.section5 {
+	    background-size: contain;
+	}
+	.section7 {
+	    background-size: contain;
+	}
+	.section8 {
+    	background-size: contain;
+	}
+	.section5 .text {
+    	padding: 90px 0;
+	}
+}
+
+@media screen and (min-width: 1800px){
+	body .container {
+    	max-width: 1800px;
+    	width: 98%;
+	}
+	.header .container {
+    	max-width: 1800px !important;
+    	width: 98%;
+	}
+	.header .menu li a {
+	    font-size: 18px;
+	}
+	.right-block-head p {
+    	font-size: 18px;
+	}
+	.right-block-head p {
+	    padding-top: 66px;
+    	font-size: 18px;
+	}
+	.header .menu {
+    	width: calc(100% - 604px);
+    	padding-right: 30px;
+	}
+	.header-fixed {
+    	height: 62px;
+	}
+	.section1 {
+    	padding: 280px 0 110px 0;
+	}
+	.section3 .text {
+    	padding: 80px 0;
+	}
+	.section5 .text {
+    	padding: 100px 0 130px 0;
+	}
+	.section7 .text {
+    	padding: 80px 50px 0 0;
+	}
+	.section7>.container>.row>div:last-of-type, .section8>.container>.row>div:first-of-type {
+    	height: 10px;
+    	overflow: hidden;
+	}
+	.section1 h3 {
+		font-size: 40px;
+	}
+	.container h3 {
+    	font-size: 36px;
+	}
+	.section4-2 h1, .section6 h1, .section9 h1 {
+		font-size: 36px;
+	}
+	.section4-2 p, .section5 p, .section7 h4, .section7 p, .section8 p, .section9 p, .section10 li a {
+		font-size: 18px;
+	}
+	.section6 a {
+    	width: 340px;
+    	font-size: 18px;
+	}
+	.section7 a {
+	    width: 470px;
+	    padding: 10px 20px;
+	    font-size: 18px;
+	}
+	.section8 a {
+	    width: 415px;
+	    padding: 10px 20px;
+	    font-size: 18px;
+	}
+	.section10 ul.flex {
+    	padding-top: 0px;
+	}
+}
+
+@media screen and (max-width: 1800px) {
+	.section8 .grap {
+	    left: 45px;
+	}
+	.section8 .pc {
+	    left: 10px;
+	}
+	.section8 .bg {
+    	padding-left: 110px;
+	}
+	.section8 .btn1 {
+    	padding-bottom: 0px;
+	}
+	.section8>.container>.row>div:last-of-type {
+    	background: #EE92BB;
+	}
+}
+
+@media screen and (max-width: 1549px) {
+	img.image-right-header {
+		width: 190px;
+	}
+	.right-block-head {
+	    padding-left: 115px;
+	}
+	.right-block-head p {
+    	padding-top: 70px;
+		font-size: 14px;
+	}
+	.header .menu {
+		width: calc(100% - 509px);
+	}
+}
+
+@media screen and (max-width: 1405px) {
+	.header .menu li a {
+	    margin: 0 15px;
+	}
+}
+
+@media screen and (max-width: 1399px) {
+	.section3 img.img2.flex-center {
+	    margin-right: -10px;
+	}
+}
+
+@media screen and (max-width: 1335px) {
+	.header .menu li a {
+	    margin: 0 10px;
+	}
+}
+
+@media screen and (max-width: 1265px) {
+	img.image-right-header {
+    	width: 190px;
+    	display: none;
+	}
+	.right-block-head {
+    	padding-left: 35px;
+	}
+	.header .menu {
+    	width: calc(100% - 429px);
+	}
+	.right-block-head p {
+    	padding-top: 59px;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	.header .menu{
+		display: none;
+	}
+	.header .burger-menu-button{
+		display: flex;
+	}
+	.section10 .container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.section10 ul{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.right-block-head {
+		display: none;
+	}
+}
+@media screen and (max-width: 991px){
+	.section5 .cont1{
+		background: url(../img/s5img.png) no-repeat 80%/cover;
+	}
+	.section2 h3{
+		padding-top: 200px;
+	}
+	.section8 .cont1{
+		height: 300px;
+	}
+	.section5 .text{
+		padding: 30px 0;
+	}
+	.section5 h3{
+		text-align: center;
+	}
+	.section5 p{
+		text-align: center;
+	}
+	.section5 .cont1{
+		height: 400px;
+	}
+	.section5-1{
+		background: #4b0055;
+	}
+	.section5-1 h3, .section5-1 p{
+		text-align: center;
+		color: #fff;
+	}
+	.section6 .flex-row{
+		display: block;
+	}
+	.section6 .btn1{
+		display: flex;
+		justify-content: center;
+	}
+	.section10 ul{
+		flex-direction: column;
+		padding-top: 30px;
+	}
+	.section3 .b{
+		height: 300px;
+	}
+	.section4 {
+    	margin-top: 20px;
+	}
+	.section3 img.img2.flex-center {
+	    margin-right: 0px;
+	}
+}
+@media screen and (max-width: 768px){
+	.section1{
+		padding-top: 70px;
+	}
+	.section2{
+		background: #4b0055;
+	}
+    .section6 .bg{
+    	flex-direction: column;
+    }
+    .section6 .btn1{
+    	padding: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+	.section8 .grap {
+	    display: none;
+	}
+	.section8 .pc {
+	    display: none;
+	}
+	.section8 .bg {
+    	padding-left: 30px;
+	}
+	.section8 .btn1 {
+    	padding-bottom: 0px;
+	}
+	.section8>.container>.row>div:last-of-type {
+    	background: #EE92BB;
+	}
+}
+@media screen and (max-width: 520px){
+	.section7 p{
+		padding: 0;
+	}
+	.section7 .text img{
+		display: none;
+	}
+	.section7 .btn1{
+		padding: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding-bottom: 30px;
+	}
+	.section2 img{
+		width: 200px;
+		top: -8px;
+	}
+	.section2 h3{
+		text-align: center;
+		font-size: 25px;
+		padding-bottom: 20px;
+	}
+	.section2 h4{
+		text-align: center;
+	}
+	.section3 h3{
+		text-align: center;
+		font-size: 25px;
+	}
+	.section3 h4{
+		text-align: center;
+		font-size: 16px;
+	}
+	.section4-2 h1{
+		text-align: center;
+		font-size: 20px;
+	}
+	.section4-2 p{
+		text-align: center;
+	}
+	.section4 h3{
+		text-align: center;
+		font-size: 20px;
+		padding-top: 300px;
+	}
+	.section7 .text{
+		padding: 30px 0;
+	}
+	.section7 h3{
+		text-align: center;
+		font-size: 20px;
+	}
+	.section7 p{
+		text-align: center;
+		font-size: 14px;
+	}
+	.section7 a{
+		font-size: 12px;
+		padding: 3px 5px;
+	}
+	.section8 h3{
+		text-align: center;
+		font-size: 20px;
+		padding: 20px 0;
+	}
+	.section8 p{
+		text-align: center;
+		font-size: 14px;
+	}
+	.section8 .bg{
+		padding: 10px;
+	}
+	.section8 a{
+		padding: 5px 10px;
+		font-size: 10px;
+	}
+	.section9 h1{
+		text-align: center;
+		font-size: 20px;
+	}
+    .section9 p{
+		text-align: center;
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 370px){
+	.section4-2 .bg{
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width: 320px){
+    .header .logo img{
+	 	width: 100px;
+	}	
+    .lines{
+    	width: 30px;
+    	height: 2px;
+    }
+    .lines::before{
+    	width: 30px;
+    	height: 2px;
+    }
+    .lines::after{
+    	width: 30px;
+    	height: 2px;
+    }
+}
+
+.today-date {
+	background-color: #eee;
+}
+
+
+
+
+		/*fixes*/
+
+
+@media screen and (min-width: 1201px) and (max-width: 1266px) {
+	.header .menu{
+		width: calc(100% - 410px)!important;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1364px){
+	.section5{
+		background-size: 65%;
+	}
+	.section5 .text{
+		padding: 24px 0 24px 0px;
+	}
+	.section3 h3{
+		padding-bottom: 25px;
+	}
+	.section3 .text{
+		padding-bottom: 64px;
+		padding-top: 40px;
+	}
+	.section5 .text h3{
+		padding-bottom: 20px;
+	}
+}
+@media screen and (min-width: 1270px){
+	.section5 .container .row{
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+	}
+}
+@media screen and (min-width: 1487px) and (max-width: 1739px){
+	.location-section2__left{
+		margin-top: -142px;
+	}
+}
+.animation-section3__head-title span{
+	transform: rotate(-3deg);
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+	.animation-section3__head-title{
+		margin-bottom: 25px;
+	}
+	.animation-section3__text p{
+		margin-bottom: 0.5rem;
+		font-size: 16px;
+	}
+	.animation-section3__item:first-child{
+		padding-bottom: 37px;
+	}
+}
+@media screen and (min-width: 1256px) and (max-width: 1739px){
+	.animation-section3__item:first-child{
+		padding-bottom: 28px;
+	}
+}
+@media screen and (min-width: 1025px) and (max-width: 1189px){
+	.evenement-section3__text{
+		font-size: 18px;
+	}
+	.evenement-section3__item:nth-child(1){
+		width: 670px;
+		height: 620px;
+		left: -2%;
+	}
+	.evenement-section3__item:nth-child(2){
+		right: -1%;
+		width: 780px;
+		height: 615px;
+	}
+	.evenement-section3__item:nth-child(3){
+		left: -8%;
+		width: 710px;
+		height: 600px;
+		font-size: 16px;
+		line-height: 19px;
+	}
+	.evenement-section3__item:nth-child(3) .evenement-section3__text{
+		left: 49%;
+		top: 52%;
+	}
+	.evenement-section3__item:nth-child(4){
+		right: -2%;
+		height: 600px;
+	}
+	.evenement-section3__item:nth-child(4) .evenement-section3__text{
+		font-size: 17px!important;
+	}
+	.evenement-section2{
+		padding-bottom: 100px;
+	}
+}
+@media screen and (min-width: 1256px) and (max-width: 1740px){
+	.evenement-section2{
+		padding-bottom: 100px;
+	}
+}
+@media screen and (min-width: 1141px) and (max-width: 1920px){
+	.anniversaire-section8__img__right{
+		width: 360px;
+		top: -60px;
+	}
+}
+
+
+@media screen and (max-width: 1200px){
+	.header .menu-active {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		float: left;
+		width: 75%!important;
+		padding-top: 30px;
+	}
+	.header .menu-active li{
+		height: 25px;
+		padding: 0;
+		margin: 0;
+	}
+	.header .logo-active {
+		display: none;
+	}
+	.header .menu li .menu-level2{
+		min-width: 135px;
+	}
+	.header .header-fixed{
+		height: 160px!important;
+	}
+	.header .menu-active .menu-level2 li{
+		display: contents;
+		height: auto;
+	}
+	
+}
+@media screen and (max-width:1799px){
+	.header .menu li .menu-level2{
+		min-width: 135px;
+	}
+}
+@media screen and (min-width: 1800px){
+	.header .menu li .menu-level2{
+		min-width: 178px;
+	}
+}
+@media screen and (min-width:768px) and (max-width:1169px){
+	.burger-menu-button-a{
+		padding: 0;
+	}
+	.header .menu-active{
+		width: 90%!important;
+	}
+}
+@media screen and (min-width:767px) and (max-width:991px){
+	.container.h-100{
+		max-width: 900px;
+	}
+	.header .menu-active{
+		padding-top: 65px;
+	}
+
+	.header .menu-active li a{
+		font-size: 12px;
+		margin: 0;
+	}	
+}
+@media screen and (min-width:992px) and (max-width:1200px){
+	.header .menu-active{
+		padding-top: 5px;
+	}
+}
+@media screen and (max-width: 991px){
+	.header-fixed{
+		height: 160px;
+	}
+}
+.location-page .location-section9 .container{
+	display: block;
+}
+.location-page .location-section4 .container{
+	display: block;
+}
+.particuliers2-section1__img{
+	margin-bottom: -40px!important;
+}
+
+a.disabledlink{
+	pointer-events: none;
+}
+.location-section9__title.ugol span{
+	transform: rotateZ(-4deg);
+}
+
+.menu-level2 li a {
+	margin-left: 5px!important;
+	margin-right: 5px!important;
+}
+
+.contact-section1{
+	padding-top: 20px;
+}
+
+@media screen and (min-width:1406px) and (max-width:1409px){
+	.header .menu li a{
+		font-size: 12px;
+	}
+}
+.hide {
+	visibility: hidden !important;
+}
+
+@media screen and (max-width: 767px) {
+	.header .menu-active {
+		display: flex !important;
+		justify-content: flex-end !important;
+		flex-direction: row-reverse;
+		flex-wrap: wrap-reverse;
+		width: 78% !important;
+		margin-top: 25px !important;
+		
+	}
+	.header .menu li a {
+		font-size: 12px !important;
+	}
+	
+}
+
+@media screen and (max-width: 576px) {
+	.header .menu {
+		display: block;
+		transform: translateX(-350px);
+		position: absolute;
+		opacity: 0;
+		transition: 0.25s transform;
+	}
+	.header .menu-active {
+		display: flex !important;
+		opacity: 1;
+		transform: translateX(-0px);		
+		display: flex !important;
+		justify-content: flex-end !important;
+		flex-direction: column-reverse;		
+		margin-top: -20px !important;
+		max-width: 170px !important;
+		margin-left: 10px !important;		
+	}
+	.header .menu li a:hover {
+		border-bottom: none !important;
+	}
+
+	.header .menu li a {
+		font-size: 14px !important;
+		margin: 0 !important;
+		width: 100%;
+		line-height: 12px;
+		height: 100%;
+
+	}
+	.header .menu-active li {
+		height: 22px;
+		padding: 0;
+	}
+	.header .menu li .menu-level2{
+	top: 55%;
+    left: 0;
+	z-index: 10;
+	padding: 2px;	
+	}
+	.header .menu li .menu-level2 li a {
+		margin-top: 10px !important;
+	}	
+	.coll {
+		max-width: 100% !important;
+		flex: none !important;
+		margin-bottom: 18px;
+	}
+	.particuliers3-section1__left-item__body__row {
+		margin-bottom: 0 !important;
+	}
+	.particuliers3-section1__left-item__body {
+		min-height: 670px;
+	}
+
+	.animation-section2__items{
+		width: 90% !important;
+		margin: 0 auto !important;
+	}
+	.animation-section2__col {
+		overflow: hidden !important;
+		position: relative !important;
+		width: 100% !important;
+		padding-bottom: 100% !important;
+		margin-bottom: 30px;
+	}
+
+	.animation-section2__item {
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		max-width: 100% !important;
+		padding: 5px 22px 20px 22px !important;
+	}
+
+	.animation-section2__text {
+		font-size: 11px !important;
+	}
+
+	.animation-section2__col .animation-section2__text .animation-section2__color {
+		font-size: 16px !important;
+		line-height: 16px !important;
+	}
+	.animation-section2__col .animation-section2__text .animation-section2__title {
+		font-size: 23px !important;
+	}
+	
+
+	.right-block-head {
+		display: flex;
+		padding-left: 0;
+		width: 100%;
+		justify-content: center;
+		position: relative;
+		top: -19px;
+		height: auto;
+	}
+	.right-block-head p{
+		padding: 0 !important;
+		top: 140px;
+		right: -92px;
+		text-align: center;
+		width: 250px;
+		font-size: 11px !important;
+	}
+	.reservation_hidden{
+		display: none;
+	}
+	.reservation_active{
+		display: block;
+		margin: 0 auto;
+	}
+	
+
+	.right-block-head p br{
+		display: none;
+	}
+	.condition {
+		padding: 20px 20px 40px 19px;
+	}
+	.condition__container {
+		padding: 14px 17px 31px 20px;
+	}
+	.condition__title {
+		font-size: 22px;
+		margin-bottom: 30px;
+	}
+	.condition__subtitle {		
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.condition__text{
+		font-size: 18px;
+		line-height: 22px;
+		text-align: justify; 
+	}
+
+	.conteiner-header {
+		height: 84px;
+		transition: 0.3s all;
+	}
+	.header {
+		height: 84px;
+		transition: 0.3s all;
+	}
+	.burger-menu-button {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-top: 10px;
+	}
+	.header-fixed .logo {
+		align-items: flex-start;
+	}
+	.header .logo {
+		padding: 0;
+		padding-top: 15px;
+	}
+	.header_active {
+		height: 164px !important;
+	}
+	.conteiner-header_active {
+		height: 164px !important;
+	}
+
+}
+
