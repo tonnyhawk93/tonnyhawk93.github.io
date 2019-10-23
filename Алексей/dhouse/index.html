@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>b</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">	
+		<script src="js/three.min.js"></script>
+		<script src="js/objloader.min.js"></script>
+		<script src="js/orbitcontrols.min.js"></script>
+		
+		<script src="js/postprocessing/EffectComposer.js"></script>
+		<script src="js/postprocessing/RenderPass.js"></script>
+		<script src="js/postprocessing/ShaderPass.js"></script>
+		<script src="js/postprocessing/OutlinePass.js"></script>
+		<script src="js/postprocessing/SSAARenderPass.js"></script>
+		<script src="js/shaders/CopyShader.js"></script>
+		<script src="js/shaders/FXAAShader.js"></script>
+		
+		<script src="js/app.js"></script>
+		 <!-- .min -->
+		<style>
+			label, select
+			{
+				margin: 4px;
+			}
+		</style>
+		<link rel="stylesheet" href="CSS/style.min.css">
+	</head>
+	<body>
+		
+		
+		
+		<script>
+		
+			var app;
+			var ui;
+			var uiInfo;
+			var materials;
+
+			var uiData = 
+			{
+				"konek":[ "Wood1", "Wood2", "Wood3", "Wood4", "Wood5", "Wood6", "Wood7", "Wood8", "Wood9", "Brick", "Brick2" ],
+				"rami":[ "Wood1", "Wood2", "Wood3", "Wood4", "Wood5", "Wood6", "Wood7", "Wood8", "Wood9", "Brick", "Brick2" ],
+				"dimohod":[ "Wood1", "Wood2", "Wood3", "Wood4", "Wood5", "Wood6", "Wood7", "Wood8", "Wood9", "Brick", "Brick2" ],
+				"pol":[ "Wood1", "Wood2", "Wood3", "Wood4", "Wood5", "Wood6", "Wood7", "Wood8", "Wood9", "Brick", "Brick2" ],
+				"fundament":[ "Wood1", "Wood2", "Wood3", "Wood4", "Wood5", "Wood6", "Wood7", "Wood8", "Wood9", "Brick", "Brick2" ],
+				"stekla":[ "Glass" ],
+				"podshiva":[ "Wood1", "Wood2", "Wood3", "Wood4", "Wood5", "Wood6", "Wood7", "Wood8", "Wood9", "Brick", "Brick2" ],
+				"krisha":[ "Wood1", "Wood2", "Wood3", "Wood4", "Wood5", "Wood6", "Wood7", "Wood8", "Wood9", "Brick", "Brick2" ],
+				"derevo":[ "Wood1", "Wood2", "Wood3", "Wood4", "Wood5", "Wood6", "Wood7", "Wood8", "Wood9", "Brick", "Brick2" ],
+				"dveri":[ "Wood1", "Wood2", "Wood3", "Wood4", "Wood5", "Wood6", "Wood7", "Wood8", "Wood9", "Brick", "Brick2" ]
+			};
+			
+			var request = new XMLHttpRequest();
+				request.open( "GET", "materials.json", true );
+				request.addEventListener( "load", onJSONComplete );
+				request.send();
+			
+			function onJSONComplete( event )
+			{
+				materials = JSON.parse( event.target.response );
+				
+				for( var name in materials )
+				{
+					materials[ name ].name = name;
+				}
+					
+				//console.log( materials );
+				
+				app = new App();
+				app.onStart = onAppStart;
+
+				document.body.appendChild( app.domElement );
+				
+					
+			}
+			
+			app = new App();
+			app.onStart = onAppStart;
+			app.onInfo = onAppInfo;
+
+			document.body.appendChild( app.domElement );
+			
+			function onAppInfo()
+			{
+				if( uiInfo )
+				{
+					uiInfo.innerHTML = "Azimuthal: " + app.getAA().toFixed( 0 ) + ", Polar: " + app.getPA().toFixed( 0 );
+				
+				}
+			}
+
+			function onAppStart( panels )
+			{
+				ui = document.createElement( "div" );
+				ui.className="myClass"
+				ui.style.cssText = "z-index:999;position:absolute;padding:10px;top:20px;left:20px;background-color:white;box-shadow: 0 0 10px rgba(0,0,0,0.25);";
+				
+				uiInfo = document.createElement( "div" );
+				
+				ui.appendChild( uiInfo );
+				ui.appendChild( document.createElement( "hr" ) );
+				
+				var panelSelect = document.createElement( "select" );
+					panelSelect.onchange = function( event ) 
+					{
+						var option = panelSelect.options[ panelSelect.selectedIndex ];
+						
+						app.selectPanel( option.innerHTML, option.value );
+					}
+					
+					var option = document.createElement( "option" );
+						option.innerHTML = "---";
+						option.value = 0;
+						
+						panelSelect.appendChild( option );
+							
+					for( var o = 0; o < panels.length; o++ )
+					{
+						var option = document.createElement( "option" );
+							option.innerHTML = panels[ o ].text;
+							option.value = panels[ o ].data;
+							
+						panelSelect.appendChild( option );
+					}
+					
+					panelSelect.onchange( null );
+					
+				//
+				
+				var size = 128;
+				var textureCanvas = document.createElement( "canvas" );					
+					textureCanvas.style.width = ( textureCanvas.width = size ) + "px";
+					textureCanvas.style.height = ( textureCanvas.height = size ) + "px";
+					textureCanvas.style.border = "1px solid gray";
+					
+				function drawTextureToCanvas( url )
+				{
+					
+					var context = textureCanvas.getContext( "2d" );
+						context.clearRect( 0,  0, size, size );
+						context.fillStyle = panelColorInput.value;
+						context.fillRect( 0,  0, size, size );
+						
+					console.log( url );
+					
+					
+					if( url )
+					{
+						
+						var image = new Image();
+							image.onload = function()
+							{
+								//console.log( "image" );
+								context.globalCompositeOperation = "multiply";
+								context.drawImage( image, 0, 0, size, size );
+							}
+							
+							image.src = url;
+					}
+				}
+				
+				//
+				
+				function getSelectedPanelMaterialName()
+				{
+					return panelMaterialSelect.options[ panelMaterialSelect.selectedIndex ].value;
+				}
+				
+				function getSelectedPanelMaterial()
+				{
+					return materials[ getSelectedPanelMaterialName() ];
+				}
+					
+				var panelMaterialSelect = document.createElement( "select" );
+					panelMaterialSelect.onchange = function( event ) 
+					{
+						var m = getSelectedPanelMaterial();
+						
+						if( m != null ) panelColorInput.value = m.color;
+						
+						app.setMaterialDataForPanels( getSelectedPanelMaterial(), panelColorInput.value );
+						
+						app.setObjectMaterialData
+						( 
+							panelSelect.options[ panelSelect.selectedIndex ].innerHTML,
+							getSelectedPanelMaterial(),
+							panelColorInput.value
+						);
+						
+						drawTextureToCanvas( m ? m.map : null );
+					}
+					
+					var panelMaterialNames = [ "Brick2", "Brick3", "Brick4", "Brick5" ];
+					var option = document.createElement( "option" );
+						option.innerHTML = "---";
+						option.value = "";
+							
+						panelMaterialSelect.appendChild( option );
+						
+					for( var o = 0; o < panelMaterialNames.length; o++ )
+					{
+						var option = document.createElement( "option" );
+							option.innerHTML = option.value = panelMaterialNames[ o ];
+							
+						panelMaterialSelect.appendChild( option );
+					}
+					
+					//app.setMaterialDataForPanels( getSelectedPanelMaterial() );
+					
+				var panelColorInput = document.createElement( "input" );
+					panelColorInput.type = "color";
+					panelColorInput.value = "#FFFFFF";//getSelectedPanelMaterial().color;
+					panelColorInput.onchange = function( event ) 
+					{
+						var m = getSelectedPanelMaterial();
+						
+						app.setMaterialDataForPanels( m, panelColorInput.value );
+						
+						app.setObjectMaterialData
+						( 
+							panelSelect.options[ panelSelect.selectedIndex ].innerHTML,
+							getSelectedPanelMaterial(),
+							panelColorInput.value
+						);
+						
+						drawTextureToCanvas( m ? m.map : null );
+					}
+					
+				var label = document.createElement( "label" );
+					label.innerHTML = "Панель";
+						
+				ui.appendChild( label );
+				ui.appendChild( panelSelect );
+				ui.appendChild( document.createElement( "br" ) );
+				
+				
+				
+				var label = document.createElement( "label" );
+					label.innerHTML = "Материал";
+					
+				ui.appendChild( label );
+				ui.appendChild( panelMaterialSelect );
+				ui.appendChild( panelColorInput );
+				ui.appendChild( document.createElement( "br" ) );
+				ui.appendChild( textureCanvas );
+				ui.appendChild( document.createElement( "br" ) );
+				
+				/*var setPanelMaterialButton = document.createElement( "button" );
+					setPanelMaterialButton.innerHTML = "Применить к выбранной панели";
+					setPanelMaterialButton.onclick = function( event )
+					{
+						app.setObjectMaterialData
+						( 
+							panelSelect.options[ panelSelect.selectedIndex ].innerHTML,
+							getSelectedPanelMaterial(),
+							panelColorInput.value
+						);
+					}
+				
+				ui.appendChild( setPanelMaterialButton );*/				
+				ui.appendChild( document.createElement( "hr" ) );
+				
+				
+				// --------------------------------------------------------
+				
+				
+				for( var u in uiData )
+				{
+					var list = uiData[ u ];
+					
+					if( list.length > 1 )
+					{
+						var label = document.createElement( "label" );
+							label.innerHTML = u;
+							
+						var select = document.createElement( "select" );
+							select.id = u;
+							select.onchange = function( event ) 
+							{
+								onMaterialChange( event.target );
+							}
+							
+						for( var o = 0; o < list.length; o++ )
+						{
+							var option = document.createElement( "option" );
+								option.innerHTML = option.value = list[ o ];
+								
+							select.appendChild( option );
+						}	
+						
+						var br = document.createElement( "br" );
+						
+						ui.appendChild( label );
+						ui.appendChild( select );
+						ui.appendChild( br );
+						
+						select.selectedIndex = Math.floor( Math.random() * list.length );
+						
+						onMaterialChange( select );
+						
+						list.select = select;
+					}
+					else if( list.length == 1 )
+					{
+						app.setObjectMaterialData( u, materials[ list[ 0 ] ] );
+					}
+				}
+				
+				var gridButton = document.createElement( "button" );
+					gridButton.innerHTML = "Brick2";
+					gridButton.onclick = setGridMaterial;
+					
+				var grid2Button = document.createElement( "button" );
+					grid2Button.innerHTML = "Brick";
+					grid2Button.onclick = setGrid2Material;
+					
+				var randomButton = document.createElement( "button" );
+					randomButton.innerHTML = "Random";
+					randomButton.onclick = setRandomMaterials;
+				
+				ui.appendChild( document.createElement( "br" ) );
+				ui.appendChild( grid2Button );				
+				ui.appendChild( gridButton );
+				
+				ui.appendChild( randomButton );
+				
+				document.body.appendChild( ui );
+				
+				///
+				
+				function onAppPanelSelect( name, data, color )
+				{
+					console.log( name, data, color );
+					
+					// Name
+					
+					var f = false;
+
+					for( var i = 0; i < panelSelect.options.length; i++ )
+					{
+
+						if( panelSelect.options[ i ].innerHTML == name )
+						{
+							panelSelect.selectedIndex = i;
+							f = true;
+							break;
+						}
+					}
+					
+					if( !f ) panelSelect.selectedIndex = 0;
+					
+					// Data
+					
+					f = false;
+					
+					if( data )
+					{
+						for( var i = 0; i < panelMaterialSelect.options.length; i++ )
+						{
+
+							if( panelMaterialSelect.options[ i ].innerHTML == data.name )
+							{
+								panelMaterialSelect.selectedIndex = i;
+								f = true;
+								break;
+							}
+						}
+					}
+					
+					if( !f ) panelMaterialSelect.selectedIndex = 0;
+	
+					// Color
+					
+					if( color != null ) panelColorInput.value = color; 
+					else if( data && data.color != null ) panelColorInput.value = data.color;
+					else panelColorInput.value = "#FFFFFF";
+					
+					app.setMaterialDataForPanels( getSelectedPanelMaterial(), panelColorInput.value );
+					
+					drawTextureToCanvas( data ? data.map : null );
+				}
+				
+				app.onPanelSelect = onAppPanelSelect;
+			}
+			
+			function setRandomMaterials( event )
+			{
+				for( var u in uiData )
+				{
+					var list = uiData[ u ];
+					
+					if( list.length > 1 )
+					{
+						list.select.selectedIndex = Math.floor( list.length * Math.random() );
+						app.setObjectMaterialData( u, materials[ list.select.options[ list.select.selectedIndex ].value ] );
+					}
+				}
+			}
+			
+			function setGridMaterial( event )
+			{
+				for( var u in uiData )
+				{
+					var list = uiData[ u ];
+					
+					if( list.length > 1 )
+					{
+						list.select.selectedIndex = list.indexOf( "Brick2" );
+						app.setObjectMaterialData( u, materials[ list.select.options[ list.select.selectedIndex ].value ] );
+					}
+				}
+			}
+			
+			function setGrid2Material( event )
+			{
+				for( var u in uiData )
+				{
+					var list = uiData[ u ];
+					
+					if( list.length > 1 )
+					{
+						list.select.selectedIndex = list.indexOf( "Brick" );
+						app.setObjectMaterialData( u, materials[ list.select.options[ list.select.selectedIndex ].value ] );
+					}
+				}
+			}
+			
+			function onMaterialChange( select )
+			{
+				var selectedValue = select.options[ select.selectedIndex ].value;
+				
+				//console.log( select.id, selectedValue );
+				
+				app.setObjectMaterialData( select.id, materials[ selectedValue ] );
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

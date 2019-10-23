@@ -1,0 +1,92 @@
+.myClass {
+	position: relative;
+	padding-bottom: 10px;
+	background-color: #d3d1cd!important
+}
+.myClass select {
+	cursor: pointer;
+	right: 10%;
+	border: 1px solid #000;
+	border-radius: 5px;
+	background-color: azure;
+	padding: 1px;
+	display: block;
+	float: right
+}
+.myClass label {
+	margin-top: 5px;
+	line-height: 30px
+}
+.myClass button {
+	position: relative;
+	border-radius: 5px;
+	margin-right: 5px;
+	background-color: #60887b;
+	border: none;
+	cursor: pointer;
+	padding: 9px;
+	font-weight: 500;
+	transition: .3s all
+}
+button:hover {
+	box-shadow: 2px 2px 15px #74f34d
+}
+.myClass input {
+	position: absolute;
+	right: 7%;
+	top: 116px;
+	cursor: pointer
+}
+.myClass canvas {
+	margin-top: 10px
+}
+option {
+	padding: 0;
+	min-height: 1em;
+	max-height: 3px
+}
+@media (max-width:850px) and (min-width:567px) {
+	body {
+		background-color: #ccc
+    }
+    .house {
+        left: 200px !important;
+    }    
+	.myClass {
+		width: 30%!important;
+		font-size: 12px;
+		top: 5px!important;
+		height: 95vh!important;
+		padding-bottom: 20px!important
+	}
+	.myClass select {
+		width: 40%!important;
+		margin-top: 0!important;
+		margin: 2px!important;
+		font-size: 10px
+	}
+	.myClass hr {
+		display: none
+	}
+	.myClass input {
+		top: 71px;
+		width: 20px
+	}
+	.myClass label {
+		margin: 1px!important;
+		line-height: 21px
+	}
+	.myClass canvas {
+		width: 30px!important;
+		height: 30px!important;
+		margin-top: 0!important
+	}
+	.myClass button {
+		margin: 0!important;
+		margin-bottom: 10px;
+		width: 30%;
+		padding: 2px;
+		text-align: center!important;
+		font-size: 10px;
+		top: -10px!important;
+		margin-right: 4px!important}}@media (max-width:567px) and (min-width:0px){.myClass{display:none!important}}
