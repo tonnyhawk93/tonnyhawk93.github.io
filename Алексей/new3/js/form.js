@@ -82,31 +82,47 @@ var odds = [];
     name: $('.text', el).html().split('<span>')[0].trim(),
     price: parseInt($('.text', el).html().split('<span>')[1].trim())
   });
-  odds.push(true);
+  odds.push(true); 
   var redrawOpts = function(num) {
-    if (num !== false) {
+    if (num !== false) {      
       $('.particuliers3-section1__left-item__body__right > div').hide();
       $($('.particuliers3-section1__left-item__body__right > div')[num]).show();
+      
     }
     recalcPrice();
   }
   $(el).click(function(){
-    var num = this.dataset.num - 1;
+    var num = this.dataset.num-1;    
     if (odds[num]) {
       odds[num] = false;
       return;
     }
     odds[num] = true;
     opts[num].enabled = $('.checkmark', this).is(':visible');
+    
     redrawOpts(opts[num].enabled ? num : false);
+    
   });
 });
 
-$('.livraison .particuliers3-section1__left-item__body__left__a').click(function(){
+$('.livraison .particuliers3-section1__left-item__body__left__a').click(function(e){
+  var n = e.target.value;
   $('#shipping-field').text($('.text', this).html().split('<span>')[0].trim());
-  payShip = $('.checkmark', $('.livraison .particuliers3-section1__left-item__body__left__a')[1]).is(':visible');
+  if($('.checkmark', $('.livraison .particuliers3-section1__left-item__body__left__a')[1]).is(':visible')) {
+    payShip = true; 
+    shipPrice = parseInt(
+      $($('.livraison .particuliers3-section1__left-item__body__left__a .text')[1]).html().split('<span>')[1]
+    );
+  } else if($('.checkmark', $('.livraison .particuliers3-section1__left-item__body__left__a')[2]).is(':visible')) {
+    payShip = true;
+    shipPrice = parseInt(
+      $($('.livraison .particuliers3-section1__left-item__body__left__a .text')[2]).html().split('<span>')[1]
+    );
+  } else {
+    payShip = false;
+  }  
   $('.particuliers3-section1__left-item__body__right > div', $('.livraison')).hide();
-  $($('.particuliers3-section1__left-item__body__right > div', $('.livraison'))[payShip * 1]).show();
+  $($('.particuliers3-section1__left-item__body__right > div', $('.livraison'))[n]).show();
   recalcPrice();
 });
 
