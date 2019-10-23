@@ -1,0 +1,115 @@
+.catal {
+    padding: 25px 0 107px 15px;
+  }
+  
+  .catal__navigation {
+    color: #313131;
+    font-family: "Arial";
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .catal__navigation a {
+    color: #497470;
+    text-decoration: underline;
+  }
+  
+  .catal__up {
+    width: 100%;
+    margin: 0;
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .catal__up .catal__item {
+    margin: 0;
+    width: 200px;
+    margin-right: 15px;
+    position: relative;
+  } 
+  .catal__up span {
+    display: flex;
+    position: absolute;
+    color: #ffffff;
+    font-family: "Arial";
+    font-size: 14px;
+    line-height: 16px !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 50px;
+    z-index: 0;
+    top: 22px;
+    left: 92px;
+    max-width: 98px;
+    text-align: center;
+    align-items: center;
+    pointer-events: none;
+  }
+  .catal__up .catal__item:nth-child(4) {
+    margin-right: 0;
+  }
+  
+  .catal__midle {
+    width: 100%;
+    margin: 0;
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .catal__title {
+    display: block;
+    color: #313130;
+    font-family: "Arial";
+    margin-top: 37px;
+    margin-bottom: 0;
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  .catal__midle .catal__item {
+    width: 200px;
+    margin-right: 15px;
+    margin-bottom: 29px;
+    text-align: center;  
+  }
+  .catal__midle .catal__item span{
+    display: block;
+    color: #313131;
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 12px;
+  }
+  .catal__popular {
+    width: 100%;
+    margin: 0;
+    margin-top: 25px; 
+    position: relative; 
+  }
+  .catal__popular .catal__item {
+    margin-right: 15px;
+    margin-bottom: 29px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .catal__popular .catal__item span{
+    display: block;
+    color: #313131;
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+  
+  .catal__popular .controls-top {
+    right: 35px;
+  }
+  .owl-carousel {
+    width: 860px;
+    overflow: hidden;
+  }
+  .controls-top {
+    position: absolute;
+    
+  }
+  
