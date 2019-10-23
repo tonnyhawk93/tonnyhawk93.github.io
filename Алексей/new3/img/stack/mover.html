@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<style>
+		.formats {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 100%;
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		.format {
+			margin: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			perspective: 800px;
+			transform-style: preserve-3d;
+			cursor: pointer;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-khtml-user-select: none;
+			-ms-user-select: none;
+		}
+		.template-stack {
+			position: relative;
+			height: 300px;
+			width: 300px;
+			transform-style: preserve-3d;
+			transition: transform .3s ease-in-out;
+			cursor: pointer;
+		}
+		.format .label {
+			background-color: white;
+			color: #255073;
+			border-radius: 5px;
+			padding: 4px 25px;
+			font-size: 1.1em;
+			margin-top: 10px;
+			margin-bottom: 30px;
+			transform: translateZ(70px);
+			box-shadow: 2px 2px 7px rgba(0,0,0,0.1),0 0 5px rgba(0,0,0,0.1),0 0 40px rgba(0,0,0,0.1);
+			transition: transform .3s ease-in-out;
+		}
+		.template-stack {
+			position: relative;
+			height: 300px;
+			width: 300px;
+			transform-style: preserve-3d;
+			transition: transform .3s ease-in-out
+		}
+		.template-stack .mover {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform-style: preserve-3d
+		}
+		.template-stack img {
+			max-height: 100%;
+			max-width: 100%;
+			border-radius: 3px;
+			box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 0 35px rgba(0, 0, 0, 0.1)
+		}
+		.template-stack .send-back1,
+		.template-stack .send-back2,
+		.template-stack .send-back3 {
+			animation-duration: .5s;
+			animation-timing-function: cubic-bezier(0.27, 0.01, 0.4, 1.2);
+			transform: translateZ(-60px);
+			z-index: -2
+		}
+		.template-stack .send-back1 {
+			animation-name: send-back-anim1
+		}
+		.template-stack .send-back2 {
+			animation-name: send-back-anim2
+		}
+		.template-stack .send-back3 {
+			animation-name: send-back-anim3
+		}
+		@keyframes send-back-anim1 {
+			0% {
+				transform: translateZ(60px)
+			}
+			45% {
+				transform: translateZ(60px) translateX(100px) rotateZ(10deg)
+			}
+			55% {
+				transform: translateZ(-60px) translateX(70px) rotateZ(5deg)
+			}
+			100% {
+				transform: translateZ(-60px)
+			}
+		}
+		@keyframes send-back-anim2 {
+			0% {
+				transform: translateZ(60px)
+			}
+			45% {
+				transform: translateZ(60px) translateX(-100px) rotateZ(-10deg)
+			}
+			55% {
+				transform: translateZ(-60px) translateX(-70px) rotateZ(-5deg)
+			}
+			100% {
+				transform: translateZ(-60px)
+			}
+		}
+		@keyframes send-back-anim3 {
+			0% {
+				transform: translateZ(60px);
+				transform-origin: bottom right
+			}
+			45% {
+				transform: translateZ(60px) translateX(20px) rotateZ(50deg);
+				transform-origin: bottom right
+			}
+			55% {
+				transform: translateZ(-60px) translateX(10px) rotateZ(30deg);
+				transform-origin: bottom right
+			}
+			100% {
+				transform: translateZ(-60px);
+				transform-origin: bottom right
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="formats">
+		<div class="format">
+			<div class="template-stack" id="duplex">
+				<div class="mover"><img src="vegas-1.png" style="transform: rotateZ(-3deg) translateX(4px) translateY(-9px) translateZ(5px) "></div>
+				<div class="mover"><img src="vegas-2.png" style="transform: rotateZ(-6deg) translateX(-7px) translateY(-3px) translateZ(15px) "></div>
+				<div class="mover"><img src="vegas-3.png" style="transform: rotateZ(6deg) translateX(-8px) translateY(-6px) translateZ(25px) "></div>
+			</div>
+			<div class="label">Duplex</div>
+		</div>
+	</div>
+
+	<script>
+		document.querySelectorAll('.mover').forEach(function(e) {
+			e.addEventListener('click', function() {
+				const potentialMover = document.querySelectorAll('#' + this.parentElement.id + ' .mover')
+				const activeMover = document.querySelectorAll('#' + this.parentElement.id + ' .send-back1, #' + this.parentElement.id + ' .send-back2, #' + this.parentElement.id + ' .send-back3, #' + this.parentElement.id + ' .send-back4')
+				this.classList.add('send-back' + (Math.round(Math.random() * 2) + 1))
+				if (activeMover.length === potentialMover.length - 1) activeMover.forEach(function(el) { 
+					el.classList.remove('send-back1', 'send-back2', 'send-back3', 'send-back4') 
+				})
+			})
+		})
+	</script>
+</body>
+</html>
