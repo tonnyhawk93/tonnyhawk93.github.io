@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Календарь -->
+    <link rel="stylesheet" href="css/theme2.css"/>
+    <!-- Календарь конец -->
+	<link rel="stylesheet" href="css/main.css?ver=1.0.1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<script src="https://kit.fontawesome.com/f026efd6a1.js"></script>
+
+    <title>Particuliers 3</title>
+</head>
+<body class="animation-page">
+    <div class="header">
+    	<div class="container h-100">
+    		<div class="logo">
+                <a href="index.html" class="logotype">
+                    <img src="img/logo.png" alt="">
+                </a>
+    		</div>
+			<div class="burger-menu-button">
+				<div class="burger-menu-icon flex-center">
+					<div class="lines"></div>
+				</div>
+			</div>
+            <div class="right-block-head">
+                <img src="img/right-image.png" alt="" class="image-right-header">
+                <p>CENTRALE DE RÉSERVATION <br>01.45.01.66.66</p>
+            </div>
+			<ul class="menu">
+                <li class="flex">
+                    <a href="#">BLOG</a>
+                </li>
+                <li class="flex">
+                    <a href="contact.html">CONTACT</a>
+                </li>
+                <li class="flex">
+                    <a href="#">ESPACE CLIENT</a>
+                </li>
+                <li class="flex">
+                    <a href="particuliers1.html">RÉSERVATION/TARIFS</a>
+                </li>
+                <li class="flex">
+                    <a href="animation.html">Animations</a>
+                    <ul class="menu-level2">
+                        <li>
+                            <a href="animation.html">Soirée entreprise</a>
+                        </li>
+                        <li>
+                            <a href="evenement-prive.html">Evènement privé</a>
+                        </li>
+                        <li>
+                            <a href="mariage.html">Mariage</a>
+                        </li>
+                        <li>
+                            <a href="anniversaire.html">Anniversaire</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="flex">
+                    <a href="location.html">LOCATION PHOTOBOOTH</a>
+                </li>
+				<li class="flex">
+					<a href="index.html">HOME</a>
+				</li>
+			</ul>
+    	</div>
+    </div>
+    <div class="conteiner-header"></div>
+    <div class="particuliers3-section1 particuliers5-section1">
+        <div class="particuliers3-section1__container">
+            <div class="particuliers3-section1__items">
+                <div class="particuliers3-section1__col-left">
+                    <div class="particuliers3-section1__left-item">
+                        <div class="particuliers3-section1__left-item__head-titles">
+                            <div class="particuliers3-section1__left-item__head-title active" onClick="$('.particuliers-reservation').addClass('hide')">
+                                <span id="switch-tab-1">Evenement</span>
+                            </div>
+                            <div class="particuliers3-section1__left-item__head-title" onClick="$('.particuliers-reservation').addClass('hide')">
+                                <span id="switch-tab-2">Options</span>
+                            </div>
+                            <div class="particuliers3-section1__left-item__head-title" onClick="$('.particuliers-reservation').addClass('hide')">
+                                <span id="switch-tab-3">Livraison</span>
+                            </div>
+                            <div class="particuliers3-section1__left-item__head-title" onClick="$('.particuliers-reservation').removeClass('hide')">
+                                <span id="switch-tab-4">Informations</span>
+                            </div>
+                        </div>
+                        <div class="particuliers3-section1__left-item__body active" data-index="0">
+                            <div class="particuliers3-section1__left-item__body__head-title">
+                                MON EVENEMENT
+                            </div>
+                            <div class="particuliers3-section1__left-item__body__row">
+                                <div class="particuliers3-section1__left-item__body__title">
+                                    ¤ Date de l’événement
+                                </div>
+                                <div class="particuliers3-section1__left-item__body__item">
+                                    <div id="caleandar"></div>
+                                </div>
+                            </div>
+                            <div class="particuliers3-section1__left-item__body__row">
+                                <div class="particuliers3-section1__left-item__body__title">
+                                    ¤ Type de l’événement
+                                </div>
+                                <div class="particuliers3-section1__left-item__body__item">
+                                    <label class="particuliers3-section1__left-item__body__left__a particuliers3-section1__left-item__body__input">
+                                        <input type="text" class="type" id="txt-1">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="particuliers3-section1__left-item__body__row">
+                                <div class="particuliers3-section1__left-item__body__title">
+                                    ¤ Lieu de l’événement
+                                </div>
+                                <div class="particuliers3-section1__left-item__body__item">
+                                    <label class="particuliers3-section1__left-item__body__left__a particuliers3-section1__left-item__body__input">
+                                        <input type="text" class="city" id="txt-2">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="particuliers3-section1__left-item__body__row">
+                                <a href="#" class="particuliers3-section1__left-item__body__button to-tab-2">
+                                    SUIVANT
+                                </a>
+                            </div>
+                        </div>
+                        <div class="particuliers3-section1__left-item__body" data-index="1" id="tab-2">
+                            <div class="particuliers3-section1__left-item__body__head-title">
+                                MES OPTIONS
+                            </div>
+                            <div class="particuliers3-section1__left-item__body__row options">
+                                <div class="particuliers3-section1__left-item__body__left">
+                                    <label class="particuliers3-section1__left-item__body__left__a" data-num="1">
+                                        <input type="checkbox" class="double_impression" />
+                                        <span class="checkmark"></span>
+                                        <div class="text">Double impression <span>50€</span></div>
+                                    </label>
+                                    <label class="particuliers3-section1__left-item__body__left__a" data-num="2">
+                                        <input type="checkbox" class="pack_props" />
+                                        <span class="checkmark"></span>
+                                        <div class="text">Pack Props <span>10€</span></div>
+                                    </label>
+                                    <label class="particuliers3-section1__left-item__body__left__a" data-num="3">
+                                        <input type="checkbox" class="magnet_lozenges" />
+                                        <span class="checkmark"></span>
+                                        <div class="text">Pastilles magnétiques <span>60€</span></div>
+                                    </label>
+                                    <label class="particuliers3-section1__left-item__body__left__a" data-num="4">
+                                        <input type="checkbox" class="green_background" />
+                                        <span class="checkmark"></span>
+                                        <div class="text">Fond vert <span>120€</span></div>
+                                    </label>
+                                </div>
+                                <div class="particuliers3-section1__left-item__body__right">
+                                    <div>
+                                        Non, vous ne rêvez pas, ne vous frottez pas les yeux, ce sont bien deux photos qui s’impriment ! Voyez la vie en double avec notre option impression multiple : Deux fois plus de plaisir, deux fois plus de souvenirs ! A partager ou à conserver dans un livre d’or, nos impressions haute qualité sauront se faire une place de choix dans votre cœur et celui de vos invités !
+                                    </div>
+                                    <div>
+                                        Déguisés, la fête est plus gaie ! On le sait tous, dès qu’on voit une paire de lunettes, une perruque ou un chapeau fluo, on retombe tous en enfance. Les masques tombent et les fous rires pleuvent ! Choisissez vos armes, démarrez la session et… Cheeeeze ! Tant de combinaisons possibles, vous ne saurez plus où donner de la tête. Pas le choix, il faut refaire tout de suite une nouvelle photo !
+                                    </div>
+                                    <div>
+                                        Une jolie photo c’est bien, une jolie photo magnétique, c’est mieux ! Parce qu’après tout, une porte de frigo n’est pas très sexy, autant la recouvrir de souvenirs ! Votre photo trônera fièrement à côté du magnet décapsuleur rapporté d’Ibiza l’été dernier et autres puzzle de France de votre marque de cordon bleu préférée…
+                                    </div>
+                                    <div>
+                                        Le grand spectacle à domicile ! Changez de décor, de pays, de continent, de monde, et même d’univers en un claquement de doigt ! Finis les sempiternels photocalls en bâche : choisissez le fond que vous souhaitez avoir sur vos photos, notre logiciel s’occupe du reste. Grâce à la technologie Chromakey, impossible n’est pas Shoot’n Box !
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="particuliers3-section1__left-item__body__row">
+                                <a href="#" class="particuliers3-section1__left-item__body__button to-tab-3">
+                                    SUIVANT
+                                </a>
+                            </div>
+                        </div>
+                        <div class="particuliers3-section1__left-item__body livraison" data-index="2">
+                            <div class="particuliers3-section1__left-item__body__head-title">
+                                MA LIVRAISON
+                            </div>
+                            <div class="particuliers3-section1__left-item__body__row options livraison">
+                                <div class="particuliers3-section1__left-item__body__left">
+                                    <label class="particuliers3-section1__left-item__body__left__a">
+                                        <input type="radio" name="name" class="delivery" value="0" />
+                                        <span class="checkmark"></span>
+                                        <div class="text">Retrait boutique  <span>Gratuit</span></div>
+                                    </label>
+                                    <label class="particuliers3-section1__left-item__body__left__a">
+                                        <input type="radio" name="name" class="delivery" value="1" />
+                                        <span class="checkmark"></span>
+                                        <div class="text">Livraison standard <span>39€</span></div>
+                                    </label>
+                                </div>
+                                <div class="particuliers3-section1__left-item__body__right">
+                                    <div>
+                                        Venez nous rencontrer dans notre showroom, et repartez avec votre borne prête à l’emploi ! Déjà configurée et rangée dans son sac de transport, vous n’aurez plus qu’à l’installer en quelques étapes très simples. Réduisez les coûts, et optez pour le retrait boutique, le choix malin !
+                                    </div>
+                                    <div>
+                                        Nos équipes vous contacteront afin d’établir un tarif de livraison sur mesure.
+                                        Pas le temps pour un retrait boutique ? Pas de panique ! Nos livreurs sont à votre service pour vous apportez votre borne où vous le souhaitez : à domicile, au bureau, chez des proches… Epargnez-vous de la route et du stress !
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="particuliers3-section1__left-item__body__row">
+                                <a href="#" class="particuliers3-section1__left-item__body__button to-tab-4">
+                                    SUIVANT
+                                </a>
+                            </div>
+                        </div>
+                        <div class="particuliers3-section1__left-item__body informations" data-index="3">
+                            <div class="particuliers3-section1__left-item__body__head-title">
+                                MES INFORMATIONS
+                            </div>
+                            <div class="particuliers3-section1__left-item__body__form">
+                                <div class="particuliers3-section1__left-item__body__row">
+                                    <div class="coll"><input type="text" id="last_name" placeholder="Nom"></div>
+                                    <div class="coll"><input type="text" id="first_name" placeholder="Prénom"></div>
+                                </div>
+                                <div class="particuliers3-section1__left-item__body__row">
+                                    <div class="coll"><input type="text" id="email" placeholder="Mail"></div>
+                                    <div class="coll"><input type="text" id="phone" placeholder="Téléphone"></div>
+                                </div>
+                                <textarea name="textarea" id="textarea" cols="20" rows="5" placeholder="Informations complémentaires"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="particuliers3-section1__col-right">
+                    <div class="particuliers3-section1__col-right__item">
+                        <div class="particuliers3-section1__col-right__head-title">
+                            MON PANIER
+                        </div>
+                        <div class="particuliers3-section1__col-right__body">
+                            <div class="particuliers3-section1__col-right__row">
+                                <div class="particuliers3-section1__col-right__body__title">
+                                    ¤ Ma borne
+                                </div>
+                                <div class="particuliers3-section1__col-right__body__value" id="plan-field"></div>
+                            </div>
+                            <div class="particuliers3-section1__col-right__row">
+                                <div class="particuliers3-section1__col-right__body__title">
+                                    ¤ Date de l’événement
+                                </div>
+                                <div class="particuliers3-section1__col-right__body__value" id="date-field">
+
+                                </div>
+                            </div>
+                            <div class="particuliers3-section1__col-right__row">
+                                <div class="particuliers3-section1__col-right__body__title">
+                                    ¤ Type de l’événement
+                                </div>
+                                <div class="particuliers3-section1__col-right__body__value" id="txt-1-field"></div>
+                            </div>
+                            <div class="particuliers3-section1__col-right__row">
+                                <div class="particuliers3-section1__col-right__body__title">
+                                    ¤ Lieu de l’événement
+                                </div>
+                                <div class="particuliers3-section1__col-right__body__value" id="txt-2-field"></div>
+                            </div>
+                            <div class="particuliers3-section1__col-right__row">
+                                <div class="particuliers3-section1__col-right__body__title">
+                                    ¤ Mes options
+                                </div>
+                                <div class="particuliers3-section1__col-right__body__value" id="opts-field"></div>
+                            </div>
+                            <div class="particuliers3-section1__col-right__row">
+                                <div class="particuliers3-section1__col-right__body__title">
+                                    ¤ Ma livraison
+                                </div>
+                                <div class="particuliers3-section1__col-right__body__value" id="shipping-field">
+
+                                </div>
+                            </div>
+                            <div class="particuliers3-section1__col-right__row">
+                                <div class="particuliers3-section1__col-right__body__title">
+                                    ¤ Nom / Prénom
+                                </div>
+                                <div class="particuliers3-section1__col-right__body__value" id="name-field"></div>
+                            </div>
+                            <div class="particuliers3-section1__col-right__row">
+                                <div class="particuliers3-section1__col-right__body__title">
+                                    ¤ Mail
+                                </div>
+                                <div class="particuliers3-section1__col-right__body__value" id="email-field"></div>
+                            </div>
+                            <div class="particuliers3-section1__col-right__row">
+                                <div class="particuliers3-section1__col-right__body__title">
+                                    ¤ Téléphone
+                                </div>
+                                <div class="particuliers3-section1__col-right__body__value" id="phone-field"></div>
+                            </div>
+                        </div>
+                        <div class="particuliers3-section1__col-right__row">
+                            <a href="#" class="particuliers3-section1__col-right__body__button" id="price">€ ttc</a>
+                            <a href="#" class="particuliers3-section1__col-right__body__button particuliers-reservation right hide">
+                                RESERVER
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section10">
+        <div class="container h-100">
+            <div class="logo">
+                <a href="index.html" class="logotype">
+                    <img src="img/logo2.png" alt="" class="">
+                </a>
+            </div>
+            <ul class="flex">
+                <li class="flex">
+                    <i class="fas fa-pen" style="color: transparent;"></i>
+                    <a href="#">Copyright © 2019 Shootnbox</a>
+                </li>
+                <li>-</li>
+                <li class="flex">
+                    <i class="fas fa-pen" style="color: transparent;"></i>
+                    <a href="#">Politique de confidentialité </a>
+                </li>
+                <li>-</li>
+                <li class="flex">
+                    <i class="fas fa-pen"></i>
+                    <a href="condition.html">Conditions générales de location</a>
+                </li>
+                <li>-</li>
+                <li class="flex">
+                    <i class="fas fa-question"></i>
+                    <a href="#">FAQ</a>
+                </li>
+                <li>-</li>
+                <li class="flex">
+                    <i class="fas fa-phone-volume"></i>
+                    <a href="contact.html">Nous contacter 01.45.01.66.66</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var burgermenuicon = document.querySelector('.burger-menu-icon');
+        var burgerMenu = document.querySelector('.burger-menu');
+        var header = document.querySelector('.header');
+        let reservation = document.querySelector('.right-block-head p')
+        
+         var miniMenu = document.querySelector('.menu');
+         var logo =  document.querySelector('.logo');
+         var activeButton =  document.querySelector('.burger-menu-button');
+         
+        burgermenuicon.onclick =function () {
+            this.classList.toggle('burger-menu-active');
+            
+            miniMenu.classList.toggle('menu-active');
+            logo.classList.toggle('logo-active');
+            activeButton.classList.toggle('burger-menu-button-a');
+            reservation.classList.toggle('reservation_hidden');            
+            if (window.pageYOffset > 120){
+                burgerMenu.classList.toggle('burger-menu-active2');
+            }
+            else{
+                burgerMenu.classList.toggle('burger-menu-active1');
+            }
+        }
+        window.onscroll = function show_header(){
+            if (window.pageYOffset > 120){
+                header.classList.add('header-fixed');
+            }
+            else{
+                header.classList.remove('header-fixed');
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/form.js"></script>
+
+    <!-- Календарь -->
+    <script type="text/javascript" src="js/caleandar.js?ver=1.0.0"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    <!-- Календарь конец -->
+	<script src="js/jquery-2.2.2.min.js"></script>
+	<link rel="stylesheet" href="sweetalert2/css/sweetalert2.min.css" />
+	<script src="sweetalert2/js/sweetalert2.min.js"></script>
+	<script src="js/main.js?ver=1.0.4"></script>
+</body>
+</html>
