@@ -389,7 +389,6 @@ jQuery(document).ready(function(){
 			}
 		});
 	});
-
 });
 function checkemail(value){
 	reg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
