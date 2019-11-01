@@ -607,7 +607,10 @@ img.image-right-header {
 	color: #000;
 	padding-bottom: 30px;
 }
-.section7 h4{
+.section7 h4 {
+	padding-bottom: 30px;
+}
+.section7 h4 a{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	font-weight: 400px;
@@ -625,7 +628,7 @@ img.image-right-header {
 	padding-right: 30px;
 	padding-bottom: 110px;
 }
-.section7 a{
+.section7 .btn1 a{
 	width: 400px;
 	display: block;
 	padding: 10px 30px;
@@ -7966,6 +7969,7 @@ a.disabledlink{
 		justify-content: flex-end !important;
 		flex-direction: column-reverse;		
 		margin-top: -20px !important;
+		max-width: 170px !important;
 		margin-left: 10px !important;		
 	}
 	.header .menu li a:hover {
