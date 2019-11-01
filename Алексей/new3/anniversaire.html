@@ -18,7 +18,7 @@
                 </a>
     		</div>
 			<div class="burger-menu-button">
-				<div class="burger-menu-icon flex-center">
+				<div class="burger-menu-icon">
 					<div class="lines"></div>
 				</div>
 			</div>
@@ -249,41 +249,6 @@
             </ul>
         </div>
     </div>
-    <script>
-        var burgermenuicon = document.querySelector('.burger-menu-icon');
-        var burgerMenu = document.querySelector('.burger-menu');
-        var header = document.querySelector('.header');
-        let reservation = document.querySelector('.right-block-head p')
-        
-         var miniMenu = document.querySelector('.menu');
-         var logo =  document.querySelector('.logo');
-         var activeButton =  document.querySelector('.burger-menu-button');
-         
-        burgermenuicon.onclick =function () {
-            this.classList.toggle('burger-menu-active');
-            
-            miniMenu.classList.toggle('menu-active');
-            logo.classList.toggle('logo-active');
-            activeButton.classList.toggle('burger-menu-button-a');
-            reservation.classList.toggle('reservation_hidden');
-            console.log(reservation);
-            
-            if (window.pageYOffset > 120){
-                burgerMenu.classList.toggle('burger-menu-active2');
-            }
-            else{
-                burgerMenu.classList.toggle('burger-menu-active1');
-            }
-        }
-        window.onscroll = function show_header(){
-            if (window.pageYOffset > 120){
-                header.classList.add('header-fixed');
-            }
-            else{
-                header.classList.remove('header-fixed');
-            }
-        }
-    </script>
-	<script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>   
 </body>
 </html>

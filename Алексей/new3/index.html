@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="https://kit.fontawesome.com/f026efd6a1.js"></script>
-
 	<title>Bornes photo interactives pour particuliers et professionnels / Shoot’n Box</title>
 </head>
 <body class="main-page">
@@ -14,7 +13,7 @@
     	<div class="container h-100">
     		<div class="logo">
                 <a href="index.html" class="logotype">
-                    <img src="img/logo.png" alt="">
+                    <img src="img/logo.png" alt="logo">
                 </a>
     		</div>
 			<div class="burger-menu-button">
@@ -85,16 +84,16 @@
     <div class="section3">
     	<div class="container">
     		<div class="row">
-    			<div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+    			<div class="col-12 col-md-8 col-lg-6 col-xl-6">
     				<div class="text">
     					<h3>Le photobooth est une borne photo autonome</h3>
     					<h4>capable de prendre des clichés et de les imprimer sur place en <span class="bold">8 secondes</span> seulement. Vous avez également la possibilité de créer des <span class="bold">Gifs</span> et <span class="bold">Boomerangs</span> à volonté et vous les envoyer par <span class="bold">SMS et Email en illimité !</span> </h4>
     				</div>
     			</div>
-    			<div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 flex">
+    			<div class="col-12 col-md-4 col-lg-3 col-xl-3 flex">
     				<img src="img/sms.png" alt="" class="img1 flex-center">
     			</div>
-    			<div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 flex">
+    			<div class="col-12 col-md-12 col-lg-3 col-xl-3 flex">
                     <img src="img/s3img.png" alt="" class="img2 flex-center">
                 </div>
     		</div>
@@ -279,40 +278,6 @@
             </ul>
         </div>
     </div>
-    <script>
-        var burgermenuicon = document.querySelector('.burger-menu-icon');
-        var burgerMenu = document.querySelector('.burger-menu');
-        var header = document.querySelector('.header');
-        var reservation = document.querySelector('.right-block-head p');        
-        var miniMenu = document.querySelector('.menu');
-        var logo =  document.querySelector('.logo');
-        var activeButton =  document.querySelector('.burger-menu-button');
-        var contHeader = document.querySelector('.conteiner-header');         
-        burgermenuicon.onclick =function () {
-            this.classList.toggle('burger-menu-active');
-            
-            miniMenu.classList.toggle('menu-active');
-            logo.classList.toggle('logo-active');
-            activeButton.classList.toggle('burger-menu-button-a');
-            reservation.classList.toggle('reservation_hidden'); 
-            header.classList.toggle('header_active');
-            contHeader.classList.toggle('conteiner-header_active');         
-            if (window.pageYOffset > 120){
-                burgerMenu.classList.toggle('burger-menu-active2');
-            }
-            else{
-                burgerMenu.classList.toggle('burger-menu-active1');
-            }
-        }
-        window.onscroll = function show_header(){
-            if (window.pageYOffset > 120){
-                header.classList.add('header-fixed');
-            }
-            else{
-                header.classList.remove('header-fixed');
-            }
-        }
-    </script>
-	<script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>    
 </body>
 </html>
