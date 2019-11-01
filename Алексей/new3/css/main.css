@@ -264,7 +264,9 @@ img.image-right-header {
     display: none;
 }
 .header.header-fixed .right-block-head p {
-    padding-top: 1px;
+	padding-top: 58px;
+	line-height: 15px;
+	width: 100px;	
 }
 
 /*===BURGER-MENU===*/
@@ -8650,7 +8652,7 @@ a.disabledlink{
 		top: 140px;
 		right: -92px;
 		text-align: center;
-		width: 250px;
+		width: 250px !important;
 		font-size: 11px !important;
 	}
 	.reservation_hidden{
