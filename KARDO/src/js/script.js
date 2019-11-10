@@ -42,6 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
         gutter: 30,
         nav: false,
         controlsContainer: '.carousel__controls',
+        lazyload: true
     });
 
     slider.events.on('indexChanged', moveCentral);
@@ -53,7 +54,8 @@ window.addEventListener('DOMContentLoaded', () => {
         controlsContainer: '.carousel__controls_first',
         nav: false,
         loop: false,
-        onInit: initTeamFirstCounter
+        onInit: initTeamFirstCounter,
+        lazyload: true,
         
     });
 
@@ -72,6 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
         loop: false,
         onInit: initTeamTwoCounter,
         controlsContainer: '.carousel__controls_second',
+        lazyload: true
     });
 
     team2.events.on('indexChanged', initTeamTwoCounter);
@@ -89,74 +92,86 @@ window.addEventListener('DOMContentLoaded', () => {
         navContainer: '.judges__list',
         touch: false,
         controls: false,
-        autoHeight: true
+        autoHeight: true,
+        lazyload:true,
     });
 
     let judgesActive1 = tns({
         container: '#judges_riters',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive2 = tns({
         container: '#judges_trikers',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive3 = tns({
         container: '#judges_trasers',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive4 = tns({
         container: '#judges_braykers',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive5 = tns({
         container: '#judges_workauters',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive6 = tns({
         container: '#judges_friraners',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive7 = tns({
         container: '#judges_mediameikers',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive8 = tns({
         container: '#judges_socialworkers',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive9 = tns({
         container: '#judges_hiphopdansers',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive10 = tns({
         container: '#j',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     let judgesActive11 = tns({
         container: '#jj',
         mode: "gallery",
         nav: false,
-        controls: false
+        controls: false,
+        lazyload: true
     });
     judgesActive1.destroy();
             judgesActive2.destroy();
@@ -206,6 +221,7 @@ window.addEventListener('DOMContentLoaded', () => {
         loop: false,
         touch: false,
         center: true,
+        lazyload:true,
         controlsContainer: '.carousel__controls'
     });
     let about = tns({
@@ -216,6 +232,7 @@ window.addEventListener('DOMContentLoaded', () => {
         slideBy: 4,
         controlsContainer: '.about__photos_controls',
         nav: false,
+        lazyload: true,
         responsive: {
             1200: {
                 container: '.about__photolitle',
@@ -246,6 +263,7 @@ window.addEventListener('DOMContentLoaded', () => {
         autoWidth: false,
         center: true,
         controls: false,
+        lazyload: true,
         navContainer: '#g_container'
     });
     let smiNews = tns({
