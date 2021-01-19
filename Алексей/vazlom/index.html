@@ -1,38 +1,81 @@
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Взломать пословицы</title>
-        <meta name="theme-color" content="#fff">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="stylesheet" href="styles/main.min.css">
-    </head>
-    <body>
-            <section class="game">
-        <div class="game__area game__area_hiden" id="gameArea">
-            <div class="game__text"></div>
-            <div class="game__icon" id="i"></div>
-            <div class="game__icon" id="book"></div>
-            <div class="game__answer" id="yes"></div>
-            <div class="game__answer" id="no"></div>
-            <div class="game__errors">
-                <div class="game__error"></div>
-                <div class="game__error"></div>
-                <div class="game__error"></div>
-                <div class="game__error"></div>
-                <div class="game__error"></div>
-            </div>
-        </div>
-        <div class="game__wraper game__wraper_active">
-            <div class="game__modal" id="modal">
-                <div class="modal__text"id="modal__text">
-                </div>
-                <div class="game__icon game__icon_modal" id="x"></div>   
-            </div>
-        </div>
-    </section>
-        <script src="js/main.min.js"></script>
-    </body>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="30">
+<meta name="author" content="Егор Бойко">
+<meta name="organization" content="ММФ БГУ">
+<meta name="date of creation" content="18/01/2021">
+<meta name="description" content="Учебный сайт для задания лабораторной работы №2">
+<meta name="keywords" content="Егор, Бойко, студент, мехмат">
+
+<title>Главная страница</title>
+</head>
+<body style="padding: 50px 100px; background-color: gray">
+	<style type="text/css">
+   a{
+    color: green; /* Цвет обычной ссылки */
+
+   }
+   a:visited {
+    color: blue; /* Цвет посещенной ссылки */
+   }
+		a:active{
+			color: red
+		}
+  </style>
+	<header>
+		<div style="display: flex; justify-content: space-between;">
+			<div class="logo" align="left"> 
+			<img src="images/logo.svg" alt="logo">	 
+		</div>
+		<div class="name" align="center">
+			<h1>Сайт студента первого курса заочного отделения Егора Бойко</h1>
+		</div>
+		</div>
+	</header>
+	<section style="display: flex; justify-content: space-between;">
+	<div class="menu" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start">
+		<h2>Меню</h2>
+		<ul>
+			<li><a href="res.html">Мое резюме</a></li>
+			<li><a href="gif.html">Фоновый gif</a></li>
+			<li><a href="st.html">Стих про зиму</a></li>
+		</ul>
+	</div>
+	<div class="main" style="display: flex; flex-direction: column; justify-content: center; align-content: flex-start; width: 60%">
+		<div>
+			<h4>Список экзаменов зимней сесии</h4>
+			<ol>
+				<li>Математический анализ</li>
+				<li>Алгебра и теория чисел</li>
+			</ol>
+		</div>	 	<div>
+			<h4>Список дел</h4>
+			<ul>
+				<li>Проснуться</li>
+				<li>Попить кофе</li>
+				<li>Сделать лабораторные работы по Введению в специальность</li>
+			</ul>
+		</div>	
+		<h4>Рассписание на завтра</h4>
+		<table bgcolor="yellow">
+  			<tr>
+    			<td>Зачет: Введение в специальность</td>
+				<td>11.15-14.20</td>
+  			</tr>
+			<tr>
+    			<td>Геометрия </td>
+				<td>16.00-18.50</td>
+  			</tr>
+		</table>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/lkQ0LDx9jHs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	</section>
+	<footer>
+		<div align="center"><a href="mailto:tonnyhawk93@gmail.com"><img src="images/email.jpg" width="3%">Написать мне</a></div>
+	</footer>	
+</body>
 </html>
