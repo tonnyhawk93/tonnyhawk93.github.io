@@ -39,6 +39,7 @@ function showMetricByPeriod(data, page, dateFrom, dateTo) {
 	table.ttfb = addMetricByDate(data, page, 'ttfb', period);
 	table.lcp = addMetricByDate(data, page, 'lcp', period);
 	table.fid = addMetricByDate(data, page, 'fid', period);
+	table.download = addMetricByDate(data, page, 'download', period);
 
 	console.table(table);
 }
@@ -93,6 +94,7 @@ function calcMetrics(data) {
 	table.ttfb = addMetric(data, 'ttfb');
 	table.lcp = addMetric(data, 'lcp');
 	table.fid = addMetric(data, 'fid');
+	table.download = addMetric(data, 'download');
 	return table;
 };
 function addMetricByDate(data, page, name, date) {
@@ -117,6 +119,7 @@ function showMetricsByDate(data, page, date) {
 	table.ttfb = addMetricByDate(data, page, 'ttfb', date);
 	table.lcp = addMetricByDate(data, page, 'lcp', date);
 	table.fid = addMetricByDate(data, page, 'fid', date);
+	table.download = addMetricByDate(data, page, 'download', date);
 
 	console.table(table);
 };
@@ -133,5 +136,4 @@ fetch(`https://shri.yandex/hw/stat/data?counterId=${id}`)
 		showMetricByPeriod(data, 'main page', '2021-10-30', '2021-10-31');
 		showSession('65d78b6f-0f6f-4442-9429-78248683e349', data);
 		compareMetric(data, {name: 'platform', value: "desktop"}, {name: 'platform', value: "touch"})
-		// добавить свои сценарии, реализовать функции выше
 	});
