@@ -72,8 +72,6 @@ function compareMetric(data, ...slicers) {
 	console.table(table);
 }
 
-// любые другие сценарии, которые считаете полезными
-
 function addMetric(data, name) {
 	let sampleData = data
 					.filter(item => item.name == name)
@@ -134,6 +132,6 @@ fetch(`https://shri.yandex/hw/stat/data?counterId=${id}`)
 		let data = prepareData(result);
 		showMetricsByDate(data, 'main page', '2021-10-30');
 		showMetricByPeriod(data, 'main page', '2021-10-30', '2021-10-31');
-		showSession('65d78b6f-0f6f-4442-9429-78248683e349', data);
+		showSession('7eac46b1-e8ca-4a30-a0d0-62edaa144417', data);
 		compareMetric(data, {name: 'platform', value: "desktop"}, {name: 'platform', value: "touch"})
 	});

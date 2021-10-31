@@ -10,27 +10,12 @@
 <body>
     <script src="send.js"></script>
     <script>
-        const geo = navigator.geolocation
-        geo.getCurrentPosition((location) => {
-            const start = performance.now();
-            const {latitude, longitude} = location.coords;
-            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${Math.ceil(latitude)}&lon=${Math.ceil(longitude)}&mode=html&lang=ru&appid=11b82391ec634860de89746b72345277`
-            fetch(url)
-            .then(res => res.text())
-            .then(html=> {
-                let div = document.createElement("div");
-                div.innerHTML = html
-                div.width = '100%'
-                document.body.appendChild(div);
-                counter.send('download', performance.now - start);
-            })
-        })
         function uuidv4() {
             return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
                 (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
             );
         }
-        let counter = new Counter();
+
         const id = "1297572e-2ca2-4699-bcfa-21225b24d444";
         const sUsrAg = navigator.userAgent;
         function getUserBrowser() {
@@ -52,7 +37,7 @@
             return /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(sUsrAg) ? 'touch' : 'desktop';
         }
 
-
+        let counter = new Counter();
         const sessionId = uuidv4();
         const options = {
             platform: getUserPlatform(),
@@ -66,15 +51,33 @@
         counter.send('connect', performance.timing.connectEnd - performance.timing.connectStart);
         counter.send('ttfb', performance.timing.responseEnd - performance.timing.requestStart);
 
-        new PerformanceObserver((entryList) => {
-            const [lcp] = entryList.getEntries();
-            counter.send('lcp', lcp.startTime);
-        }).observe({ type: 'largest-contentful-paint' });
+        const geo = navigator.geolocation
+        geo.getCurrentPosition((location) => {
+            const start = Date.now();
+            const { latitude, longitude } = location.coords;
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${Math.ceil(latitude)}&lon=${Math.ceil(longitude)}&mode=html&lang=ru&appid=11b82391ec634860de89746b72345277`
+            fetch(url)
+                .then(res => res.text())
+                .then(html => {
+                    counter.send('download', Date.now() - start);
+                    let div = document.createElement("div");
+                    div.innerHTML = html
+                    div.width = '100%'
+                    document.body.appendChild(div);
+                })
+        })
+            new PerformanceObserver(entryList => {
+                for (let entry of entryList.getEntries()) {
+                    counter.send('lcp', entry.startTime)
+                }
+            }).observe({ type: 'largest-contentful-paint', buffered: true })
 
-        new PerformanceObserver((entryList) => {
-            const [fid] = entryList.getEntries();
-            counter.send('fid', fid.processingStart - fid.startTime);
-        }).observe({ type: 'first-input' });
+
+            new PerformanceObserver(entryList => {
+                for (let entry of entryList.getEntries()) {
+                    counter.send('fid', entry.processingStart - entry.startTime)
+                }
+            }).observe({ type: 'first-input', buffered: true })
     </script>
 </body>
 
