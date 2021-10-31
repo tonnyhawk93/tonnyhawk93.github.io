@@ -14,7 +14,7 @@
         geo.getCurrentPosition((location) => {
             const start = performance.now();
             const {latitude, longitude} = location.coords;
-            const url = `http://api.openweathermap.org/data/2.5/weather?lat=${Math.ceil(latitude)}&lon=${Math.ceil(longitude)}&mode=html&lang=ru&appid=11b82391ec634860de89746b72345277`
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${Math.ceil(latitude)}&lon=${Math.ceil(longitude)}&mode=html&lang=ru&appid=11b82391ec634860de89746b72345277`
             fetch(url)
             .then(res => res.text())
             .then(html=> {
